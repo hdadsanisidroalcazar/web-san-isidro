@@ -177,10 +177,6 @@ metadata:
     site: '@twitter_user'
     cardType: summary_large_image
 
-i18n:
-  language: en
-  textDirection: ltr
-
 apps:
   blog:
     isEnabled: true

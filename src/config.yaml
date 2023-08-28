@@ -22,14 +22,8 @@ metadata:
         width: 1200
         height: 628
     type: website
-  instagram:
-    handle: '@onwidget'
-    site: '@onwidget'
+  twitter:
     cardType: summary_large_image
-
-i18n:
-  language: es
-  textDirection: ltr
 
 apps:
   blog:
@@ -99,3 +93,7 @@ ui:
         error: rgb(248 114 114)
         link: var(--ph-color-primary)
         linkActive: var(--ph-color-link)
+
+rss:
+  instagram: hdadsanisidroalcazar
+  facebook: hermandadsanisidro

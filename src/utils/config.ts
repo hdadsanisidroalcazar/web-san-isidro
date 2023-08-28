@@ -17,11 +17,7 @@ export interface MetaDataConfig extends Omit<MetaData, 'title'> {
     template: string;
   };
 }
-export interface I18NConfig {
-  language: string;
-  textDirection: string;
-  dateFormatter: unknown;
-}
+
 export interface AppBlogConfig {
   isEnabled: boolean;
   postsPerPage: number;
@@ -59,14 +55,19 @@ export interface AppBlogConfig {
   };
 }
 
+export interface RssConfig  {
+  instagram: string;
+  facebook: string;
+}
+
 const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
   site?: SiteConfig;
   metadata?: MetaDataConfig;
-  i18n?: I18NConfig;
   apps?: {
     blog?: AppBlogConfig;
   };
   ui?: unknown;
+  rss?: RssConfig;
 };
 
 const DEFAULT_SITE_NAME = 'Hermandad de San Isidro Labrador';
@@ -156,8 +157,18 @@ const getUI = () => {
   return merge({}, _default, config?.ui ?? {});
 };
 
+const getRss = () => {
+  const _default = {
+    instagram: '',
+    facebook: '',
+  };
+
+  return merge({}, _default, config?.rss ?? {});
+};
+
 
 export const SITE_CONFIG = getSite();
 export const METADATA_CONFIG = getMetadata();
 export const APP_BLOG_CONFIG = getAppBlog();
 export const UI_CONFIG = getUI();
+export const RSS_CONFIG = getRss()
