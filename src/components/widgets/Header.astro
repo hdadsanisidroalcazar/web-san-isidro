@@ -53,7 +53,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
 <header
   class:list={[
     { sticky: isSticky, relative: !isSticky, dark: isDark },
-    "top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out bg-page",
+    "top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out bg-header dark:bg-page text-header",
   ]}
   {...id ? { id } : {}}
 >
@@ -76,8 +76,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
       </div>
     </div>
     <nav
-      class="items-center w-full md:w-auto hidden md:flex text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:mx-5"
-      aria-label="Main navigation"
+      class="items-center w-full md:w-auto hidden md:flex text-header overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:mx-5"
+      aria-label="Navegacion principal"
     >
       <ul
         class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium"
@@ -87,10 +87,10 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
             <li class={links?.length ? "dropdown" : ""}>
               {links?.length ? (
                 <>
-                  <button class="hover:text-link dark:hover:text-white px-4 py-3 flex items-center">
+                  <button class="hover:text-link hover:text-white px-4 py-3 flex items-center">
                     {text} <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
                   </button>
-                  <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
+                  <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl text-default">
                     {links.map(({ text: text2, href: href2 }) => (
                       <li>
                         <a

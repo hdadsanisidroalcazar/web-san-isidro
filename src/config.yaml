@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Hermandad de San Isidro Labrador
+  site: 'https://hermandadsanisidrolabrador.es'
   base: '/'
   trailingSlash: false
 
@@ -9,26 +9,26 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Hermandad de San Isidro Labrador
+    template: '%s — Hermandad de San Isidro Labrador'
+  description: "Web de la hermandad de San Isidro Labrador de Alcázar de San Juan"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Hermandad de San Isidro labrador
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
-  twitter:
+  instagram:
     handle: '@onwidget'
     site: '@onwidget'
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: es
   textDirection: ltr
 
 apps:
@@ -67,7 +67,7 @@ analytics:
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
-
+# rgb(25.5 68.2 34.5)
   tokens:
     default:
       fonts:
