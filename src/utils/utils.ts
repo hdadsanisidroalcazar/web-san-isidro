@@ -1,12 +1,9 @@
-import { I18N_CONFIG } from '~/utils/config';
-
 const formatter =
-  I18N_CONFIG?.dateFormatter ||
-  new Intl.DateTimeFormat('en', {
+  new Intl.DateTimeFormat('es', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
-    timeZone: 'UTC',
+    timeZone: 'Europe/Madrid',
   });
 
 /* eslint-disable no-mixed-spaces-and-tabs */

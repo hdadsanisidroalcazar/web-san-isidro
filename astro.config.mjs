@@ -13,16 +13,9 @@ import tasks from "./src/utils/tasks";
 
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 
-import { ANALYTICS_CONFIG, SITE_CONFIG } from './src/utils/config.ts';
+import { SITE_CONFIG } from './src/utils/config.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const whenExternalScripts = (items = []) =>
-  ANALYTICS_CONFIG.vendors.googleAnalytics.id && ANALYTICS_CONFIG.vendors.googleAnalytics.partytown
-    ? Array.isArray(items)
-      ? items.map((item) => item())
-      : [items()]
-    : [];
 
 export default defineConfig({
   site: SITE_CONFIG.site,
@@ -53,12 +46,6 @@ export default defineConfig({
         ],
       },
     }),
-
-    ...whenExternalScripts(() =>
-      partytown({
-        config: { forward: ['dataLayer.push'] },
-      })
-    ),
 
     tasks(),
 

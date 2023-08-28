@@ -4,7 +4,7 @@ import { AstroSeo } from '@astrolib/seo';
 
 import type { AstroSeoProps } from '@astrolib/seo/src/types';
 
-import { SITE_CONFIG, METADATA_CONFIG, I18N_CONFIG } from '~/utils/config';
+import { SITE_CONFIG, METADATA_CONFIG } from '~/utils/config';
 import { MetaData } from '~/types';
 import { getCanonical } from '~/utils/permalinks';
 
@@ -36,7 +36,7 @@ const seoProps: AstroSeoProps = merge(
       url: canonical,
       site_name: SITE_CONFIG?.name,
       images: [],
-      locale: I18N_CONFIG?.language || 'en',
+      locale: 'es',
       type: 'website',
     },
     twitter: {

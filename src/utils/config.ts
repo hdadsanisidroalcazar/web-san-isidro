@@ -58,14 +58,6 @@ export interface AppBlogConfig {
     };
   };
 }
-export interface AnalyticsConfig {
-  vendors: {
-    googleAnalytics: {
-      id?: string;
-      partytown?: boolean;
-    };
-  };
-}
 
 const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
   site?: SiteConfig;
@@ -75,7 +67,6 @@ const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
     blog?: AppBlogConfig;
   };
   ui?: unknown;
-  analytics?: unknown;
 };
 
 const DEFAULT_SITE_NAME = 'Hermandad de San Isidro Labrador';
@@ -112,24 +103,6 @@ const getMetadata = () => {
   };
 
   return merge({}, _default, config?.metadata ?? {}) as MetaDataConfig;
-};
-
-const getI18N = () => {
-  const _default = {
-    language: 'en',
-    textDirection: 'ltr',
-  };
-
-  const value = merge({}, _default, config?.i18n ?? {});
-
-  return Object.assign(value, {
-    dateFormatter: new Intl.DateTimeFormat(value.language, {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-      timeZone: 'UTC',
-    }),
-  }) as I18NConfig;
 };
 
 const getAppBlog = () => {
@@ -183,22 +156,8 @@ const getUI = () => {
   return merge({}, _default, config?.ui ?? {});
 };
 
-const getAnalytics = () => {
-  const _default = {
-    vendors: {
-      googleAnalytics: {
-        id: undefined,
-        partytown: true,
-      },
-    },
-  };
-
-  return merge({}, _default, config?.analytics ?? {}) as AnalyticsConfig;
-};
 
 export const SITE_CONFIG = getSite();
-export const I18N_CONFIG = getI18N();
 export const METADATA_CONFIG = getMetadata();
 export const APP_BLOG_CONFIG = getAppBlog();
 export const UI_CONFIG = getUI();
-export const ANALYTICS_CONFIG = getAnalytics();

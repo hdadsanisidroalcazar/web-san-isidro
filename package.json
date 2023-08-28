@@ -1,7 +1,7 @@
 {
   "name": "san-isidro",
   "description": "A template to make your website using Astro + Tailwind CSS.",
-  "version": "0.9.9",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -18,19 +18,18 @@
     "@astrojs/rss": "^2.4.4",
     "@astrojs/sitemap": "^2.0.2",
     "@astrojs/tailwind": "^4.0.0",
-    "@astrolib/analytics": "^0.4.2",
     "@astrolib/seo": "^0.6.0",
     "@fontsource-variable/inter": "^5.0.8",
     "@iconify-json/flat-color-icons": "^1.1.7",
-    "@iconify-json/tabler": "^1.1.88",
+    "@iconify-json/tabler": "^1.1.89",
     "@tailwindcss/typography": "^0.5.9",
     "@types/lodash.merge": "^4.6.7",
-    "@typescript-eslint/eslint-plugin": "^6.4.1",
-    "@typescript-eslint/parser": "^6.4.1",
-    "astro": "^2.10.12",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "astro": "^2.10.14",
     "astro-compress": "^2.0.14",
-    "astro-icon": "^1.0.0-next.2",
-    "eslint": "^8.47.0",
+    "astro-icon": "1.0.0-next.2",
+    "eslint": "^8.48.0",
     "eslint-plugin-astro": "^0.28.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "js-yaml": "^4.1.0",
@@ -43,10 +42,10 @@
     "svgo": "3.0.2",
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "^3.3.3",
-    "typescript": "^5.1.6",
+    "typescript": "^5.2.2",
     "unpic": "^3.10.0"
   },
   "engines": {
-    "node": ">=16.12.0"
+    "node": ">=18.0.0"
   }
 }

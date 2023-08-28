@@ -60,11 +60,6 @@ apps:
       robots:
         index: false
 
-analytics:
-  vendors:
-    googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
-
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 # rgb(25.5 68.2 34.5)
