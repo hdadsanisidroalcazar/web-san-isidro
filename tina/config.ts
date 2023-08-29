@@ -14,34 +14,61 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "src/assets/images",
       publicFolder: "public",
     },
   },
   schema: {
     collections: [
       {
-        name: "post",
-        label: "Posts",
-        path: "src/content/posts",
+        name: "news",
+        label: "Actualidad",
+        path: "src/content/news",
         fields: [
           {
             type: "string",
             name: "title",
-            label: "Title",
+            label: "Titulo",
             isTitle: true,
             required: true,
           },
           {
+            type: "string",
+            name: "description",
+            label: "Descripción",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "category",
+            label: "Categoria",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "tags",
+            label: "Etiquetas",
+            required: false,
+            list: true,
+            options: ["tag1", "tag2", "tag3"],
+
+          },
+          {
             type: "datetime",
             name: "publishDate",
-            label: "Date Posted",
+            label: "Fecha de publicación",
+            required: false,
+          },
+          {
+            type: "image",
+            name: "image",
+            label: "Imagen de portada",
             required: true,
           },
           {
             type: "rich-text",
             name: "body",
-            label: "Body",
+            label: "Cuerpo",
             isBody: true,
           },
         ],
