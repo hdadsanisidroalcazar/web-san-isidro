@@ -1,10 +1,10 @@
 {
   "name": "san-isidro",
-  "description": "A template to make your website using Astro + Tailwind CSS.",
+  "description": "Web de la hermandad de san isidro.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
+    "dev": "tinacms dev -c 'astro dev'",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -47,5 +47,9 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@tinacms/cli": "^1.5.29",
+    "tinacms": "^1.5.20"
   }
 }
