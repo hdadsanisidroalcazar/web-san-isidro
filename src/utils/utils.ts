@@ -1,4 +1,4 @@
-const formatter =
+const formatter: Intl.DateTimeFormat =
   new Intl.DateTimeFormat('es', {
     year: 'numeric',
     month: 'short',
@@ -6,13 +6,7 @@ const formatter =
     timeZone: 'Europe/Madrid',
   });
 
-/* eslint-disable no-mixed-spaces-and-tabs */
-export const getFormattedDate = (date: Date) =>
-  date
-    ? // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      /* @ts-ignore */
-      formatter.format(date)
-    : '';
+export const getFormattedDate = (date: Date): string => (date ? formatter.format(date) : '');
 
 export const trim = (str = '', ch?: string) => {
   let start = 0,

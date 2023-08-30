@@ -54,7 +54,6 @@ export interface AppBlogConfig {
     };
   };
 }
-
 export interface RssConfig  {
   instagram: string;
   facebook: string;
@@ -77,9 +76,7 @@ const getSite = () => {
     name: DEFAULT_SITE_NAME,
     site: undefined,
     base: '/',
-    trailingSlash: false,
-
-    googleSiteVerificationId: '',
+    trailingSlash: false
   };
 
   return merge({}, _default, config?.site ?? {}) as SiteConfig;
@@ -157,6 +154,7 @@ const getUI = () => {
   return merge({}, _default, config?.ui ?? {});
 };
 
+
 const getRss = () => {
   const _default = {
     instagram: '',
@@ -167,8 +165,8 @@ const getRss = () => {
 };
 
 
-export const SITE_CONFIG = getSite();
-export const METADATA_CONFIG = getMetadata();
-export const APP_BLOG_CONFIG = getAppBlog();
-export const UI_CONFIG = getUI();
-export const RSS_CONFIG = getRss()
+export const SITE = getSite();
+export const METADATA = getMetadata();
+export const APP_BLOG = getAppBlog();
+export const UI = getUI();
+export const RSS = getRss();
