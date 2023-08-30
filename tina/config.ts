@@ -12,6 +12,14 @@ export default defineConfig({
     outputFolder: "admin",
     publicFolder: "public",
   },
+
+  search: {
+    tina: {
+      indexerToken: process.env.TINA_INDEXER_TOKEN,
+      stopwordLanguages: ["spa"],
+    }
+  },
+  
   media: {
     tina: {
       mediaRoot: "images",
