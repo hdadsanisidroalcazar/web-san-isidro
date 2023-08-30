@@ -1,23 +1,19 @@
 ---
-import { Icon } from "astro-icon/components";
-import { twMerge } from "tailwind-merge";
-import type { ItemGrid } from "~/types";
-import CTA from "./CTA.astro";
+import { twMerge } from 'tailwind-merge';
+import type { ItemGrid } from '~/types';
+import CTA from './CTA.astro';
+import { Icon } from 'astro-icon/components';
+
+const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props as ItemGrid;
 
 const {
-  items = [],
-  columns,
-  defaultIcon = "",
-  classes = {},
-} = Astro.props as ItemGrid;
-
-const {
-  container: containerClass = "",
+  container: containerClass = '',
   // container: containerClass = "md:grid-cols-2",
-  panel: panelClass = "",
-  title: titleClass = "",
-  description: descriptionClass = "",
-  icon: defaultIconClass = "text-primary",
+  panel: panelClass = '',
+  title: titleClass = '',
+  description: descriptionClass = '',
+  icon: defaultIconClass = 'text-primary',
+  action: actionClass = '',
 } = classes;
 ---
 
@@ -77,16 +73,17 @@ const {
                 </h3>
                 {description && (
                   <p
-                    class={twMerge(
-                      `${title ? "mt-3" : ""} text-muted`,
-                      descriptionClass,
-                      itemClasses?.description
-                    )}
-                    set:html={description}
-                  />
+                  class={twMerge(`${title ? 'mt-3' : ''} text-muted`, descriptionClass, itemClasses?.description)}
+                  set:html={description}
+                />
                 )}
                 {callToAction && (
-                  <div class="mt-2 text-primary cursor-pointer">
+                  <div 
+                  class={twMerge(
+                    `${title || description ? 'mt-3' : ''} text-primary cursor-pointer`,
+                    actionClass,
+                    itemClasses?.actionClass
+                  )}>
                     <CTA callToAction={callToAction} />
                   </div>
                 )}
