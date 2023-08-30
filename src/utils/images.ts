@@ -1,6 +1,6 @@
 import { getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
-import type { OpenGraph } from '@astrolib/seo/src/types';
+import type { OpenGraph } from '@astrolib/seo';
 
 const load = async function () {
   let images: Record<string, () => Promise<unknown>> | undefined = undefined;
@@ -21,7 +21,9 @@ export const fetchLocalImages = async () => {
 };
 
 /** */
-export const findImage = async (imagePath?: string | ImageMetadata | null): Promise<string | ImageMetadata | undefined | null> => {
+export const findImage = async (
+  imagePath?: string | ImageMetadata | null
+): Promise<string | ImageMetadata | undefined | null> => {
   // Not string
   if (typeof imagePath !== 'string') {
     return imagePath;
