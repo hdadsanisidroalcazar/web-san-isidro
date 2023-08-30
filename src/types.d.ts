@@ -16,7 +16,7 @@ export interface Post {
   /**  */
   title: string;
   /** Optional summary of post content. */
-  excerpt?: string;
+  description?: string;
   /**  */
   image?: string;
 

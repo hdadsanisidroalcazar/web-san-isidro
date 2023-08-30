@@ -37,7 +37,7 @@ const Content = post?.Content || null;
               </>
             )
           }
-          {post.readingTime && <> · {post.readingTime} min read</>}
+          {post.readingTime && <> · {post.readingTime} min de lectura</>}
         </p>
       </div>
       <h1
@@ -48,7 +48,7 @@ const Content = post?.Content || null;
       <p
         class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify"
       >
-        {post.excerpt}
+        {post.description}
       </p>
 
       {
@@ -58,7 +58,7 @@ const Content = post?.Content || null;
             class="max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
             widths={[400, 900]}
             sizes="(max-width: 900px) 400px, 900px"
-            alt={post?.excerpt || ''}
+            alt={post?.title || ''}
             loading="eager"
             width={900}
             height={506}

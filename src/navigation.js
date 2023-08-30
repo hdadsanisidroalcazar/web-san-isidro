@@ -8,6 +8,10 @@ export const headerData = {
       href: getPermalink('/')
     },
     {
+      text: 'Actualidad',
+      href: getPermalink('/actualidad'),
+    },
+    {
       text: 'Hermandad',
       links: [
         {
@@ -39,10 +43,6 @@ export const headerData = {
           href: getPermalink('/privacy'),
         },
       ],
-    },
-    {
-      text: 'Actualidad',
-      href: getPermalink('/actualidad'),
     },
     {
       text: 'San Isidro',

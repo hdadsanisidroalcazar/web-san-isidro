@@ -21,9 +21,10 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "news",
+        name: "post",
         label: "Actualidad",
-        path: "src/content/news",
+        path: "src/content/post",
+        format: "mdx",
         fields: [
           {
             type: "string",

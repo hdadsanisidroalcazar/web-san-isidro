@@ -89,17 +89,11 @@
         "twitter": {
           "type": "object",
           "properties": {
-            "handle": {
-              "type": "string"
-            },
-            "site": {
-              "type": "string"
-            },
             "cardType": {
               "type": "string"
             }
           },
-          "required": ["handle", "site", "cardType"]
+          "required": ["cardType"]
         }
       },
       "required": ["title", "description", "robots", "openGraph", "twitter"]
@@ -380,11 +374,7 @@
         }
       },
       "required": ["theme", "tokens"]
-        }
-      },
-      "required": ["isEnabled", "path"]
-    },
     }
   },
-  "required": ["site", "metadata", "apps", "analytics", "ui"]
+  "required": ["site", "metadata", "apps", "ui"]
 }
