@@ -31,8 +31,8 @@ export const headerData = {
           href: getPermalink('/about'),
         },
         {
-          text: 'Contact',
-          href: getPermalink('/contact'),
+          text: 'Contacto',
+          href: getPermalink('/contacto'),
         },
         {
           text: 'Terms',
@@ -108,7 +108,7 @@ export const headerData = {
     },
     {
       text: 'Contacto',
-      href: '#',
+      href: getPermalink('/contacto'),
     },
   ],
 };

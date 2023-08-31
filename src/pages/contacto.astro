@@ -1,0 +1,68 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contacto',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText title="Contacto" />
+
+  <ContactUs
+    title="Envíanos un mensaje"
+    subtitle="Rellena el formulario para enviarnos un correo electrónico. Si prefieres otra forma de contacto, las facilitamos más abajo."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Nombre',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Correo electrónico',
+      },
+      {
+        type: 'tel',
+        name: 'phone',
+        label: 'Teléfono',
+      },
+    ]}
+    textarea={{
+      label: 'Mensaje',
+    }}
+    disclaimer={{
+      label:
+        'Al enviar el formulario de contacto, acepta la ultilización de sus datos para la contestación de su mensaje.',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title='Información de contacto'
+    items={[
+      {
+        title: 'Teléfono',
+        description: '654 53 82 29 (Jesús)',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Correo electrónico',
+        description: 'hdadsanisidroalcazar@outlook.es',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Dirección',
+        description: 'Casa Parroquial de la Iglesia de San Francisco\n Plaza de San Francisco, s/n\n13600 - Alcázar de San Juan (Ciudad Real)',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>
