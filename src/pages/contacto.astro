@@ -1,8 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
+import Hero from '~/components/widgets/Hero.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import { findImage } from '~/utils/images';
 
 const metadata = {
   title: 'Contacto',
@@ -12,7 +13,20 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText title="Contacto" />
+  <Hero title="Contacto" image={{ src: findImage('~/assets/images/ermita.webp'), alt: 'ermita' }} />
+
+  <div class="relative w-full h-96">
+    <iframe
+      class="absolute top-0 left-0 w-full h-full"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.339227933959!2d-3.1918235248172184!3d39.38222019446626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd69ae96c3f245a9%3A0xab8d02c31466b93!2sErmita%20de%20San%20Isidro!5e0!3m2!1ses!2ses!4v1693506396563!5m2!1ses!2ses"
+      frameborder="0"
+      style="border:0;"
+      allowfullscreen=""
+      aria-hidden="false"
+      tabindex="0"
+    >
+    </iframe>
+  </div>
 
   <ContactUs
     title="Envíanos un mensaje"
@@ -46,7 +60,7 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title='Información de contacto'
+    title="Información de contacto"
     items={[
       {
         title: 'Teléfono',
@@ -60,7 +74,8 @@ const metadata = {
       },
       {
         title: 'Dirección',
-        description: 'Casa Parroquial de la Iglesia de San Francisco\n Plaza de San Francisco, s/n\n13600 - Alcázar de San Juan (Ciudad Real)',
+        description:
+          'Casa Parroquial de la Iglesia de San Francisco\n Plaza de San Francisco, s/n\n13600 - Alcázar de San Juan (Ciudad Real)',
         icon: 'tabler:map-pin',
       },
     ]}

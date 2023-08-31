@@ -104,7 +104,7 @@ export const headerData = {
     },
     {
       text: 'Patrocinadores',
-      href: '#',
+      href: getPermalink('/patrocinadores'),
     },
     {
       text: 'Contacto',
