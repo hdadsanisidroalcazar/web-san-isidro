@@ -167,6 +167,5 @@ const getRss = () => {
 export const SITE = getSite();
 export const METADATA = getMetadata();
 export const APP_BLOG = getAppBlog();
-export const APP_ARTICLES = getAppBlog();
 export const UI = getUI();
 export const RSS = getRss();

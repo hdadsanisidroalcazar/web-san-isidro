@@ -1,3 +1,14 @@
+export interface Home {
+  announce?: string;
+  titlefaqs?: string;
+  subtitlefaqs?: string;
+  taglinefaqs?: string;
+  faqs?: ({
+    title: string;
+    description: string;
+  }[]);
+}
+
 export interface Post {
   /** A unique ID number that identifies a post. */
   id: string;

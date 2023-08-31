@@ -63,6 +63,23 @@ const postCollection = defineCollection({
   }),
 });
 
+const homeCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    announce: z.string().optional(),
+    titlefaqs: z.string().optional(),
+    subtitlefaqs: z.string().optional(),
+    taglinefaqs: z.string().optional(),
+    faqs: z.array(
+      z.object({
+        title: z.string(),
+        description: z.string(),
+      })
+    ).optional(),
+  }),
+});
+
 export const collections = {
   post: postCollection,
+  home: homeCollection,
 };
