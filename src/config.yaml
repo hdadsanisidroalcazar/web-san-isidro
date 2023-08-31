@@ -42,7 +42,7 @@ apps:
 
     category:
       isEnabled: true
-      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      pathname: 'categoria' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
       robots:
         index: true
 

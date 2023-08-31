@@ -108,7 +108,7 @@ const getAppBlog = () => {
     postsPerPage: 6,
     post: {
       isEnabled: true,
-      permalink: '/blog/%slug%',
+      permalink: '/actualidad/%slug%',
       robots: {
         index: true,
         follow: true,
@@ -116,7 +116,7 @@ const getAppBlog = () => {
     },
     list: {
       isEnabled: true,
-      pathname: 'blog',
+      pathname: 'actualidad',
       robots: {
         index: true,
         follow: true,
@@ -124,7 +124,7 @@ const getAppBlog = () => {
     },
     category: {
       isEnabled: true,
-      pathname: 'category',
+      pathname: 'categoria',
       robots: {
         index: true,
         follow: true,
@@ -167,5 +167,6 @@ const getRss = () => {
 export const SITE = getSite();
 export const METADATA = getMetadata();
 export const APP_BLOG = getAppBlog();
+export const APP_ARTICLES = getAppBlog();
 export const UI = getUI();
 export const RSS = getRss();

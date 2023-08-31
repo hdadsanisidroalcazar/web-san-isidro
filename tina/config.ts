@@ -82,6 +82,37 @@ export default defineConfig({
           },
         ],
       },
+      {
+        name: "article",
+        label: "Articulos",
+        path: "src/content/article",
+        format: "mdx",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Titulo",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "description",
+            label: "Descripción",
+          },
+          {
+            type: "string",
+            name: "author",
+            label: "Autor",
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Cuerpo",
+            isBody: true,
+          },
+        ],
+      },
     ],
   },
 });
