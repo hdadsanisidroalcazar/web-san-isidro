@@ -22,7 +22,7 @@ export const GET = async () => {
     items: posts.map((post) => ({
       link: getPermalink(post.permalink, 'post'),
       title: post.title,
-      description: post.excerpt,
+      description: post.description,
       pubDate: post.publishDate,
     })),
 
