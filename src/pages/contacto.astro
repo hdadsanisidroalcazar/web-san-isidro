@@ -4,21 +4,24 @@ import Hero from '~/components/widgets/Hero.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import { findImage } from '~/utils/images';
+import { fetchContact } from '~/utils/page';
 
 const metadata = {
   title: 'Contacto',
 };
+
+const contactData = await fetchContact();
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <Hero title="Contacto" image={{ src: findImage('~/assets/images/ermita.webp'), alt: 'ermita' }} />
+  <Hero title={contactData.title} image={{ src: findImage(contactData.image), alt: 'ermita' }} />
 
   <div class="relative w-full h-96">
     <iframe
       class="absolute top-0 left-0 w-full h-full"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.339227933959!2d-3.1918235248172184!3d39.38222019446626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd69ae96c3f245a9%3A0xab8d02c31466b93!2sErmita%20de%20San%20Isidro!5e0!3m2!1ses!2ses!4v1693506396563!5m2!1ses!2ses"
+      src={contactData.map}
       frameborder="0"
       style="border:0;"
       allowfullscreen=""
@@ -29,8 +32,8 @@ const metadata = {
   </div>
 
   <ContactUs
-    title="Envíanos un mensaje"
-    subtitle="Rellena el formulario para enviarnos un correo electrónico. Si prefieres otra forma de contacto, las facilitamos más abajo."
+    title={contactData.titleform}
+    subtitle={contactData.subtitleform}
     inputs={[
       {
         type: 'text',
@@ -51,7 +54,7 @@ const metadata = {
     textarea={{
       label: 'Mensaje',
     }}
-    description="Al enviar el formulario de contacto, acepta la ultilización de sus datos para la contestación de su mensaje."
+    description={contactData.disclaimer}
   />
 
   <!-- Features2 Widget ************** -->
@@ -61,18 +64,17 @@ const metadata = {
     items={[
       {
         title: 'Teléfono',
-        description: '654 53 82 29 (Jesús)',
+        description: contactData.phone,
         icon: 'tabler:headset',
       },
       {
         title: 'Correo electrónico',
-        description: 'hdadsanisidroalcazar@outlook.es',
+        description: contactData.email,
         icon: 'tabler:mail',
       },
       {
         title: 'Dirección',
-        description:
-          'Casa Parroquial de la Iglesia de San Francisco\n Plaza de San Francisco, s/n\n13600 - Alcázar de San Juan (Ciudad Real)',
+        description: contactData.address,
         icon: 'tabler:map-pin',
       },
     ]}

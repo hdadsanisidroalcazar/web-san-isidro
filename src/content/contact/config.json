@@ -1,0 +1,13 @@
+{
+  "title": "Contacto",
+  "subtitle": "",
+  "tagline": "",
+  "disclaimer": "Al enviar el formulario de contacto, acepta la ultilización de sus datos para la contestación de su mensaje.",
+  "email": "hdadsanisidroalcazar@outlook.es",
+  "phone": "654 53 82 29 (Jesús)",
+  "address": "Casa Parroquial de la Iglesia de San Francisco <br/>\nPlaza de San Francisco, s/n <br/>\n13600 - Alcázar de San Juan (Ciudad Real)\n",
+  "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.339227933959!2d-3.1918235248172184!3d39.38222019446626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd69ae96c3f245a9%3A0xab8d02c31466b93!2sErmita%20de%20San%20Isidro!5e0!3m2!1ses!2ses!4v1693506396563!5m2!1ses!2ses",
+  "titleform": "Envíanos un mensaje",
+  "subtitleform": "Rellena el formulario para enviarnos un correo electrónico. Si prefieres otra forma de contacto, las facilitamos más abajo.",
+  "image": "/images/ermita.webp"
+}

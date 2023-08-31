@@ -3,10 +3,29 @@ export interface Home {
   titlefaqs?: string;
   subtitlefaqs?: string;
   taglinefaqs?: string;
-  faqs?: ({
+  faqs?: {
     title: string;
     description: string;
-  }[]);
+  }[];
+}
+
+export interface Sponsor {
+  title?: string;
+  subtitle?: string;
+  sponsor?: string[];
+}
+
+export interface Contact {
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+  image: string;
+  titleform?: string;
+  subtitleform?: string;
+  disclaimer?: string;
+  email: string;
+  phone: string;
+  map: string;
 }
 
 export interface Post {
