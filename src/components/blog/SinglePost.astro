@@ -38,16 +38,17 @@ const Content = post?.Content || null;
             )
           }
           {post.readingTime && <> · {post.readingTime} min de lectura</>}
-          {
-            post.author && (
-              <p class="text-sm text-secondary dark:text-blue-200 font-bold tracking-wide flex items-center">
-                <Icon name="tabler:user" class="w-4 h-4 dark:text-gray-400 mr-0.5" />
-                {post.author}
-              </p>
-            )
-          }
         </p>
       </div>
+
+      {
+        post.author && (
+          <p class="px-4 sm:px-6 mt-0 mb-2 max-w-3xl mx-auto text-sm text-secondary dark:text-blue-200 font-bold tracking-wide flex items-center">
+            <Icon name="tabler:user" class="w-4 h-4 dark:text-gray-400 mr-0.5" />
+            {post.author}
+          </p>
+        )
+      }
 
       <h1
         class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading"
