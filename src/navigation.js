@@ -16,19 +16,19 @@ export const headerData = {
       links: [
         {
           text: 'Fundación',
-          href: getPermalink('/#features'),
+          href: getPermalink('/hermandad/fundacion'),
         },
         {
           text: 'Evolución',
-          href: getPermalink('/services'),
+          href: getPermalink('/hermandad/evolucion'),
         },
         {
           text: 'La ermita',
-          href: getPermalink('/pricing'),
+          href: getPermalink('/ermita'),
         },
         {
           text: 'Medalla',
-          href: getPermalink('/about'),
+          href: getPermalink('/medalla'),
         },
       ],
     },
@@ -37,11 +37,11 @@ export const headerData = {
       links: [
         {
           text: 'Historia',
-          href: getPermalink('/landing/lead-generation'),
+          href: getPermalink('/san-isidro/historia'),
         },
         {
           text: 'Programa de cultos y actos',
-          href: getPermalink('/landing/sales'),
+          href: getPermalink('/san-isidro/cultos'),
         },
         {
           text: 'Revistas',
@@ -49,7 +49,7 @@ export const headerData = {
         },
         {
           text: 'Cartelería',
-          href: getPermalink('/landing/product'),
+          href: getPermalink('/san-isidro/carteleria'),
         },
       ],
     },
@@ -58,17 +58,17 @@ export const headerData = {
       links: [
         {
           text: 'Historia',
-          href: getBlogPermalink(),
+          href: getPermalink('/santas/historia'),
         },
         {
           text: 'Programa de cultos y actos',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+          href: getPermalink('/santas/cultos'),
         },
       ],
     },
     {
       text: 'Galería',
-      href: '#',
+      href: getPermalink('/galeria'),
     },
     {
       text: 'Patrocinadores',
@@ -86,32 +86,32 @@ export const footerData = {
     {
       title: 'Hermandad',
       links: [
-        { text: 'Fundación', href: '#' },
-        { text: 'Evolución', href: '#' },
-        { text: 'La ermita', href: '#' },
-        { text: 'La medalla', href: '#' },
+        { text: 'Fundación', href: '/hermandad/fundacion' },
+        { text: 'Evolución', href: '/hermandad/evolucion' },
+        { text: 'La ermita', href: '/ermita' },
+        { text: 'La medalla', href: '/medalla' },
       ],
     },
     {
       title: 'San Isidro',
       links: [
-        { text: 'Historia', href: '#' },
-        { text: 'Programa de cultos y actos', href: '#' },
+        { text: 'Historia', href: '/san-isidro/historia' },
+        { text: 'Programa de cultos y actos', href: '/san-isidro/cultos' },
         { text: 'Revistas', href: '/revistas' },
-        { text: 'Cartelería', href: '#' },
+        { text: 'Cartelería', href: '/san-isidro/carteleria' },
       ],
     },
     {
       title: 'Santas',
       links: [
-        { text: 'Hisoria', href: '#' },
-        { text: 'Programa de cultos y actos', href: '#' },
+        { text: 'Hisoria', href: 'santas/hitoria' },
+        { text: 'Programa de cultos y actos', href: '/santas/cultos' },
       ],
     },
     {
       title: 'Otros',
       links: [
-        { text: 'Galería de fotos', href: '#' },
+        { text: 'Galería de fotos', href: '/galería' },
         { text: 'Patrocinadores', href: '/patrocinadores' },
       ],
     },
