@@ -38,7 +38,7 @@ export const fetchMagazines = async (): Promise<Magazine[]> => {
   if (!_magazines) {
     const magazines = await getCollection('magazine');
     _magazines = magazines.map((magazine) => magazine.data);
-    _magazines.sort((a, b) => parseInt(b.year) - parseInt(a.year))
+    _magazines.sort((a, b) => parseInt(b.year) - parseInt(a.year));
   }
 
   return _magazines;

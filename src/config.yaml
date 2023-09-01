@@ -31,7 +31,6 @@ apps:
       - articulos
       - entrevistas
 
-
     post:
       isEnabled: true
       permalink: '/actualidad/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%

@@ -4,3 +4,4 @@ node_modules
 types.generated.d.ts
 tina/__generated__
 tina/tina-lock.json
+public/admin
