@@ -221,7 +221,7 @@ export default defineConfig({
       },
       {
         name: 'post',
-        label: 'Actualidad',
+        label: 'Publicaciones',
         path: 'src/content/post',
         format: 'mdx',
         fields: [
@@ -246,7 +246,6 @@ export default defineConfig({
             type: 'string',
             name: 'category',
             label: 'Categoria',
-            required: true,
           },
           {
             type: 'string',
@@ -260,7 +259,7 @@ export default defineConfig({
             type: 'datetime',
             name: 'publishDate',
             label: 'Fecha de publicación',
-            required: false,
+            required: true,
           },
           {
             type: 'image',
