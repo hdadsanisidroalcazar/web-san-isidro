@@ -13,14 +13,12 @@ export default defineConfig({
     publicFolder: 'public',
   },
 
-  ...(process.env.TINA_INDEXER_TOKEN && {
-    search: {
-      tina: {
-        indexerToken: process.env.TINA_INDEXER_TOKEN,
-        stopwordLanguages: ['spa'],
-      },
+  search: {
+    tina: {
+      indexerToken: process.env.TINA_INDEXER_TOKEN,
+      stopwordLanguages: ['spa'],
     },
-  }),
+  },
 
   media: {
     tina: {
