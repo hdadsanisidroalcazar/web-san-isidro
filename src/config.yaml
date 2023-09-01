@@ -27,6 +27,10 @@ apps:
   blog:
     isEnabled: true
     postsPerPage: 6
+    archivedCategories:
+      - articulos
+      - entrevistas
+
 
     post:
       isEnabled: true

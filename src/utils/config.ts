@@ -20,6 +20,7 @@ export interface MetaDataConfig extends Omit<MetaData, 'title'> {
 export interface AppBlogConfig {
   isEnabled: boolean;
   postsPerPage: number;
+  archivedCategories: string[];
   post: {
     isEnabled: boolean;
     permalink: string;
@@ -106,6 +107,7 @@ const getAppBlog = () => {
   const _default = {
     isEnabled: false,
     postsPerPage: 6,
+    archivedCategories: [],
     post: {
       isEnabled: true,
       permalink: '/actualidad/%slug%',
