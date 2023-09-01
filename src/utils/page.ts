@@ -1,9 +1,10 @@
 import { getCollection } from 'astro:content';
-import type { Home, Contact, Sponsor } from '~/types';
+import type { Home, Contact, Sponsor, Magazine } from '~/types';
 
 let _home: Home;
 let _contact: Contact;
 let _sponsor: Sponsor;
+let _magazines: Magazine[];
 
 /** */
 export const fetchHome = async (): Promise<Home> => {
@@ -31,4 +32,14 @@ export const fetchContact = async (): Promise<Contact> => {
   }
 
   return _contact;
+};
+
+export const fetchMagazines = async (): Promise<Magazine[]> => {
+  if (!_magazines) {
+    const magazines = await getCollection('magazine');
+    _magazines = magazines.map((magazine) => magazine.data);
+    _magazines.sort((a, b) => parseInt(b.year) - parseInt(a.year))
+  }
+
+  return _magazines;
 };

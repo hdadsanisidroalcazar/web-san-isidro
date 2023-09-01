@@ -9,6 +9,14 @@ export interface Home {
   }[];
 }
 
+export interface Magazine {
+  year: string;
+  description?: string;
+  image: string;
+  pdf?: string;
+  url?: string;
+}
+
 export interface Sponsor {
   title?: string;
   subtitle?: string;
@@ -25,6 +33,7 @@ export interface Contact {
   disclaimer?: string;
   email: string;
   phone: string;
+  address: string;
   map: string;
 }
 

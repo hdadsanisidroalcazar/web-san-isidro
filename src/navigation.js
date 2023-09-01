@@ -45,7 +45,7 @@ export const headerData = {
         },
         {
           text: 'Revistas',
-          href: getPermalink('/landing/click-through'),
+          href: getPermalink('/revistas'),
         },
         {
           text: 'Cartelería',
@@ -97,7 +97,7 @@ export const footerData = {
       links: [
         { text: 'Historia', href: '#' },
         { text: 'Programa de cultos y actos', href: '#' },
-        { text: 'Revistas', href: '#' },
+        { text: 'Revistas', href: '/revistas' },
         { text: 'Cartelería', href: '#' },
       ],
     },
@@ -112,7 +112,7 @@ export const footerData = {
       title: 'Otros',
       links: [
         { text: 'Galería de fotos', href: '#' },
-        { text: 'Patrocinadores', href: '#' },
+        { text: 'Patrocinadores', href: '/patrocinadores' },
       ],
     },
   ],

@@ -81,6 +81,41 @@ export default defineConfig({
         ],
       },
       {
+        name: 'magazine',
+        label: 'Revistas',
+        path: 'src/content/magazine',
+        format: 'json',
+        fields: [
+          {
+            type: 'string',
+            name: 'year',
+            label: 'Año',
+            required: true,
+          },
+          {
+            type: 'string',
+            name: 'description',
+            label: 'Descripción',
+          },
+          {
+            type: 'image',
+            name: 'image',
+            label: 'Imagen',
+            required: true,
+          },
+          {
+            type: 'image',
+            name: 'pdf',
+            label: 'PDF',
+          },
+          {
+            type: 'string',
+            name: 'url',
+            label: 'Enlace',
+          },
+        ],
+      },
+      {
         name: 'sponsor',
         label: 'Patrocinadores',
         path: 'src/content/sponsor',
@@ -199,9 +234,13 @@ export default defineConfig({
           },
           {
             type: 'string',
+            name: 'author',
+            label: 'Autor',
+          },
+          {
+            type: 'string',
             name: 'description',
             label: 'Descripción',
-            required: true,
           },
           {
             type: 'string',
@@ -227,38 +266,6 @@ export default defineConfig({
             type: 'image',
             name: 'image',
             label: 'Imagen de portada',
-            required: true,
-          },
-          {
-            type: 'rich-text',
-            name: 'body',
-            label: 'Cuerpo',
-            isBody: true,
-          },
-        ],
-      },
-      {
-        name: 'article',
-        label: 'Articulos',
-        path: 'src/content/article',
-        format: 'mdx',
-        fields: [
-          {
-            type: 'string',
-            name: 'title',
-            label: 'Titulo',
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: 'string',
-            name: 'description',
-            label: 'Descripción',
-          },
-          {
-            type: 'string',
-            name: 'author',
-            label: 'Autor',
           },
           {
             type: 'rich-text',

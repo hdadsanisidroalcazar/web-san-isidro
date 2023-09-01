@@ -1,0 +1,27 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import { findImage } from '~/utils/images';
+import { fetchMagazines } from '~/utils/page';
+
+const metadata = {
+  title: 'Revistas',
+};
+
+const magazines = await fetchMagazines();
+---
+
+<Layout metadata={metadata}>
+  {
+    magazines.map((magazine) => (
+      <Hero2
+        title={`Revista ${magazine.year}`}
+        subtitle={magazine.description}
+        image={{ src: findImage(magazine.image), alt: 'portada' }}
+        {...(magazine.url && { callToAction: { text: 'Ver online', href: magazine.url } })}
+        {...(magazine.pdf && { callToAction2: { text: 'Descargar', href: magazine.pdf } })}
+      />
+    ))
+  }
+  <div class="mb-20"></div>
+</Layout>

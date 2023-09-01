@@ -16,7 +16,12 @@ const contactData = await fetchContact();
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <Hero title={contactData.title} image={{ src: findImage(contactData.image), alt: 'ermita' }} />
+  <Hero
+    title={contactData.title}
+    image={{ src: findImage(contactData.image), alt: 'ermita' }}
+    subtitle={contactData.subtitle}
+    tagline={contactData.tagline}
+  />
 
   <div class="relative w-full h-96">
     <iframe

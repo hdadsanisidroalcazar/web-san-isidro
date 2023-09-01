@@ -91,7 +91,8 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
 
 const load = async function (): Promise<Array<Post>> {
   const posts = await getCollection('post');
-  const normalizedPosts = posts.map(async (post) => await getNormalizedPost(post));
+  const normalizedPosts = posts
+  .map(async (post) => await getNormalizedPost(post));
 
   const results = (await Promise.all(normalizedPosts))
     .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
@@ -156,7 +157,8 @@ export const findPostsByIds = async (ids: Array<string>): Promise<Array<Post>> =
 /** */
 export const findLatestPosts = async ({ count }: { count?: number }): Promise<Array<Post>> => {
   const _count = count || 4;
-  const posts = await fetchPosts();
+  let posts = await fetchPosts();
+  posts = posts.filter((post) => !APP_BLOG.archivedCategories.includes(post.category || ''));
 
   return posts ? posts.slice(0, _count) : [];
 };

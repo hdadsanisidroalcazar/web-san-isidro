@@ -11,13 +11,13 @@ const metadata = {
   ignoreTitleTemplate: true,
 };
 
-const homeData = await fetchHome()
+const homeData = await fetchHome();
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <div class="w-full bg-cover bg-top" style="height:32rem; background-image: url(/images/hero.jpg);"/>
+  <div class="w-full bg-cover bg-top" style="height:32rem; background-image: url(/images/hero.jpg);"></div>
 
   <!-- Note Widget ******************* -->
 
@@ -25,10 +25,7 @@ const homeData = await fetchHome()
 
   <!-- HighlightedPosts Widget ******* -->
 
-  <BlogLatestPosts
-    title="Actualidad"
-    information='Noticias y eventos de la Hermandad'
-  />
+  <BlogLatestPosts title="Actualidad" information="Noticias y eventos de la Hermandad" />
 
   <!-- FAQs Widget ******************* -->
 
@@ -36,9 +33,7 @@ const homeData = await fetchHome()
     title={homeData.titlefaqs}
     subtitle={homeData.subtitlefaqs}
     tagline={homeData.taglinefaqs}
-    classes={{ container: 'max-w-6xl'}}
+    classes={{ container: 'max-w-6xl' }}
     items={homeData.faqs}
   />
-
-  
 </Layout>

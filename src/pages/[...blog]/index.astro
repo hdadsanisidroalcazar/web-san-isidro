@@ -8,10 +8,12 @@ import ToBlogLink from '~/components/blog/ToBlogLink.astro';
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import { getStaticPathsBlogPost, blogPostRobots } from '~/utils/blog';
 import { findImage } from '~/utils/images';
+import type { Code } from 'astro:components';
+import { APP_BLOG } from '~/utils/config';
 
 export const prerender = true;
 
-export async function getStaticPaths () {
+export async function getStaticPaths() {
   return await getStaticPathsBlogPost();
 }
 
@@ -35,9 +37,11 @@ const metadata = merge(
   },
   { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || url } : {}) }
 );
+
+const isArchivedCategory = APP_BLOG.archivedCategories?.includes(post.category);
 ---
 
 <Layout metadata={metadata}>
   <SinglePost post={{ ...post, image: image }} url={url} />
-  <ToBlogLink />
+  <ToBlogLink {...isArchivedCategory && { category: post.category }} />
 </Layout>
