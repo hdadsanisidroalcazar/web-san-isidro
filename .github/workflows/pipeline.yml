@@ -21,6 +21,9 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - uses: actions/setup-node@v3
         with:
           cache: "pnpm"
@@ -36,6 +39,9 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - uses: actions/setup-node@v3
         with:
           cache: "pnpm"
@@ -51,6 +57,9 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - uses: actions/setup-node@v3
         with:
           cache: "pnpm"
@@ -59,18 +68,3 @@ jobs:
         run: pnpm i 
       - name: Build
         run: pnpm build
-
-  build-tina:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v3
-        with:
-          cache: "pnpm"
-          node-version-file: ".nvmrc"
-      - name: Install dependencies
-        run: pnpm i 
-      - name: Build Tina
-        run: pnpm build:tina

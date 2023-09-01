@@ -4,3 +4,5 @@ node_modules
 .changeset
 tina/__generated__
 tina/tina-lock.json
+pnpm-lock.yaml
+public/admin
