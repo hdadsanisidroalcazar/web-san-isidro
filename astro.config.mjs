@@ -8,7 +8,7 @@ import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import compress from 'astro-compress';
 import icon from 'astro-icon';
-import tasks from "./src/utils/tasks";
+import tasks from './src/utils/tasks';
 
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 
@@ -22,10 +22,6 @@ export default defineConfig({
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
 
   output: 'static',
-
-  build: {
-    inlineStylesheets: 'auto',
-  },
 
   integrations: [
     tailwind({

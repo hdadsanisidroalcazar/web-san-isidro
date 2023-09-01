@@ -1,10 +1,9 @@
-const formatter: Intl.DateTimeFormat =
-  new Intl.DateTimeFormat('es', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-    timeZone: 'Europe/Madrid',
-  });
+const formatter: Intl.DateTimeFormat = new Intl.DateTimeFormat('es', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+  timeZone: 'Europe/Madrid',
+});
 
 export const getFormattedDate = (date: Date): string => (date ? formatter.format(date) : '');
 

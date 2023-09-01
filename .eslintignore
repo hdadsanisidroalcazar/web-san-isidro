@@ -2,3 +2,5 @@ dist
 node_modules
 .github
 types.generated.d.ts
+tina/__generated__
+tina/tina-lock.json

@@ -2,8 +2,8 @@ import { getCollection } from 'astro:content';
 import type { Home, Contact, Sponsor } from '~/types';
 
 let _home: Home;
-let _contact: Contact
-let _sponsor: Sponsor
+let _contact: Contact;
+let _sponsor: Sponsor;
 
 /** */
 export const fetchHome = async (): Promise<Home> => {
@@ -23,7 +23,6 @@ export const fetchSponsors = async (): Promise<Sponsor> => {
 
   return _sponsor;
 };
-
 
 export const fetchContact = async (): Promise<Contact> => {
   if (!_contact) {

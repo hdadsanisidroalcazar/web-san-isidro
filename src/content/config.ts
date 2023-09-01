@@ -70,12 +70,14 @@ const homeCollection = defineCollection({
     titlefaqs: z.string().optional(),
     subtitlefaqs: z.string().optional(),
     taglinefaqs: z.string().optional(),
-    faqs: z.array(
-      z.object({
-        title: z.string(),
-        description: z.string(),
-      })
-    ).optional(),
+    faqs: z
+      .array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+        })
+      )
+      .optional(),
   }),
 });
 

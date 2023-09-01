@@ -9,7 +9,7 @@ metadata:
   title:
     default: Hermandad de San Isidro Labrador
     template: '%s — Hermandad de San Isidro Labrador'
-  description: "Web de la hermandad de San Isidro Labrador de Alcázar de San Juan"
+  description: 'Web de la hermandad de San Isidro Labrador de Alcázar de San Juan'
   robots:
     index: true
     follow: true
@@ -54,7 +54,7 @@ apps:
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
-# rgb(25.5 68.2 34.5)
+  # rgb(25.5 68.2 34.5)
   tokens:
     default:
       fonts:
