@@ -1,5 +1,5 @@
 import { RSS } from './utils/config';
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -29,6 +29,10 @@ export const headerData = {
         {
           text: 'Medalla',
           href: getPermalink('/medalla'),
+        },
+        {
+          text: 'Artículos',
+          href: getPermalink('/articulos', 'category'),
         },
       ],
     },
@@ -90,6 +94,7 @@ export const footerData = {
         { text: 'Evolución', href: '/hermandad/evolucion' },
         { text: 'La ermita', href: '/ermita' },
         { text: 'La medalla', href: '/medalla' },
+        { text: 'Artículos', href: '/categoria/articulos' },
       ],
     },
     {
@@ -109,7 +114,6 @@ export const footerData = {
       ],
     },
     {
-      title: 'Otros',
       links: [
         { text: 'Galería de fotos', href: '/galería' },
         { text: 'Patrocinadores', href: '/patrocinadores' },
