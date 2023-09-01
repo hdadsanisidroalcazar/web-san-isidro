@@ -43,3 +43,8 @@ export const fetchMagazines = async (): Promise<Magazine[]> => {
 
   return _magazines;
 };
+
+export const fetchLastMagazine = async (): Promise<Magazine> => {
+  const magazines = await fetchMagazines();
+  return magazines[0];
+}
