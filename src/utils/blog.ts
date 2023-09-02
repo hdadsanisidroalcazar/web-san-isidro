@@ -125,6 +125,13 @@ export const fetchPosts = async (): Promise<Array<Post>> => {
   return _posts;
 };
 
+const getPostNotArchived = async () => {
+  let posts = await fetchPosts();
+  posts = posts.filter((post) => !APP_BLOG.archivedCategories.includes(post.category || ''));
+
+  return posts;
+};
+
 /** */
 export const findPostsBySlugs = async (slugs: Array<string>): Promise<Array<Post>> => {
   if (!Array.isArray(slugs)) return [];
@@ -156,16 +163,16 @@ export const findPostsByIds = async (ids: Array<string>): Promise<Array<Post>> =
 /** */
 export const findLatestPosts = async ({ count }: { count?: number }): Promise<Array<Post>> => {
   const _count = count || 4;
-  let posts = await fetchPosts();
-  posts = posts.filter((post) => !APP_BLOG.archivedCategories.includes(post.category || ''));
+  const posts = await getPostNotArchived();
 
   return posts ? posts.slice(0, _count) : [];
 };
 
 /** */
-export const getStaticPathsBlogList = async ({ paginate }) => {
+export const getStaticPathsBlogList = async ({ paginate, archived = true }) => {
   if (!isBlogEnabled || !isBlogListRouteEnabled) return [];
-  return paginate(await fetchPosts(), {
+  let posts = archived ? await fetchPosts() : await getPostNotArchived();
+  return paginate(posts, {
     params: { blog: BLOG_BASE || undefined },
     pageSize: blogPostsPerPage,
   });

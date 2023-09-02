@@ -121,8 +121,8 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Términos y condiciones', href: getPermalink('/terms') },
-    { text: 'Politica de privacidad', href: getPermalink('/privacy') },
+    { text: 'Términos y condiciones', href: getPermalink('/terminos') },
+    { text: 'Politica de privacidad', href: getPermalink('/privacidad') },
   ],
   socialLinks: [
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: `https://www.instagram.com/${RSS.instagram}` },
