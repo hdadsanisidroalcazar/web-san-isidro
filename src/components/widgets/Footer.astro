@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { SITE } from '~/utils/config';
+import { fetchContact } from '~/utils/page';
 import { getHomePermalink } from '~/utils/permalinks';
 
 interface Link {
@@ -24,6 +25,7 @@ export interface Props {
 }
 
 const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+const contactData = await fetchContact();
 ---
 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
@@ -33,8 +35,10 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
       <div class="col-span-12 lg:col-span-4">
         <div class="mb-2">
           <a class="inline-block font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
+          <p class="mt-5">Teléfono: {contactData.phone}</p>
+          <p class="mt-5" set:html={contactData.address} />
         </div>
-        <div class="text-sm text-muted">
+        <div class="text-sm text-muted mt-5">
           {
             secondaryLinks.map(({ text, href }) => (
               <a
@@ -79,7 +83,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
                   class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
                   aria-label={ariaLabel}
                   href={href}
-                  rel='noopener noreferrer'
+                  rel="noopener noreferrer"
                 >
                   {icon && <Icon name={icon} class="w-5 h-5" />}
                   <Fragment set:html={text} />

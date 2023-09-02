@@ -1,24 +1,24 @@
 ---
-title: 'Terminos y condiciones'
+title: 'Términos y condiciones'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
 _Última acutualización_: 2 de Septiembre de 2023
 
-Razón Social: Hermandad de San Isidro Labrador
+**Razón Social**: Hermandad de San Isidro Labrador
 
-Domicilio Social: 
-Casa Parroquial de la Iglesia de San Francisco
-Plaza de San Francisco, s/n 
- 13600 - Alcázar de San Juan (Ciudad Real) 
+**Domicilio Social**: <br/>
+Casa Parroquial de la Iglesia de San Francisco<br/>
+Plaza de San Francisco, s/n<br/>
+13600 - Alcázar de San Juan (Ciudad Real)
 
-CIF: 
+**CIF**: 
 
-Teléfono: 654 53 82 29
+**Teléfono**: 654 53 82 29
 
-e-Mail: hdadsanisidroalcazar@outlook.es
+**Correo electrónico**: hdadsanisidroalcazar@outlook.es
 
-Nombre de dominio: hermandadsanisidrolabrador.es
+**Nombre de dominio**: hermandadsanisidrolabrador.es
 
 Las presentes Términos, regulan el acceso y la utilización del Sitio web, así como de todos los contenidos que en los mismos se muestren o se pongan a disposición de los usuarios. Léalos detenidamente antes de utilizar Nuestro Servicio.
 

@@ -121,7 +121,7 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Terminos y condiciones', href: getPermalink('/terms') },
+    { text: 'Términos y condiciones', href: getPermalink('/terms') },
     { text: 'Politica de privacidad', href: getPermalink('/privacy') },
   ],
   socialLinks: [
