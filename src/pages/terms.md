@@ -1,120 +1,127 @@
 ---
-title: 'Terms and Conditions'
+title: 'Terminos y condiciones'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: January 06, 2023
+_Última acutualización_: 2 de Septiembre de 2023
 
-Please read these terms and conditions carefully before using Our Service.
+Razón Social: Hermandad de San Isidro Labrador
 
-## Interpretation and Definitions
+Domicilio Social: 
+Casa Parroquial de la Iglesia de San Francisco
+Plaza de San Francisco, s/n 
+ 13600 - Alcázar de San Juan (Ciudad Real) 
 
-### Interpretation
+CIF: 
 
-The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+Teléfono: 654 53 82 29
 
-### Definitions
+e-Mail: hdadsanisidroalcazar@outlook.es
 
-For the purposes of these Terms and Conditions:
+Nombre de dominio: hermandadsanisidrolabrador.es
 
-- **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
+Las presentes Términos, regulan el acceso y la utilización del Sitio web, así como de todos los contenidos que en los mismos se muestren o se pongan a disposición de los usuarios. Léalos detenidamente antes de utilizar Nuestro Servicio.
 
-- **Country** refers to: California, United States
+## Interpretación y Definiciones
 
-- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to AstroWind LLC, 1 Cupertino, CA 95014.
+### Interpretación
 
-- **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
+Las palabras cuya letra inicial está en mayúscula tienen significados definidos en las siguientes condiciones. Las siguientes definiciones tendrán el mismo significado sin importar si aparecen en singular o en plural.
 
-- **Service** refers to the Website.
+### Definiciones
 
-- **Terms and Conditions** (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement is a Demo.
+A los efectos de estos Términos y Condiciones:
 
-- **Third-party Social Media Service** means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
+- **Asociados** individuos miembros de la Asociación.
 
-- **Website** refers to AstroWind, accessible from [https://astrowind.vercel.app](https://astrowind.vercel.app)
+- **País** se refiere a: España.
 
-- **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
+- **Asociación** (referida como "la Hermandad", "Nosotros", "Nos" o "Nuestros" en este Acuerdo) se refiere a la Hermandad de San Isidro Labrador, casa Parroquial de la Iglesia de San Francisco, Plaza de San Francisco, s/n, Alcázar de San Juan.
 
-## Acknowledgment
+- **Dispositivo** significa cualquier dispositivo que pueda acceder al Servicio, como un ordenador, un teléfono móvil o una tablet.
 
-These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.
+- **Servicio** se refiere al Sitio web.
 
-Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service.
+- **Términos y Condiciones** (también referidos como "Términos") significan estos Términos y Condiciones que forman el acuerdo completo entre Usted y la Hermandad con respecto al uso del Servicio.
 
-By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.
+- **Servicio de Medios Sociales de Terceros** significa cualquier servicio o contenido (incluyendo datos, información, productos o servicios) proporcionado por un tercero que pueda ser mostrado, incluido o puesto a disposición a través del Servicio.
 
-You represent that you are over the age of 18\. The Company does not permit those under 18 to use the Service.
+- **Sitio web** se refiere a esta web, accesible desde [https://hermandadsanisidrolabrador.es/](https://hermandadsanisidrolabrador.es/)
 
-Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Application or the Website and tells You about Your privacy rights and how the law protects You. Please read Our Privacy Policy carefully before using Our Service.
+- **Usted** significa el individuo que accede o utiliza el Servicio, o la empresa u otra entidad legal en nombre de la cual dicho individuo está accediendo o utilizando el Servicio, según corresponda.
 
-## Links to Other Websites
+## Reconocimiento
 
-Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company.
+Estos son los Términos y Condiciones que rigen el uso de este Servicio y el acuerdo que opera entre Usted y la Hermandad. Estos Términos y Condiciones establecen los derechos y obligaciones de todos los usuarios con respecto al uso del Servicio.
 
-The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such web sites or services.
+Su acceso y uso del Servicio están condicionados a su aceptación y cumplimiento de estos Términos y Condiciones. Estos Términos y Condiciones se aplican a todos los visitantes, usuarios y otras personas que accedan o utilicen el Servicio.
 
-We strongly advise You to read the terms and conditions and privacy policies of any third-party web sites or services that You visit.
+Al acceder o utilizar el Servicio, Usted acepta quedar obligado por estos Términos y Condiciones. Si Usted no está de acuerdo con alguna parte de estos Términos y Condiciones, entonces no puede acceder al Servicio.
 
-## Termination
+Su acceso y uso del Servicio también están condicionados a su aceptación y cumplimiento de la Política de Privacidad de la Compañía. Nuestra Política de Privacidad describe nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de su información personal cuando Usted utiliza la Aplicación o el Sitio web, y le informa sobre sus derechos de privacidad y cómo la ley le protege. Lea Nuestra Política de Privacidad detalladamente antes de utilizar Nuestro Servicio.
 
-We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.
+### Propiedad intelectual
 
-Upon termination, Your right to use the Service will cease immediately.
+El Sitio web, incluyendo a título enunciativo pero no limitativo su programación, edición, compilación y demás elementos necesarios para su funcionamiento, los diseños, logotipos, texto y/o gráficos son propiedad del prestador o en su caso dispone de licencia o autorización expresa por parte de los autores. Todos los contenidos del sitio web se encuentran debidamente protegidos por la normativa de propiedad intelectual e industrial, así como inscritos en los registros públicos correspondientes.
 
-## Limitation of Liability
+Independientemente de la finalidad para la que fueran destinados, la reproducción total o parcial, uso, explotación, distribución y comercialización, requiere en todo caso de la autorización escrita previa por parte del prestador. Cualquier uso no autorizado previamente por parte del prestador será considerado un incumplimiento grave de los derechos de propiedad intelectual o industrial del autor.
 
-Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.
+Los diseños, logotipos, texto y/o gráficos ajenos a la Hermandad y que pudieran aparecer en el sitio web, pertenecen a sus respectivos propietarios, siendo ellos mismos responsables de cualquier posible controversia que pudiera suscitarse respecto a los mismos. En todo caso, el prestador cuenta con la autorización expresa y previa por parte de los mismos.
 
-To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.
+La Hermandad reconoce a favor de sus titulares los correspondientes derechos de propiedad industrial e intelectual, no implicando su sola mención o aparición en el sitio web la existencia de derechos o responsabilidad alguna del prestador sobre los mismos, como tampoco respaldo, patrocinio o recomendación por parte del mismo.
 
-Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party's liability will be limited to the greatest extent permitted by law.
+Para realizar cualquier tipo de observación respecto a posibles incumplimientos de los derechos de propiedad intelectual o industrial, así como sobre cualquiera de los contenidos del sitio web, puede hacerlo a través del correo electrónico al final de estos Términos.
 
-## "AS IS" and "AS AVAILABLE" Disclaimer
+## Enlaces a Otros Sitios Web
 
-The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice. Without limitation to the foregoing, the Company provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
+Nuestro Servicio puede contener enlaces a sitios web de terceros. La Hermandad no tiene control sobre ellos, ni asume ninguna responsabilidad por el contenido, las políticas de privacidad o las prácticas de ningún sitio web o servicio de terceros. Usted reconoce y acepta además que la Hermandad no será responsable, directa o indirectamente, de ningún daño o pérdida causada o presuntamente causada por el uso o la dependencia de dicho contenido, bienes o servicios disponibles en o a través de tales sitios web o servicios.
 
-Without limiting the foregoing, neither the Company nor any of the company's provider makes any representation or warranty of any kind, express or implied: (i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; (ii) that the Service will be uninterrupted or error-free; (iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or (iv) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.
+Le recomendamos encarecidamente que lea los términos y condiciones y las políticas de privacidad de cualquier sitio web o servicio de terceros que Usted visite.
 
-Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.
+## Terminación
 
-## Governing Law
+Podemos terminar o suspender Su acceso inmediatamente, sin previo aviso o responsabilidad, por cualquier motivo, incluyendo, entre otros, si Usted incumple estos Términos y Condiciones.
 
-The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.
+Al terminar, Su derecho de usar el Servicio cesará inmediatamente.
 
-## Disputes Resolution
+## Limitación de Responsabilidad
 
-If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.
+La Hermandad se exime de cualquier tipo de responsabilidad derivada de la información publicada en su sitio web, siempre que esta información haya sido manipulada o introducida por un tercero ajeno a la misma.
 
-## For European Union (EU) Users
+La Hermandad no se hace responsable de la información y contenidos almacenados, a título enunciativo pero no limitativo, en foros, chat´s, generadores de blogs, comentarios, redes sociales o cualesquiera otro medio que permita a terceros publicar contenidos de forma independiente en la página web del prestador. No obstante y en cumplimiento de lo dispuesto en el art. 11 y 16 de la LSSI-CE, el prestador se pone a disposición de todos los usuarios, autoridades y fuerzas de seguridad, y colaborando de forma activa en la retirada o en su caso bloqueo de todos aquellos contenidos que pudieran afectar o contravenir la legislación nacional, o internacional, derechos de terceros o la moral y el orden público. En caso de que el usuario considere que existe en el sitio web algún contenido que pudiera ser susceptible de esta clasificación, se ruega lo notifique de forma inmediata al administrador del sitio web.
 
-If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident in.
+Este sitio web ha sido revisado y probado para que funcione correctamente. En principio, puede garantizarse el correcto funcionamiento los 365 días del año, 24 horas al día. No obstante, el prestador no descarta la posibilidad de que existan ciertos errores de programación, o que acontezcan causas de fuerza mayor, catástrofes naturales, huelgas, o circunstancias semejantes que hagan imposible el acceso a la página web.
 
-## United States Legal Compliance
+## Descargo de Responsabilidad "TAL CUAL" y "SEGÚN DISPONIBILIDAD"
 
-You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.
+El Servicio se proporciona a Usted "TAL CUAL" y "SEGÚN DISPONIBILIDAD" y con todos los defectos y fallos sin garantía de ningún tipo. En la medida máxima permitida por la ley aplicable, la Hermandad, en su propio nombre y en nombre de sus Asociados y de sus respectivos licenciantes y proveedores de servicios, niega expresamente todas las garantías, ya sean expresas, implícitas, legales o de otro tipo, con respecto al Servicio, incluyendo todas las garantías implícitas de comerciabilidad, idoneidad para un propósito particular, título y no infracción, y garantías que puedan surgir de la relación comercial, curso del desempeño, uso o práctica comercial. Sin limitación a lo anterior, la Hermandad no ofrece ninguna garantía ni compromiso, y no hace representación alguna de que el Servicio cumplirá con sus requisitos, logrará resultados previstos, será compatible o funcionará con otro software, aplicaciones, sistemas o servicios, funcionará sin interrupciones, cumplirá con estándares de rendimiento o confiabilidad, o estará libre de errores, o que los errores o defectos se puedan o se corregirán.
 
-## Severability and Waiver
+Sin perjuicio de lo anterior, ni la Hermandad ni ninguno de los proveedores de la Hermandad realiza ninguna representación o garantía de ningún tipo, expresa o implícita: (i) en cuanto a la operación o disponibilidad del Servicio, o la información, contenido y materiales o productos incluidos en él; (ii) que el Servicio será ininterrumpido o sin errores; (iii) en cuanto a la precisión, confiabilidad o actualidad de cualquier información o contenido proporcionado a través del Servicio; o (iv) que el Servicio, sus servidores, el contenido o los correos electrónicos enviados por o en nombre de la Hermandad estén libres de virus, scripts, caballos de Troya, gusanos, malware, bombas de tiempo u otros componentes dañinos.
 
-### Severability
+## Ley Aplicable
 
-If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
+Para la resolución de todas las controversias o cuestiones relacionadas con el presente sitio web o de las actividades en él desarrolladas, será de aplicación la legislación española, a la que se someten expresamente las partes, siendo competentes para la resolución de todos los conflictos derivados o relacionados con su uso los Juzgados y Tribunales de Alcázar de San Juan o el que por turno corresponda.
 
-### Waiver
+## Resolución de Disputas
 
-Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not effect a party's ability to exercise such right or require such performance at any time thereafter nor shall the waiver of a breach constitute a waiver of any subsequent breach.
+Si tiene alguna preocupación o disputa sobre el Servicio, acepta intentar resolver la disputa de manera informal contactando primero a la Compañía.
 
-## Translation Interpretation
+## Divisibilidad y Renuncia
 
-These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute.
+### Divisibilidad
 
-## Changes to These Terms and Conditions
+Si alguna disposición de estos Términos se considera inaplicable o inválida, dicha disposición se modificará e interpretará para lograr los objetivos de dicha disposición en la medida máxima posible según la ley aplicable y las disposiciones restantes continuarán en pleno vigor y efecto.
 
-We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at Our sole discretion.
+### Renuncia
 
-By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the website and the Service.
+Salvo lo dispuesto en este documento, la falta de ejercicio de un derecho o la exigencia del cumplimiento de una obligación bajo estos Términos no afectará la capacidad de una parte para ejercer dicho derecho o exigir dicho cumplimiento en cualquier momento posterior, ni la renuncia de un incumplimiento constituirá una renuncia de cualquier incumplimiento posterior.
 
-## Contact Us
+## Cambios en estos Términos y Condiciones
 
-If you have any questions about these Terms and Conditions, You can contact us:
+Nos reservamos el derecho, a nuestra única discreción, de modificar o reemplazar estos Términos en cualquier momento.Al continuar accediendo o utilizando nuestro Servicio después de que estas revisiones, acepta quedar obligado por los términos revisados. Si no está de acuerdo con los nuevos términos, en su totalidad o en parte, le rogamos que deje de utilizar el sitio web y el Servicio.
 
-- By email: somecoolemail@domain.com
+## Contáctenos
+
+Si tiene alguna pregunta sobre estos Términos y Condiciones, puede contactarnos:
+
+- Por correo electrónico: hdadsanisidroalcazar@outlook.es
