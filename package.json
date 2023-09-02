@@ -50,6 +50,7 @@
     "astro-icon": "^1.0.0-next.2",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
+    "photoswipe": "^5.3.8",
     "tinacms": "^1.5.20",
     "unpic": "^3.10.0"
   }

@@ -29,6 +29,9 @@ dependencies:
   lodash.merge:
     specifier: ^4.6.2
     version: 4.6.2
+  photoswipe:
+    specifier: ^5.3.8
+    version: 5.3.8
   tinacms:
     specifier: ^1.5.20
     version: 1.5.20(@babel/core@7.22.11)(react-dom@18.2.0)(react@18.2.0)
@@ -12156,6 +12159,11 @@ packages:
       estree-walker: 3.0.3
       is-reference: 3.0.1
     dev: true
+
+  /photoswipe@5.3.8:
+    resolution: {integrity: sha512-4vTzOQt8GP4Chsm0s+8j2xDtVHAEN252PxrU12A1zXauNn0zD5HRHgjALKO2GKTyBnTnOrJUOxbV8LTrFIMrYw==}
+    engines: {node: '>= 0.12.0'}
+    dev: false
 
   /picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}

@@ -1,0 +1,27 @@
+---
+import type { ImageMetadata } from 'astro';
+import Lightbox from './Lightbox.astro';
+
+export interface Props {
+  folder: string;
+}
+
+const { folder } = Astro.props;
+
+const imageFiles = import.meta.glob<ImageMetadata>('../assets/images/gallery/**/*.{png,jpg,webp,jpeg,avif}', {
+  import: 'default',
+  eager: true,
+});
+const folderFiles = Object.keys(imageFiles).filter((image) => image.search(folder) >= 0);
+const imageSrcs = folderFiles.map((image) => imageFiles[image]);
+const gallery = 'gallery-' + folder;
+---
+
+<div
+  id={gallery}
+  class="not-prose mx-auto block w-full columns-1 gap-2 sm:columns-2 lg:columns-3 lg:gap-4 place-self-center"
+  itemscope
+  itemtype="http://schema.org/ImageGallery"
+>
+  <Lightbox id={gallery} images={imageSrcs} />
+</div>
