@@ -30,6 +30,7 @@ apps:
     archivedCategories:
       - articulos
       - entrevistas
+      - poemas
 
     post:
       isEnabled: true

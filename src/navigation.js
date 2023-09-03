@@ -34,6 +34,14 @@ export const headerData = {
           text: 'Artículos',
           href: getPermalink('/articulos', 'category'),
         },
+        {
+          text: 'Entrevistas',
+          href: getPermalink('/entrevistas', 'category'),
+        },
+        {
+          text: 'Poemas',
+          href: getPermalink('/poemas', 'category'),
+        },
       ],
     },
     {
@@ -95,6 +103,8 @@ export const footerData = {
         { text: 'La ermita', href: '/ermita' },
         { text: 'La medalla', href: '/medalla' },
         { text: 'Artículos', href: '/categoria/articulos' },
+        { text: 'Entrevistas', href: '/categoria/entrevistas' },
+        { text: 'Poemas', href: '/categoria/poemas' },
       ],
     },
     {
