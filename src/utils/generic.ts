@@ -14,7 +14,7 @@ const generatePermalink = async ({ id, slug }: { id: string; slug: string }) => 
 };
 
 const getNormalizedPost = async (generic: CollectionEntry<'generic'>): Promise<Generic> => {
-  const { id, slug: rawSlug = '' } = generic;
+  const { id, slug: rawSlug = '', data } = generic;
   const { Content } = await generic.render();
 
   const slug = cleanSlug(rawSlug); // cleanSlug(rawSlug.split('/').pop());
@@ -23,6 +23,7 @@ const getNormalizedPost = async (generic: CollectionEntry<'generic'>): Promise<G
     id: id,
     slug: slug,
     permalink: await generatePermalink({ id, slug }),
+    title: data.title,
 
     Content: Content,
   };
@@ -31,7 +32,7 @@ const getNormalizedPost = async (generic: CollectionEntry<'generic'>): Promise<G
 const load = async function (): Promise<Array<Generic>> {
   const pages = await getCollection('generic');
   const normalizedPages = pages.map(async (page) => await getNormalizedPost(page));
-  
+
   const results = await Promise.all(normalizedPages);
 
   return results;

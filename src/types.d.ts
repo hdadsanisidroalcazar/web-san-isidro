@@ -49,6 +49,8 @@ export interface Generic {
 
   Content?: unknown;
   content?: string;
+
+  title?: string;
 }
 
 export interface Post {
