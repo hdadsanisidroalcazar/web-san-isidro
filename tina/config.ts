@@ -225,6 +225,7 @@ export default defineConfig({
         path: 'src/content/generic',
         format: 'mdx',
         fields: [
+          { type: 'string', name: 'title', label: 'Título', required: true },
           {
             type: 'rich-text',
             name: 'body',
