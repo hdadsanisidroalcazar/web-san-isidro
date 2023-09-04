@@ -1,6 +1,6 @@
 import slugify from 'limax';
 
-import { SITE, APP_BLOG } from '~/utils/config';
+import { SITE, APP_BLOG, APP_GENERIC } from '~/utils/config';
 
 import { trim } from '~/utils/utils';
 
@@ -26,6 +26,7 @@ export const CATEGORY_BASE = cleanSlug(APP_BLOG?.category?.pathname);
 export const TAG_BASE = cleanSlug(APP_BLOG?.tag?.pathname) || 'tag';
 
 export const POST_PERMALINK_PATTERN = trimSlash(APP_BLOG?.post?.permalink || `${BLOG_BASE}/%slug%`);
+export const PAGE_PERMALINK_PATTERN = trimSlash(APP_GENERIC?.generic?.permalink || '/%slug%');
 
 /** */
 export const getCanonical = (path = ''): string | URL => {

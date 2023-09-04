@@ -220,6 +220,20 @@ export default defineConfig({
         ],
       },
       {
+        name: 'generic',
+        label: 'Genéricas',
+        path: 'src/content/generic',
+        format: 'mdx',
+        fields: [
+          {
+            type: 'rich-text',
+            name: 'body',
+            label: 'Cuerpo',
+            isBody: true,
+          },
+        ],
+      },
+      {
         name: 'post',
         label: 'Publicaciones',
         path: 'src/content/post',

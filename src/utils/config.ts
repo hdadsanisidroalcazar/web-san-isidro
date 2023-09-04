@@ -17,6 +17,18 @@ export interface MetaDataConfig extends Omit<MetaData, 'title'> {
   };
 }
 
+export interface AppGenericConfig {
+  isEnabled: boolean;
+  generic: {
+    isEnabled: boolean;
+    permalink: string;
+    robots: {
+      index: boolean;
+      follow: boolean;
+    };
+  };
+}
+
 export interface AppBlogConfig {
   isEnabled: boolean;
   postsPerPage: number;
@@ -64,6 +76,7 @@ const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
   metadata?: MetaDataConfig;
   apps?: {
     blog?: AppBlogConfig;
+    generic?: AppGenericConfig;
   };
   ui?: unknown;
   rss?: RssConfig;
@@ -101,6 +114,22 @@ const getMetadata = () => {
   };
 
   return merge({}, _default, config?.metadata ?? {}) as MetaDataConfig;
+};
+
+const getAppGeneric = () => {
+  const _default = {
+    isEnabled: false,
+    generic: {
+      isEnabled: true,
+      permalink: '/%slug%',
+      robots: {
+        index: true,
+        follow: true,
+      },
+    },
+  };
+
+  return merge({}, _default, config?.apps?.generic ?? {}) as AppGenericConfig;
 };
 
 const getAppBlog = () => {
@@ -167,5 +196,6 @@ const getRss = () => {
 export const SITE = getSite();
 export const METADATA = getMetadata();
 export const APP_BLOG = getAppBlog();
+export const APP_GENERIC = getAppGeneric();
 export const UI = getUI();
 export const RSS = getRss();

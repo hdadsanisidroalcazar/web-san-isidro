@@ -37,6 +37,20 @@ export interface Contact {
   map: string;
 }
 
+export interface Generic {
+  /** A unique ID number that identifies a post. */
+  id: string;
+
+  /** A post’s unique slug – part of the post’s URL based on its name, i.e. a post called “My Sample Page” has a slug “my-sample-page”. */
+  slug: string;
+
+  /**  */
+  permalink: string;
+
+  Content?: unknown;
+  content?: string;
+}
+
 export interface Post {
   /** A unique ID number that identifies a post. */
   id: string;

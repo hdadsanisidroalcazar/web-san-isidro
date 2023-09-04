@@ -1,0 +1,18 @@
+---
+import MarkdownLayout from '~/layouts/MarkdownLayout.astro';
+
+import { getStaticPathsGenericPage } from '~/utils/generic';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  return await getStaticPathsGenericPage();
+}
+
+const { generic } = Astro.props;
+const Content = generic?.Content || null;
+---
+
+<MarkdownLayout frontmatter={{ title: 'Prueba' }}>
+  <Content />
+</MarkdownLayout>
