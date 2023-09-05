@@ -6,3 +6,5 @@ tina/__generated__
 tina/tina-lock.json
 pnpm-lock.yaml
 public/admin
+*.md
+*.mdx

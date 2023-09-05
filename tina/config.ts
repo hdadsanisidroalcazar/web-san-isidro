@@ -300,6 +300,12 @@ export default defineConfig({
         label: 'Cultos',
         path: 'src/content/cult',
         format: 'json',
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
         fields: [
           {
             type: 'string',
@@ -347,7 +353,6 @@ export default defineConfig({
                 list: true,
                 ui: {
                   itemProps: (item) => {
-                    // Field values are accessed by item?.<Field name>
                     return { label: item?.title };
                   },
                 },
@@ -365,7 +370,7 @@ export default defineConfig({
                     required: true,
                   },
                   {
-                    type: 'string',
+                    type: 'rich-text',
                     name: 'description',
                     label: 'Descripción',
                   },

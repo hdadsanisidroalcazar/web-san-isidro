@@ -9,6 +9,23 @@ export interface Home {
   }[];
 }
 
+export interface Cult {
+  title: string;
+  subtitle?: string;
+  tagline?: string;
+  pdf?: string;
+  days: {
+    title: string;
+    event: {
+      title: string;
+      time: string;
+      description?: string;
+      location?: string;
+      image?: string;
+    }[];
+  }[];
+}
+
 export interface Magazine {
   year: string;
   description?: string;
