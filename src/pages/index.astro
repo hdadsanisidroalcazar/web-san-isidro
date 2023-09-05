@@ -30,14 +30,14 @@ const lastMagazine = await fetchLastMagazine();
 
   <CallToAction
     title={`Revista ${lastMagazine.year}`}
-    subtitle={lastMagazine.description || "Descarga el último número de la revista anual de la hermandad"}
+    subtitle={lastMagazine.description || 'Descarga el último número de la revista anual de la hermandad'}
     tagline={lastMagazine.description && 'Descarga la revista de la hermandad'}
     callToAction={{
       text: 'Ver',
       href: lastMagazine.url,
       icon: 'tabler:link',
     }}
-/>
+  />
 
   <FAQs
     title={homeData.titlefaqs}

@@ -1,0 +1,21 @@
+{
+  "title": "Programa de cultos y actos",
+  "tagline": "San Isidro 2023",
+  "days": [
+    {
+      "title": "Martes 15 de Mayo",
+      "event": [
+        {
+          "title": "Evento 2",
+          "time": "10: 00",
+          "description": "Esta es la descrpción del evento"
+        },
+        {
+          "title": "Inicio",
+          "time": "09:00",
+          "description": "Descripción"
+        }
+      ]
+    }
+  ]
+}

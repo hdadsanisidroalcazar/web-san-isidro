@@ -1,0 +1,70 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import { Icon } from 'astro-icon/components';
+
+const metadata = {
+  title: 'Programa de actos y cultos de San Isidro | Hermandad de San Isidro Labrador',
+  ignoreTitleTemplate: true,
+};
+
+const schedule = [
+  {
+    day: 'Martes 15 de Mayo',
+    events: [
+      {
+        name: 'Inicio',
+        href: '#link',
+        time: '09:00',
+        details: '',
+      },
+      {
+        name: 'Acto 2',
+        href: '#link',
+        time: '10:30',
+        details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      },
+      {
+        name: 'Acto 3',
+        href: '#link',
+        time: '14:00',
+        details:
+          'Accusantium atque tempore dolore ratione unde sunt dignissimos recusandae saepe provident architecto.',
+      },
+    ],
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="San Isidro 2023" title="Programa de cultos y actos" subtitle={undefined} />
+  <div class="mx-auto pb-8 w-full max-w-7xl bg-white">
+    <div class="mx-auto max-w-4xl">
+      <div class="mt-5 sm:mt-10 flex flex-col">
+        {
+          schedule.map((day) => (
+            <div>
+              <span class="flex items-center py-3 px-5 bg-gray-800 text-gray-50">
+                <Icon name="tabler:calendar" class="mr-4 w-6 h-6" />
+                <h3 class="text-sm font-semibold uppercase tracking-wide">{day.day}</h3>
+              </span>
+              <ul class="py-1 flex flex-col">
+                {day.events.map((event) => (
+                  <li class="group py-3 px-2 sm:px-5 flex items-center">
+                    <div class="flex-shrink-0 mr-5 sm:mr-20 px-2 flex flex-col bg-green-50">
+                      <span class="text-sm sm:text-base text-primary font-bold">{event.time}</span>
+                    </div>
+                    <div class="col-span-7 sm:col-span-6 px-3">
+                      <p class="text-base text-gray-700 font-bold uppercase">{event.name}</p>
+                      <p class="mt-2 text-xs sm:text-sm text-gray-500">{event.details}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>

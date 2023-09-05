@@ -65,6 +65,12 @@ export default defineConfig({
             name: 'faqs',
             label: 'Preguntas frecuentes',
             list: true,
+            ui: {
+              itemProps: (item) => {
+                // Field values are accessed by item?.<Field name>
+                return { label: item?.title };
+              },
+            },
             fields: [
               {
                 type: 'string',
@@ -286,6 +292,96 @@ export default defineConfig({
             name: 'body',
             label: 'Cuerpo',
             isBody: true,
+          },
+        ],
+      },
+      {
+        name: 'cultos',
+        label: 'Cultos',
+        path: 'src/content/cult',
+        format: 'json',
+        fields: [
+          {
+            type: 'string',
+            name: 'title',
+            label: 'Titulo',
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: 'string',
+            name: 'subtitle',
+            label: 'Subtitulo',
+          },
+          {
+            type: 'string',
+            name: 'tagline',
+            label: 'Etiqueta superior',
+          },
+          {
+            type: 'image',
+            name: 'pdf',
+            label: 'PDF',
+          },
+          {
+            type: 'object',
+            name: 'days',
+            label: 'Días',
+            list: true,
+            ui: {
+              itemProps: (item) => {
+                // Field values are accessed by item?.<Field name>
+                return { label: item?.title };
+              },
+            },
+            fields: [
+              {
+                type: 'string',
+                name: 'title',
+                label: 'Título',
+              },
+              {
+                type: 'object',
+                name: 'event',
+                label: 'Evento',
+                list: true,
+                ui: {
+                  itemProps: (item) => {
+                    // Field values are accessed by item?.<Field name>
+                    return { label: item?.title };
+                  },
+                },
+                fields: [
+                  {
+                    type: 'string',
+                    name: 'title',
+                    label: 'Titulo',
+                    required: true,
+                  },
+                  {
+                    type: 'string',
+                    name: 'time',
+                    label: 'Hora',
+                    required: true,
+                  },
+                  {
+                    type: 'string',
+                    name: 'description',
+                    label: 'Descripción',
+                  },
+                  {
+                    type: 'string',
+                    name: 'location',
+                    label: 'Ubicación (en proceso)',
+                  },
+                  {
+                    type: 'image',
+                    name: 'image',
+                    label: 'Cartel',
+                  },
+                ],
+              },
+            ],
           },
         ],
       },
