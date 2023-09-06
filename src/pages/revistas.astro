@@ -3,12 +3,25 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import { findImage } from '~/utils/images';
 import { fetchMagazines } from '~/utils/page';
+import type { CallToAction } from '~/types';
 
 const metadata = {
   title: 'Revistas',
 };
 
 const magazines = await fetchMagazines();
+console.log(JSON.stringify(magazines, null, 2));
+
+const getActions = (magazine) => {
+  const actions: CallToAction[] = [];
+  if (magazine.url) {
+    actions.push({ text: 'Ver online', href: magazine.url, variant: 'primary' });
+  }
+  if (magazine.pdf) {
+    actions.push({ text: 'Descargar', href: magazine.pdf });
+  }
+  return actions;
+};
 ---
 
 <Layout metadata={metadata}>
@@ -18,8 +31,7 @@ const magazines = await fetchMagazines();
         title={`Revista ${magazine.year}`}
         subtitle={magazine.description}
         image={{ src: findImage(magazine.image), alt: 'portada' }}
-        {...(magazine.url && { callToAction: { text: 'Ver online', href: magazine.url } })}
-        {...(magazine.pdf && { callToAction2: { text: 'Descargar', href: magazine.pdf } })}
+        actions={getActions(magazine)}
       />
     ))
   }
