@@ -15,7 +15,7 @@ export const GET = async () => {
   const posts = await fetchPosts();
 
   const rss = await getRssString({
-    title: `${SITE.name}’s Blog`,
+    title: SITE.name,
     description: METADATA?.description || '',
     site: import.meta.env.SITE,
 
@@ -27,6 +27,8 @@ export const GET = async () => {
     })),
 
     trailingSlash: SITE.trailingSlash,
+    customData: `<language>es-es</language>`,
+		stylesheet: '/rss/styles.xsl'
   });
 
   return new Response(rss, {
