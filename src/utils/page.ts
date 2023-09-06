@@ -1,5 +1,5 @@
 import { getCollection } from 'astro:content';
-import type { Home, Contact, Sponsor, Magazine, Cult } from '~/types';
+import type { Home, Contact, Sponsor, Magazine } from '~/types';
 
 let _home: Home;
 let _contact: Contact;

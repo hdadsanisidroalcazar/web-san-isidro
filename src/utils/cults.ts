@@ -1,10 +1,9 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Cult } from '~/types';
-import { APP_CULTS } from '~/utils/config';
-import { cleanSlug, CULT_PERMALINK_PATTERN, trimSlash } from './permalinks';
+import { CULT_PERMALINK_PATTERN, trimSlash } from './permalinks';
 
-const generatePermalink = async ({ id, slug }: { id: string }) => {
+const generatePermalink = async ({ id }: { id: string }) => {
   const permalink = CULT_PERMALINK_PATTERN.replace('%id%', id);
 
   return permalink

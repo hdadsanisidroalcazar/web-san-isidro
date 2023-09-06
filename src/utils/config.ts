@@ -41,7 +41,6 @@ export interface AppCultConfig {
   };
 }
 
-
 export interface AppBlogConfig {
   isEnabled: boolean;
   postsPerPage: number;
@@ -161,7 +160,6 @@ const getAppCults = () => {
 
   return merge({}, _default, config?.apps?.cults ?? {});
 };
-
 
 const getAppBlog = () => {
   const _default = {
