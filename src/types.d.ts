@@ -1,3 +1,4 @@
+import type { HTMLAttributes } from 'astro/types';
 export interface Home {
   announce?: string;
   titlefaqs?: string;
@@ -10,6 +11,10 @@ export interface Home {
 }
 
 export interface Cult {
+  id: string;
+  slug: string;
+  permalink: string;
+  /** **/
   title: string;
   subtitle?: string;
   tagline?: string;
@@ -22,6 +27,10 @@ export interface Cult {
       description?: string;
       location?: string;
       image?: string;
+      buttons?: {
+        text: string;
+        link: string;
+      }[];
     }[];
   }[];
 }
@@ -244,11 +253,10 @@ export interface Disclaimer {
 }
 
 // COMPONENTS
-export interface CallToAction {
-  targetBlank?: boolean;
+export interface CallToAction extends HTMLAttributes<a> {
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'link';
   text?: string;
   icon?: string;
-  href?: string;
   classes?: Record<string, string>;
 }
 

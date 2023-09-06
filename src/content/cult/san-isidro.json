@@ -15,7 +15,8 @@
           "title": "Mayos en honor a San Isidro",
           "time": "21:00",
           "description": "A cargi de Asociaciones y Grupos Locales\n",
-          "location": "Atrio de la Iglesia de San Francisco"
+          "location": "Iglesia de San Francisco",
+          "map": "https://goo.gl/maps/Juk88fLdCBqRcEqF7"
         }
       ]
     },
@@ -27,7 +28,13 @@
           "time": "21:00",
           "description": "Las cuadrillas que deseen participar en la elaboración de platos manchegos típicos frios, como ensalada de limón. bizcochá, machacón o pipirrana, deberán apuntarse a traves del enlace o llamando al teléfono 654 538 299 (Jesús). Se prohibe la realización de fuego. Límite de inscripciones: 15 cuadrillas.<br/><br/>\n\nDonativo de la inscripción por cuadrilla: 5€.<br/><br/>\n\nHorario de descarga de sillas, mesas y enseres: de 20:00 a 21:00\n",
           "location": "Ermita de San Isidro",
-          "image": "/images/carteles/i-noche-manchega.webp"
+          "image": "/images/carteles/i-noche-manchega.webp",
+          "buttons": [
+            {
+              "text": "Inscribirme",
+              "link": "https://l.facebook.com/l.php?u=https%3A%2F%2Fforms.gle%2FFxc8GDbqHZgsorZA7%3Ffbclid%3DIwAR2baJojgO64aoEPD-HVwAs_kcZasfKczb0g5nuWPtXOT0qzkEHn_8dL-cg&h=AT1ZrETHQAzvK2JMar0Uow4avoIu6Ksk7GJIhLsIJ4OTqLsokH6bjlMMgSfurlpYzkIO5bLLi7l2kSQrpId4roco0O6PbuGMgxEhOCFKm2Qf1T0ju4jmww73oQ&__tn__=-UK-R&c[0]=AT1PwCRwfnAjjpO36isTyUGnyQlIaMKuQN7nU0VlVHicUXjx3n_5slNexdLO8fpVuUW1BQP3SCf0aIdl2Qq4N5XnYfUi6Ebx5U-rNnTrjpTdoDRAmWJye24JnsSoMEpOb6w_O7nYTR34Koxd6EkBrbTDKVlc3rOxozNuuKbSY4AbaFRw6Yve_d9E_N9HGgEXonk56tmbnKHc"
+            }
+          ]
         }
       ]
     },

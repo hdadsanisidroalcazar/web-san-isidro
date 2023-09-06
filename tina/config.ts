@@ -336,7 +336,6 @@ export default defineConfig({
             list: true,
             ui: {
               itemProps: (item) => {
-                // Field values are accessed by item?.<Field name>
                 return { label: item?.title };
               },
             },
@@ -377,16 +376,65 @@ export default defineConfig({
                   {
                     type: 'string',
                     name: 'location',
-                    label: 'Ubicación (en proceso)',
+                    label: 'Ubicación',
+                  },
+                  {
+                    type: 'string',
+                    name: 'map',
+                    label: 'Google maps',
                   },
                   {
                     type: 'image',
                     name: 'image',
                     label: 'Cartel',
                   },
+                  {
+                    type: 'object',
+                    name: 'buttons',
+                    label: 'Botones',
+                    list: true,
+                    ui: {
+                      itemProps: (item) => {
+                        return { label: item?.text };
+                      },
+                    },
+                    fields: [
+                      {
+                        type: 'string',
+                        name: 'text',
+                        label: 'Texto',
+                        required: true,
+                      },
+                      {
+                        type: 'string',
+                        name: 'link',
+                        label: 'Enlace',
+                        required: true,
+                      },
+                    ],
+                  },
                 ],
               },
             ],
+          },
+        ],
+      },
+      {
+        name: 'location',
+        label: 'Ubicaciones',
+        path: 'src/content/location',
+        format: 'json',
+        fields: [
+          {
+            type: 'string',
+            name: 'title',
+            label: 'Texto',
+            required: true,
+          },
+          {
+            type: 'string',
+            name: 'map',
+            label: 'Google Maps',
           },
         ],
       },

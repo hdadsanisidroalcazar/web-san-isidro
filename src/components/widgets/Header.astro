@@ -1,11 +1,12 @@
 ---
-import { Icon } from "astro-icon/components";
-import Logo from "~/components/Logo.astro";
-import ToggleTheme from "~/components/common/ToggleTheme.astro";
-import ToggleMenu from "~/components/common/ToggleMenu.astro";
+import { Icon } from 'astro-icon/components';
+import Logo from '~/components/Logo.astro';
+import ToggleTheme from '~/components/common/ToggleTheme.astro';
+import ToggleMenu from '~/components/common/ToggleMenu.astro';
 
-import { getHomePermalink } from "~/utils/permalinks";
-import { trimSlash, getAsset } from "~/utils/permalinks";
+import { getHomePermalink } from '~/utils/permalinks';
+import { trimSlash, getAsset } from '~/utils/permalinks';
+import type { CallToAction } from '~/types';
 
 interface Link {
   text?: string;
@@ -14,10 +15,7 @@ interface Link {
   icon?: string;
 }
 
-interface ActionLink extends Link {
-  class?: string;
-  type?: string;
-}
+interface ActionLink extends CallToAction {}
 
 interface MenuLink extends Link {
   links?: Array<MenuLink>;
@@ -36,36 +34,36 @@ export interface Props {
 }
 
 const {
-  id = "header",
+  id = 'header',
   links = [],
   isSticky = false,
   isDark = false,
   isFullWidth = false,
   showToggleTheme = false,
   showRssFeed = false,
-  position = "center",
+  position = 'center',
 } = Astro.props;
 
-const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
+const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 ---
 
 <header
   class:list={[
     { sticky: isSticky, relative: !isSticky, dark: isDark },
-    "top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out bg-header dark:bg-page text-header",
+    'top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out bg-header dark:bg-page text-header',
   ]}
   {...id ? { id } : {}}
 >
   <div class="absolute inset-0"></div>
   <div
     class:list={[
-      "relative text-default py-3 px-3 md:px-6 mx-auto w-full md:flex md:justify-between",
+      'relative text-default py-3 px-3 md:px-6 mx-auto w-full md:flex md:justify-between',
       {
-        "max-w-7xl": !isFullWidth,
+        'max-w-7xl': !isFullWidth,
       },
     ]}
   >
-    <div class:list={[{ "mr-auto": position === "right" }, "flex justify-between"]}>
+    <div class:list={[{ 'mr-auto': position === 'right' }, 'flex justify-between']}>
       <a class="flex items-center" href={getHomePermalink()}>
         <Logo />
       </a>
@@ -83,7 +81,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
       >
         {
           links.map(({ text, href, links }) => (
-            <li class={links?.length ? "dropdown" : ""}>
+            <li class={links?.length ? 'dropdown' : ''}>
               {links?.length ? (
                 <>
                   <button class="hover:text-link hover:text-white px-4 py-3 flex items-center">
@@ -94,8 +92,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
                       <li>
                         <a
                           class:list={[
-                            "first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap",
-                            { "aw-link-active" : href2 === currentPath}
+                            'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
+                            { 'aw-link-active': href2 === currentPath },
                           ]}
                           href={href2}
                         >
@@ -108,8 +106,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
               ) : (
                 <a
                   class:list={[
-                    "hover:text-link dark:hover:text-white px-4 py-3 flex items-centers",
-                    { "aw-link-active": href === currentPath }
+                    'hover:text-link dark:hover:text-white px-4 py-3 flex items-centers',
+                    { 'aw-link-active': href === currentPath },
                   ]}
                   href={href}
                 >
@@ -123,8 +121,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
     </nav>
     <div
       class:list={[
-        { "ml-auto": position === "left" },
-        "hidden md:self-center flex md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 bottom-0 p-3 md:p-0",
+        { 'ml-auto': position === 'left' },
+        'hidden md:self-center flex md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 bottom-0 p-3 md:p-0',
       ]}
     >
       <div class="items-center flex justify-between w-full md:w-auto">

@@ -1,10 +1,9 @@
 ---
 import Headline from '~/components/ui/Headline.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import CTA from '~/components/ui/CTA.astro';
+import Button from '~/components/ui/Button.astro';
 import Image from '~/components/common/Image.astro';
 import type { Testimonials } from '~/types';
-
 
 const {
   title = '',
@@ -56,7 +55,7 @@ const {
                   </div>
                 )}
 
-                <div class="grow ml-3">
+                <div class="grow ml-3 rtl:ml-0 rtl:mr-3">
                   {name && <p class="text-base font-semibold">{name}</p>}
                   {job && <p class="text-xs text-muted">{job}</p>}
                 </div>
@@ -68,8 +67,8 @@ const {
   </div>
   {
     callToAction && (
-      <div class="btn flex justify-center mx-auto w-fit mt-8 md:mt-12 font-medium">
-        <CTA callToAction={callToAction} />
+      <div class="flex justify-center mx-auto w-fit mt-8 md:mt-12 font-medium">
+        <Button {...callToAction} />
       </div>
     )
   }

@@ -65,6 +65,15 @@ apps:
       robots:
         index: true
 
+  cults: # Cult pages
+    isEnabled: true
+
+    cult:
+      isEnabled: true
+      permalink: '/%id%/cultos' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      robots:
+        index: true
+
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
   # rgb(25.5 68.2 34.5)

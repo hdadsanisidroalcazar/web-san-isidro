@@ -171,7 +171,7 @@ export const findLatestPosts = async ({ count }: { count?: number }): Promise<Ar
 /** */
 export const getStaticPathsBlogList = async ({ paginate, archived = true }) => {
   if (!isBlogEnabled || !isBlogListRouteEnabled) return [];
-  let posts = archived ? await fetchPosts() : await getPostNotArchived();
+  const posts = archived ? await fetchPosts() : await getPostNotArchived();
   return paginate(posts, {
     params: { blog: BLOG_BASE || undefined },
     pageSize: blogPostsPerPage,

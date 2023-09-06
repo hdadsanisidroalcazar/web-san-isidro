@@ -5,7 +5,6 @@ let _home: Home;
 let _contact: Contact;
 let _sponsor: Sponsor;
 let _magazines: Magazine[];
-let _cults;
 
 /** */
 export const fetchHome = async (): Promise<Home> => {
@@ -48,12 +47,4 @@ export const fetchMagazines = async (): Promise<Magazine[]> => {
 export const fetchLastMagazine = async (): Promise<Magazine> => {
   const magazines = await fetchMagazines();
   return magazines[0];
-};
-
-export const fetchCultById = async (id: string): Promise<Cult> => {
-  if (!_cults) {
-    _cults = await getCollection('cult');
-  }
-
-  return _cults.find((cult) => cult.id === id).data;
 };

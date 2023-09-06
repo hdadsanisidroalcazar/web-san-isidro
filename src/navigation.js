@@ -28,7 +28,7 @@ export const headerData = {
         },
         {
           text: 'Medalla',
-          href: getPermalink('/medalla'),
+          href: getPermalink('/hermandad/medalla'),
         },
         {
           text: 'Artículos',
@@ -74,7 +74,7 @@ export const headerData = {
         },
         {
           text: 'Programa de cultos y actos',
-          href: getPermalink('/santas/cultos'),
+          href: getPermalink('/santa-agueda-y-santa-apolonia/cultos'),
         },
       ],
     },
@@ -101,7 +101,7 @@ export const footerData = {
         { text: 'Fundación', href: '/hermandad/fundacion' },
         { text: 'Evolución', href: '/hermandad/evolucion' },
         { text: 'La ermita', href: '/ermita' },
-        { text: 'La medalla', href: '/medalla' },
+        { text: 'La medalla', href: '/hermandad/medalla' },
         { text: 'Artículos', href: '/categoria/articulos' },
         { text: 'Entrevistas', href: '/categoria/entrevistas' },
         { text: 'Poemas', href: '/categoria/poemas' },
@@ -117,10 +117,10 @@ export const footerData = {
       ],
     },
     {
-      title: 'Santas',
+      title: 'Santa Águeda y Santa Apolonia',
       links: [
-        { text: 'Hisoria', href: 'santas/hitoria' },
-        { text: 'Programa de cultos y actos', href: '/santas/cultos' },
+        { text: 'Hisoria', href: '/santas/hitoria' },
+        { text: 'Programa de cultos y actos', href: '/santa-agueda-y-santa-apolonia/cultos' },
       ],
     },
     {
