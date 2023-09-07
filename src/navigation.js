@@ -70,7 +70,7 @@ export const headerData = {
       links: [
         {
           text: 'Historia',
-          href: getPermalink('/santas/historia'),
+          href: getPermalink('/santa-agueda-y-santa-apolonia/historia'),
         },
         {
           text: 'Programa de cultos y actos',
