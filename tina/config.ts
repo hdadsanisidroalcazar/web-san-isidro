@@ -274,13 +274,18 @@ export default defineConfig({
             label: 'Etiquetas',
             required: false,
             list: true,
-            options: ['tag1', 'tag2', 'tag3'],
+            ui: {
+              component: 'tags',
+            },
           },
           {
             type: 'datetime',
             name: 'publishDate',
             label: 'Fecha de publicación',
             required: true,
+            ui: {
+              dateFormat: 'DD/MM/YYYY',
+            },
           },
           {
             type: 'image',
@@ -420,21 +425,47 @@ export default defineConfig({
         ],
       },
       {
-        name: 'location',
-        label: 'Ubicaciones',
-        path: 'src/content/location',
-        format: 'json',
+        name: 'form',
+        label: 'Formularios',
+        path: 'src/content/form',
+        format: 'md',
         fields: [
           {
-            type: 'string',
-            name: 'title',
-            label: 'Texto',
-            required: true,
+            type: 'boolean',
+            name: 'closed',
+            label: 'Desactivar formulario',
           },
           {
-            type: 'string',
-            name: 'map',
-            label: 'Google Maps',
+            type: 'rich-text',
+            name: 'body',
+            label: 'Texto inicial',
+            required: true,
+            isBody: true,
+          },
+          {
+            type: 'object',
+            name: 'field',
+            label: 'Campo',
+            list: true,
+            ui: {
+              itemProps: (item) => {
+                // Field values are accessed by item?.<Field name>
+                return { label: item?.title };
+              },
+            },
+            fields: [
+              {
+                type: 'string',
+                name: 'title',
+                label: 'Texto',
+                required: true,
+              },
+              {
+                type: 'string',
+                name: 'name',
+                label: 'Código interno (palabra sin espacios ni caracteres raros, Ejemplo: nombre-apellidos)',
+              },
+            ],
           },
         ],
       },
