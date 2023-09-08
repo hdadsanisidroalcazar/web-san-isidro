@@ -436,6 +436,13 @@ export default defineConfig({
             label: 'Desactivar formulario',
           },
           {
+            type: 'string',
+            name: 'title',
+            label: 'Título',
+            required: true,
+            isTitle: true
+          },
+          {
             type: 'rich-text',
             name: 'body',
             label: 'Texto inicial',

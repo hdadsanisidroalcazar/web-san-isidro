@@ -10,6 +10,18 @@ export interface Home {
   }[];
 }
 
+export interface Form {
+  id: string;
+  slug: string;
+  permalink: string;
+  /** **/
+  title: string;
+  Content?: unknown;
+  content?: string;
+  closed?: boolean;
+  field?: { title: string; name: string }[];
+}
+
 export interface Cult {
   id: string;
   slug: string;

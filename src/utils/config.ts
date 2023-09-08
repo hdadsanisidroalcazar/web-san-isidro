@@ -31,7 +31,20 @@ export interface AppGenericConfig {
 
 export interface AppCultConfig {
   isEnabled: boolean;
-  cultcults: {
+  cult: {
+    isEnabled: boolean;
+    permalink: string;
+    robots: {
+      index: boolean;
+      follow: boolean;
+    };
+  };
+}
+
+
+export interface AppFormConfig {
+  isEnabled: boolean;
+  form: {
     isEnabled: boolean;
     permalink: string;
     robots: {
@@ -90,6 +103,7 @@ const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
     blog?: AppBlogConfig;
     generic?: AppGenericConfig;
     cults?: AppCultConfig;
+    forms?: AppFormConfig;
   };
   ui?: unknown;
   rss?: RssConfig;
@@ -161,6 +175,22 @@ const getAppCults = () => {
   return merge({}, _default, config?.apps?.cults ?? {});
 };
 
+const getAppForms = () => {
+  const _default = {
+    isEnabled: false,
+    form: {
+      isEnabled: true,
+      permalink: '/inscripciones/%id%',
+      robots: {
+        index: true,
+        follow: true,
+      },
+    },
+  };
+
+  return merge({}, _default, config?.apps?.forms ?? {});
+};
+
 const getAppBlog = () => {
   const _default = {
     isEnabled: false,
@@ -227,5 +257,6 @@ export const METADATA = getMetadata();
 export const APP_BLOG = getAppBlog();
 export const APP_GENERIC = getAppGeneric();
 export const APP_CULTS = getAppCults();
+export const APP_FORMS = getAppForms()
 export const UI = getUI();
 export const RSS = getRss();
