@@ -79,7 +79,7 @@ const { inputs, textarea, disclaimer, button = 'Enviar', description = '' } = As
   {
     description && (
       <div class="mt-3 text-center">
-        <p class="text-sm text-gray-600 dark:text-gray-400">{description}</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400" set:html={description}/>
       </div>
     )
   }

@@ -3,8 +3,8 @@ import type { CollectionEntry } from 'astro:content';
 import type { Form } from '~/types';
 import { trimSlash, FORM_PERMALINK_PATTERN } from './permalinks';
 
-const generatePermalink = async ({ id }: { id: string }) => {
-  const permalink = FORM_PERMALINK_PATTERN.replace('%id%', id);
+const generatePermalink = async ({ slug }: { slug: string }) => {
+  const permalink = FORM_PERMALINK_PATTERN.replace('%slug%', slug);
 
   return permalink
     .split('/')
@@ -14,12 +14,13 @@ const generatePermalink = async ({ id }: { id: string }) => {
 };
 
 const getNormalizedPost = async (form: CollectionEntry<'form'>): Promise<Form> => {
-  const { id, data } = form;
+  const { slug, data } = form;
   const { Content } = await form.render();
 
   return {
-    id: id,
-    permalink: await generatePermalink({ id }),
+    id: slug,
+    slug,
+    permalink: await generatePermalink({ slug }),
     Content: Content,
     ...data,
   };

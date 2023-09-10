@@ -463,7 +463,7 @@ export default defineConfig({
             fields: [
               {
                 type: 'string',
-                name: 'title',
+                name: 'label',
                 label: 'Texto',
                 required: true,
               },

@@ -28,7 +28,7 @@ export const TAG_BASE = cleanSlug(APP_BLOG?.tag?.pathname) || 'tag';
 export const POST_PERMALINK_PATTERN = trimSlash(APP_BLOG?.post?.permalink || `${BLOG_BASE}/%slug%`);
 export const PAGE_PERMALINK_PATTERN = trimSlash(APP_GENERIC?.generic?.permalink || '/%slug%');
 export const CULT_PERMALINK_PATTERN = trimSlash(APP_CULTS?.cult?.permalink || '/%id%');
-export const FORM_PERMALINK_PATTERN = trimSlash(APP_FORMS?.form?.permalink || '/inscripciones/%id%');
+export const FORM_PERMALINK_PATTERN = trimSlash(APP_FORMS?.form?.permalink || '/inscripciones/%slug%');
 
 /** */
 export const getCanonical = (path = ''): string | URL => {

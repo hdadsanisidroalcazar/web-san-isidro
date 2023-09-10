@@ -79,7 +79,7 @@ apps:
 
     form:
       isEnabled: true
-      permalink: '/inscripciones/%id%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      permalink: '/inscripciones/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       robots:
         index: true
 
