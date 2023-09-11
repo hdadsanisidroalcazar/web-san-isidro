@@ -28,7 +28,7 @@ export const GET = async () => {
 
     trailingSlash: SITE.trailingSlash,
     customData: `<language>es-es</language>`,
-		stylesheet: '/rss/styles.xsl'
+    stylesheet: '/rss/styles.xsl',
   });
 
   return new Response(rss, {

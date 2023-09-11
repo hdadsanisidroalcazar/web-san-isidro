@@ -440,7 +440,7 @@ export default defineConfig({
             name: 'title',
             label: 'Título',
             required: true,
-            isTitle: true
+            isTitle: true,
           },
           {
             type: 'rich-text',

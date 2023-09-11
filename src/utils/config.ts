@@ -41,7 +41,6 @@ export interface AppCultConfig {
   };
 }
 
-
 export interface AppFormConfig {
   isEnabled: boolean;
   form: {
@@ -257,6 +256,6 @@ export const METADATA = getMetadata();
 export const APP_BLOG = getAppBlog();
 export const APP_GENERIC = getAppGeneric();
 export const APP_CULTS = getAppCults();
-export const APP_FORMS = getAppForms()
+export const APP_FORMS = getAppForms();
 export const UI = getUI();
 export const RSS = getRss();

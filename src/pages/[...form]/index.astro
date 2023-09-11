@@ -16,7 +16,7 @@ const Content = form?.Content || null;
 ---
 
 <MarkdownLayout frontmatter={{ title: form.title }}>
-  <Note note='Inscripciones cerradas' />
+  {form.closed && <Note note="Inscripciones cerradas" />}
   <Content />
 
   {
@@ -26,6 +26,4 @@ const Content = form?.Content || null;
       </div>
     )
   }
-
-  
 </MarkdownLayout>
