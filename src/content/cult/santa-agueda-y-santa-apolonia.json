@@ -1,5 +1,19 @@
 {
   "title": "Programa de cultos y actos",
   "subtitle": "",
-  "tagline": "Sta. Águeda y Sta. Apolonia"
+  "tagline": "Sta. Águeda y Sta. Apolonia",
+  "days": [
+    {
+      "title": "Domingo 5 de Febrero",
+      "event": [
+        {
+          "title": "Santa Misa en honor a Santa Águeda y Santa Apolonia",
+          "time": "13:00",
+          "description": "En la misa se bendecirán las tortas que se ofrecerán en las meriendas.\n",
+          "location": "Iglesia de San Francisco",
+          "map": "https://goo.gl/maps/NgwoKHw32bC1hAANA"
+        }
+      ]
+    }
+  ]
 }
