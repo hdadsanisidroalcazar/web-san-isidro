@@ -6,6 +6,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { fetchHome, fetchLastMagazine } from '~/utils/page';
+import SponsorBrand from '~/components/widgets/SponsorBrand.astro';
 
 const metadata = {
   title: 'Inicio | Hermandad de San Isidro Labrador',
@@ -41,4 +42,6 @@ const lastMagazine = await fetchLastMagazine();
     classes={{ container: 'max-w-6xl' }}
     items={homeData.faqs}
   />
+
+  <SponsorBrand />
 </Layout>

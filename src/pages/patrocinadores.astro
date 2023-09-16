@@ -1,23 +1,12 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import Brands from '~/components/widgets/Brands.astro';
-import { fetchSponsors } from '~/utils/page';
+import SponsorBrand from '~/components/widgets/SponsorBrand.astro';
 
 const metadata = {
   title: 'patrocinadores',
 };
-
-const sponsorData = await fetchSponsors();
 ---
 
 <Layout metadata={metadata}>
-  <Brands
-    title={sponsorData.title}
-    subtitle={sponsorData.subtitle}
-    icons={[]}
-    images={sponsorData.sponsor?.map((sponsor, index) => ({
-      src: sponsor,
-      alt: `patrocinador-${index}`,
-    }))}
-  />
+  <SponsorBrand />
 </Layout>

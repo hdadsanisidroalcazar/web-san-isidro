@@ -1,0 +1,16 @@
+---
+import Brands from '~/components/widgets/Brands.astro';
+import { fetchSponsors } from '~/utils/page';
+
+const sponsorData = await fetchSponsors();
+---
+
+<Brands
+  title={sponsorData.title}
+  subtitle={sponsorData.subtitle}
+  icons={[]}
+  images={sponsorData.sponsor?.map((sponsor, index) => ({
+    src: sponsor,
+    alt: `patrocinador-${index}`,
+  }))}
+/>
