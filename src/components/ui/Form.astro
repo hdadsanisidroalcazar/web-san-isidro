@@ -1,7 +1,13 @@
 ---
 import type { Form } from '~/types';
 
-const { inputs, textarea, disclaimer, button = 'Enviar', description = '' } = Astro.props as Form;
+const {
+  inputs,
+  textarea,
+  disclaimer = { label: 'Acepto la ' },
+  button = 'Enviar',
+  description = '',
+} = Astro.props as Form;
 ---
 
 <form action="https://formsubmit.co/72a2b31ace297743cfa40ebbc6399a35" method="POST">
@@ -54,12 +60,18 @@ const { inputs, textarea, disclaimer, button = 'Enviar', description = '' } = As
             id="disclaimer"
             name="disclaimer"
             type="checkbox"
-            class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            class="cursor-pointer mt-1 py-3 px-4 block text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            required
+            oninvalid="this.setCustomValidity('Por favor, acepte la política de privacidad.')"
           />
         </div>
         <div class="ml-3">
           <label for="disclaimer" class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
-            {disclaimer.label}
+            {disclaimer.label}{' '}
+            <a href="/privacidad" class="text-primary">
+              política de privacidad
+            </a>
+            .
           </label>
         </div>
       </div>
@@ -79,7 +91,7 @@ const { inputs, textarea, disclaimer, button = 'Enviar', description = '' } = As
   {
     description && (
       <div class="mt-3 text-center">
-        <p class="text-sm text-gray-600 dark:text-gray-400" set:html={description}/>
+        <p class="text-sm text-gray-600 dark:text-gray-400" set:html={description} />
       </div>
     )
   }

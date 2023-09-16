@@ -69,6 +69,7 @@ export interface Contact {
   titleform?: string;
   subtitleform?: string;
   disclaimer?: string;
+  descrptionform?: string;
   email: string;
   phone: string;
   address: string;

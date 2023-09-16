@@ -207,6 +207,11 @@ export default defineConfig({
           },
           {
             type: 'string',
+            name: 'descrptionform',
+            label: 'Texto inferior (formulario)',
+          },
+          {
+            type: 'string',
             name: 'email',
             label: 'Email',
             required: true,

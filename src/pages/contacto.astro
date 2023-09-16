@@ -59,7 +59,8 @@ const contactData = await fetchContact();
     textarea={{
       label: 'Mensaje',
     }}
-    description={contactData.disclaimer}
+    description={contactData.descrptionform}
+    disclaimer={{ label: contactData.disclaimer }}
   />
 
   <Features2
