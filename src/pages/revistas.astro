@@ -10,7 +10,6 @@ const metadata = {
 };
 
 const magazines = await fetchMagazines();
-console.log(JSON.stringify(magazines, null, 2));
 
 const getActions = (magazine) => {
   const actions: CallToAction[] = [];

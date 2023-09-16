@@ -34,10 +34,17 @@ export const fetchContact = async (): Promise<Contact> => {
   return _contact;
 };
 
+const composeUrlPdf = (url: string) => {
+  return `https://raw.githubusercontent.com/hdadsanisidroalcazar/web-san-isidro/master/public${url}`;
+};
+
 export const fetchMagazines = async (): Promise<Magazine[]> => {
   if (!_magazines) {
     const magazines = await getCollection('magazine');
-    _magazines = magazines.map((magazine) => magazine.data);
+    _magazines = magazines.map((magazine) => ({
+      ...magazine.data,
+      ...(magazine.data.pdf && { pdf: composeUrlPdf(magazine.data.pdf) }),
+    }));
     _magazines.sort((a, b) => parseInt(b.year) - parseInt(a.year));
   }
 
