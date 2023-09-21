@@ -66,7 +66,7 @@ export const headerData = {
       ],
     },
     {
-      text: 'Santas',
+      text: 'Sta. Águeda y Sta. Apolonia',
       links: [
         {
           text: 'Historia',
@@ -82,10 +82,10 @@ export const headerData = {
       text: 'Galería',
       href: getPermalink('/galeria'),
     },
-    {
-      text: 'Patrocinadores',
-      href: getPermalink('/patrocinadores'),
-    },
+    // {
+    //   text: 'Patrocinadores',
+    //   href: getPermalink('/patrocinadores'),
+    // },
     {
       text: 'Contacto',
       href: getPermalink('/contacto'),
@@ -102,9 +102,6 @@ export const footerData = {
         { text: 'Evolución', href: '/hermandad/evolucion' },
         { text: 'La ermita', href: '/ermita' },
         { text: 'La medalla', href: '/hermandad/medalla' },
-        { text: 'Artículos', href: '/categoria/articulos' },
-        { text: 'Entrevistas', href: '/categoria/entrevistas' },
-        { text: 'Poemas', href: '/categoria/poemas' },
       ],
     },
     {
@@ -125,8 +122,11 @@ export const footerData = {
     },
     {
       links: [
+        { text: 'Artículos', href: '/categoria/articulos' },
+        { text: 'Entrevistas', href: '/categoria/entrevistas' },
         { text: 'Galería de fotos', href: '/galería' },
-        { text: 'Patrocinadores', href: '/patrocinadores' },
+        { text: 'Poemas', href: '/categoria/poemas' },
+        // { text: 'Patrocinadores', href: '/patrocinadores' },
       ],
     },
   ],
