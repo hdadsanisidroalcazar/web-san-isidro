@@ -16,7 +16,7 @@
     "lint:fix": "eslint . --ext .js,.ts,.astro --fix"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^1.0.0",
+    "@astrojs/mdx": "^1.1.0",
     "@astrojs/sitemap": "^3.0.0",
     "@astrojs/tailwind": "5.0.0",
     "@iconify-json/flat-color-icons": "^1.1.7",
