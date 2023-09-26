@@ -9,7 +9,11 @@
 
 ## ¿Qué encontrarás en esta web? 📖
 
-- 
+-   Información general sobre la Hermandad de San Isidro Labrador y San Isidro, Santa Águeda y Santa Apolonia.
+-   Progrma de actividades y cultos.
+-   Revista anual de la hermandad.
+-   Galerias de imágenes.
+-   Otra infomación de interés.
 
 ## Tecnologías utilizadas 🛠️
 
