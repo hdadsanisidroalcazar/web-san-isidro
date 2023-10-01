@@ -23,7 +23,7 @@
     "@iconify-json/tabler": "^1.1.92",
     "@tailwindcss/typography": "^0.5.10",
     "@types/lodash.merge": "^4.6.7",
-    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.2",
     "astro-compress": "^2.0.15",
     "eslint": "^8.50.0",
