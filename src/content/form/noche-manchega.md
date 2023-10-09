@@ -1,4 +1,5 @@
 ---
+closed: false
 title: Incripción I Noche Manchega
 field:
   - label: Nombre y apellidos de la persona responsable
@@ -9,7 +10,6 @@ field:
     name: correo-electronico
   - label: Número aproximado de integrantes
     name: integrantes
-closed: true
 ---
 
 1. Este formulario es para inscribirse y reservar sitio en las degustaciones que tendrán lugar con motivo de la "I Noche Manchega" el día 13 de mayo de 2023 en la ermita de San Isidro.
