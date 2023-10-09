@@ -59,10 +59,6 @@ export const headerData = {
           text: 'Revistas',
           href: getPermalink('/revistas'),
         },
-        {
-          text: 'Cartelería',
-          href: getPermalink('/san-isidro/carteleria'),
-        },
       ],
     },
     {
