@@ -83,6 +83,22 @@ apps:
       robots:
         index: true
 
+  gallery:
+    isEnabled: true
+    postsPerPage: 6
+
+    post:
+      isEnabled: true
+      permalink: '/galerias/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      robots:
+        index: true
+
+    list:
+      isEnabled: true
+      pathname: 'galerias' # Blog main path, you can change this to "articles" (/articles)
+      robots:
+        index: true
+
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
   # rgb(25.5 68.2 34.5)
