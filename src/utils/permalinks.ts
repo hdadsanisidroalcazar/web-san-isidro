@@ -1,6 +1,6 @@
 import slugify from 'limax';
 
-import { SITE, APP_BLOG, APP_GENERIC, APP_CULTS, APP_FORMS } from '~/utils/config';
+import { SITE, APP_BLOG, APP_GENERIC, APP_CULTS, APP_FORMS, APP_GALLERY } from '~/utils/config';
 
 import { trim } from '~/utils/utils';
 
@@ -29,6 +29,7 @@ export const POST_PERMALINK_PATTERN = trimSlash(APP_BLOG?.post?.permalink || `${
 export const PAGE_PERMALINK_PATTERN = trimSlash(APP_GENERIC?.generic?.permalink || '/%slug%');
 export const CULT_PERMALINK_PATTERN = trimSlash(APP_CULTS?.cult?.permalink || '/%id%');
 export const FORM_PERMALINK_PATTERN = trimSlash(APP_FORMS?.form?.permalink || '/inscripciones/%slug%');
+export const GALLERY_PERMALINK_PATTERN = trimSlash(APP_GALLERY?.post?.permalink || `galeria/%slug%`);
 
 /** */
 export const getCanonical = (path = ''): string | URL => {

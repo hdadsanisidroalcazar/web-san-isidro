@@ -89,7 +89,7 @@ apps:
 
     post:
       isEnabled: true
-      permalink: '/galerias/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      permalink: '/galeria/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       robots:
         index: true
 

@@ -95,6 +95,27 @@ export interface RssConfig {
   facebook: string;
 }
 
+export interface GalleryConfig {
+  isEnabled: boolean;
+  postsPerPage: number;
+  post: {
+    isEnabled: boolean;
+    permalink: string;
+    robots: {
+      index: boolean;
+      follow: boolean;
+    };
+  };
+  list: {
+    isEnabled: boolean;
+    pathname: string;
+    robots: {
+      index: boolean;
+      follow: boolean;
+    };
+  };
+}
+
 const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
   site?: SiteConfig;
   metadata?: MetaDataConfig;
@@ -103,6 +124,7 @@ const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
     generic?: AppGenericConfig;
     cults?: AppCultConfig;
     forms?: AppFormConfig;
+    gallery?: GalleryConfig;
   };
   ui?: unknown;
   rss?: RssConfig;
@@ -251,11 +273,37 @@ const getRss = () => {
   return merge({}, _default, config?.rss ?? {});
 };
 
+const getGalleries = () => {
+  const _default = {
+    isEnabled: false,
+    postsPerPage: 6,
+    post: {
+      isEnabled: true,
+      permalink: '/galeria/%slug%',
+      robots: {
+        index: true,
+        follow: true,
+      },
+    },
+    list: {
+      isEnabled: true,
+      pathname: 'galerias',
+      robots: {
+        index: true,
+        follow: true,
+      },
+    },
+  };
+
+  return merge({}, _default, config?.apps?.blog ?? {}) as GalleryConfig;
+};
+
 export const SITE = getSite();
 export const METADATA = getMetadata();
 export const APP_BLOG = getAppBlog();
 export const APP_GENERIC = getAppGeneric();
 export const APP_CULTS = getAppCults();
 export const APP_FORMS = getAppForms();
+export const APP_GALLERY = getGalleries();
 export const UI = getUI();
 export const RSS = getRss();
