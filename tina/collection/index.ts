@@ -6,3 +6,4 @@ export * from './home';
 export * from './magazine';
 export * from './post';
 export * from './sponsor';
+export * from './instruction';
