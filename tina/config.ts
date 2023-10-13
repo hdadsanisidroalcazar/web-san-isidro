@@ -1,5 +1,5 @@
 import { defineConfig } from 'tinacms';
-import { Home, Magazine, Sponsor, Contact, Generic, Post, Cultos, Form } from './collection';
+import { Home, Magazine, Sponsor, Contact, Generic, Post, Cultos, Form, Instruction } from './collection';
 
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.VERCEL_GIT_COMMIT_REF || 'master';
@@ -28,6 +28,6 @@ export default defineConfig({
     },
   },
   schema: {
-    collections: [Home, Magazine, Sponsor, Contact, Generic, Post, Cultos, Form],
+    collections: [Home, Magazine, Sponsor, Contact, Generic, Post, Cultos, Form, Instruction],
   },
 });
