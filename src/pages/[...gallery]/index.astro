@@ -6,14 +6,13 @@ import SinglePost from '~/components/blog/SinglePost.astro';
 import ToBlogLink from '~/components/blog/ToBlogLink.astro';
 
 import { getCanonical, getPermalink } from '~/utils/permalinks';
-import { getStaticPathsBlogPost, blogPostRobots } from '~/utils/blog';
+import { getStaticPathsGalleryPost, galleryPostRobots } from '~/utils/gallery';
 import { findImage } from '~/utils/images';
-import { APP_BLOG } from '~/utils/config';
 
 export const prerender = true;
 
 export async function getStaticPaths() {
-  return await getStaticPathsBlogPost();
+  return await getStaticPathsGalleryPost();
 }
 
 const { post } = Astro.props;
@@ -26,8 +25,8 @@ const metadata = merge(
     title: post.title,
     description: post.description,
     robots: {
-      index: blogPostRobots?.index,
-      follow: blogPostRobots?.follow,
+      index: galleryPostRobots?.index,
+      follow: galleryPostRobots?.follow,
     },
     openGraph: {
       type: 'article',
@@ -36,11 +35,9 @@ const metadata = merge(
   },
   { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || url } : {}) }
 );
-
-const isArchivedCategory = APP_BLOG.archivedCategories?.includes(post.category);
 ---
 
 <Layout metadata={metadata}>
-  <SinglePost post={{ ...post, image: image }} url={url} />
-  <ToBlogLink {...isArchivedCategory && { category: post.category }} />
+  <!-- <SinglePost post={{ ...post, image: image }} url={url} /> -->
+  <ToBlogLink category="galeria" />
 </Layout>

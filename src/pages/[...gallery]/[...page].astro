@@ -3,27 +3,23 @@ import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
-// import PostTags from "~/components/blog/Tags.astro";
 
-import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
+import { galleryListRobots, getStaticPathsGalleryList } from '~/utils/gallery';
 
 export const prerender = true;
 
 export async function getStaticPaths ({ paginate }) {
-  return await getStaticPathsBlogList({ paginate, archived: false });
+  return await getStaticPathsGalleryList({ paginate });
 }
 
 const { page } = Astro.props;
 const currentPage = page.currentPage ?? 1;
 
-// const allCategories = await findCategories();
-// const allTags = await findTags();
-
 const metadata = {
-  title: `Galerías ${currentPage > 1 ? ` — Página ${currentPage}` : ''}`,
+  title: `Galería ${currentPage > 1 ? ` — Página ${currentPage}` : ''}`,
   robots: {
-    index: blogListRobots?.index && currentPage === 1,
-    follow: blogListRobots?.follow,
+    index: galleryListRobots?.index && currentPage === 1,
+    follow: galleryListRobots?.follow,
   },
   openGraph: {
     type: 'blog',

@@ -7,3 +7,4 @@ export * from './magazine';
 export * from './post';
 export * from './sponsor';
 export * from './instruction';
+export * from './gallery';

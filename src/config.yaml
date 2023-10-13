@@ -95,7 +95,7 @@ apps:
 
     list:
       isEnabled: true
-      pathname: 'galerias' # Blog main path, you can change this to "articles" (/articles)
+      pathname: '/galeria'
       robots:
         index: true
 

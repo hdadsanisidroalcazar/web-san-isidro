@@ -76,6 +76,22 @@ export interface Contact {
   map: string;
 }
 
+export interface Gallery {
+  id: string;
+  slug: string;
+  permalink: string;
+  publishDate: Date;
+  updateDate?: Date;
+  title: string;
+  description?: string;
+  image?: string;
+  metadata?: MetaData;
+  Content?: unknown;
+  content?: string;
+  images?: string[];
+}
+
+
 export interface Generic {
   /** A unique ID number that identifies a post. */
   id: string;

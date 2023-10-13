@@ -1,8 +1,8 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import type { Post } from '~/types';
-import { APP_BLOG } from '~/utils/config';
-import { cleanSlug, trimSlash, BLOG_BASE, GALLERY_PERMALINK_PATTERN, CATEGORY_BASE, TAG_BASE } from './permalinks';
+import type { Gallery } from '~/types';
+import { APP_GALLERY } from '~/utils/config';
+import { cleanSlug, trimSlash, GALLERY_PERMALINK_PATTERN } from './permalinks';
 
 const generatePermalink = async ({ id, slug }: { id: string; slug: string }) => {
   const permalink = GALLERY_PERMALINK_PATTERN.replace('%slug%', slug).replace('%id%', id);
@@ -14,9 +14,9 @@ const generatePermalink = async ({ id, slug }: { id: string; slug: string }) => 
     .join('/');
 };
 
-const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> => {
+const getNormalizedPost = async (post: CollectionEntry<'gallery'>): Promise<Gallery> => {
   const { id, slug: rawSlug = '', data } = post;
-  const { Content, remarkPluginFrontmatter } = await post.render();
+  const { Content } = await post.render();
 
   const {
     publishDate: rawPublishDate = new Date(),
@@ -46,55 +46,49 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     metadata,
 
     Content: Content,
-
-    readingTime: remarkPluginFrontmatter?.readingTime,
   };
 };
 
-const load = async function (): Promise<Array<Post>> {
-  const posts = await getCollection('post');
+const load = async function (): Promise<Array<Gallery>> {
+  const posts = await getCollection('gallery');
   const normalizedPosts = posts.map(async (post) => await getNormalizedPost(post));
 
-  const results = (await Promise.all(normalizedPosts))
-    .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
-    .filter((post) => !post.draft);
+  const results = (await Promise.all(normalizedPosts)).sort(
+    (a, b) => b.publishDate.valueOf() - a.publishDate.valueOf()
+  );
 
   return results;
 };
 
-let _posts: Array<Post>;
+let _galleries: Array<Gallery>;
 
 /** */
-export const isBlogEnabled = APP_BLOG.isEnabled;
-export const isBlogListRouteEnabled = APP_BLOG.list.isEnabled;
-export const isBlogPostRouteEnabled = APP_BLOG.post.isEnabled;
-export const isBlogCategoryRouteEnabled = APP_BLOG.category.isEnabled;
-export const isBlogTagRouteEnabled = APP_BLOG.tag.isEnabled;
+export const isGalleryEnabled = APP_GALLERY.isEnabled;
+export const isGalleryListRouteEnabled = APP_GALLERY.list.isEnabled;
+export const isGalleryPostRouteEnabled = APP_GALLERY.post.isEnabled;
 
-export const blogListRobots = APP_BLOG.list.robots;
-export const blogPostRobots = APP_BLOG.post.robots;
-export const blogCategoryRobots = APP_BLOG.category.robots;
-export const blogTagRobots = APP_BLOG.tag.robots;
+export const galleryListRobots = APP_GALLERY.list.robots;
+export const galleryPostRobots = APP_GALLERY.post.robots;
 
-export const blogPostsPerPage = APP_BLOG?.postsPerPage;
+export const galleryPostsPerPage = APP_GALLERY?.postsPerPage;
 
 /** */
-export const fetchGalleries = async (): Promise<Array<Post>> => {
-  if (!_posts) {
-    _posts = await load();
+export const fetchGalleries = async (): Promise<Array<Gallery>> => {
+  if (!_galleries) {
+    _galleries = await load();
   }
 
-  return _posts;
+  return _galleries;
 };
 
 /** */
-export const findGalleriesBySlugs = async (slugs: Array<string>): Promise<Array<Post>> => {
+export const findGalleriesBySlugs = async (slugs: Array<string>): Promise<Array<Gallery>> => {
   if (!Array.isArray(slugs)) return [];
 
   const posts = await fetchGalleries();
 
-  return slugs.reduce(function (r: Array<Post>, slug: string) {
-    posts.some(function (post: Post) {
+  return slugs.reduce(function (r: Array<Gallery>, slug: string) {
+    posts.some(function (post: Gallery) {
       return slug === post.slug && r.push(post);
     });
     return r;
@@ -102,13 +96,13 @@ export const findGalleriesBySlugs = async (slugs: Array<string>): Promise<Array<
 };
 
 /** */
-export const findGalleriesByIds = async (ids: Array<string>): Promise<Array<Post>> => {
+export const findGalleriesByIds = async (ids: Array<string>): Promise<Array<Gallery>> => {
   if (!Array.isArray(ids)) return [];
 
   const posts = await fetchGalleries();
 
-  return ids.reduce(function (r: Array<Post>, id: string) {
-    posts.some(function (post: Post) {
+  return ids.reduce(function (r: Array<Gallery>, id: string) {
+    posts.some(function (post: Gallery) {
       return id === post.id && r.push(post);
     });
     return r;
@@ -116,66 +110,22 @@ export const findGalleriesByIds = async (ids: Array<string>): Promise<Array<Post
 };
 
 /** */
-export const getStaticPathsGalleriesList = async ({ paginate, archived = true }) => {
-  if (!isBlogEnabled || !isBlogListRouteEnabled) return [];
+export const getStaticPathsGalleryList = async ({ paginate }) => {
+  if (!isGalleryEnabled || !isGalleryListRouteEnabled) return [];
   const posts = await fetchGalleries();
   return paginate(posts, {
-    params: { blog: BLOG_BASE || undefined },
-    pageSize: blogPostsPerPage,
+    params: { blog: APP_GALLERY?.list?.pathname },
+    pageSize: galleryPostsPerPage,
   });
 };
 
 /** */
-export const getStaticPathsBlogPost = async () => {
-  if (!isBlogEnabled || !isBlogPostRouteEnabled) return [];
-  return (await fetchPosts()).flatMap((post) => ({
+export const getStaticPathsGalleryPost = async () => {
+  if (!isGalleryEnabled || !isGalleryPostRouteEnabled) return [];
+  return (await fetchGalleries()).flatMap((post) => ({
     params: {
       blog: post.permalink,
     },
     props: { post },
   }));
-};
-
-/** */
-export const getStaticPathsBlogCategory = async ({ paginate }) => {
-  if (!isBlogEnabled || !isBlogCategoryRouteEnabled) return [];
-
-  const posts = await fetchPosts();
-  const categories = new Set();
-  posts.map((post) => {
-    typeof post.category === 'string' && categories.add(post.category.toLowerCase());
-  });
-
-  return Array.from(categories).flatMap((category: string) =>
-    paginate(
-      posts.filter((post) => typeof post.category === 'string' && category === post.category.toLowerCase()),
-      {
-        params: { category: category, blog: CATEGORY_BASE || undefined },
-        pageSize: blogPostsPerPage,
-        props: { category },
-      }
-    )
-  );
-};
-
-/** */
-export const getStaticPathsBlogTag = async ({ paginate }) => {
-  if (!isBlogEnabled || !isBlogTagRouteEnabled) return [];
-
-  const posts = await fetchPosts();
-  const tags = new Set();
-  posts.map((post) => {
-    Array.isArray(post.tags) && post.tags.map((tag) => tags.add(tag.toLowerCase()));
-  });
-
-  return Array.from(tags).flatMap((tag: string) =>
-    paginate(
-      posts.filter((post) => Array.isArray(post.tags) && post.tags.find((elem) => elem.toLowerCase() === tag)),
-      {
-        params: { tag: tag, blog: TAG_BASE || undefined },
-        pageSize: blogPostsPerPage,
-        props: { tag },
-      }
-    )
-  );
 };

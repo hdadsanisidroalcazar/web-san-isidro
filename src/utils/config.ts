@@ -287,7 +287,7 @@ const getGalleries = () => {
     },
     list: {
       isEnabled: true,
-      pathname: 'galerias',
+      pathname: '/galeria',
       robots: {
         index: true,
         follow: true,
@@ -295,7 +295,7 @@ const getGalleries = () => {
     },
   };
 
-  return merge({}, _default, config?.apps?.blog ?? {}) as GalleryConfig;
+  return merge({}, _default, config?.apps?.gallery ?? {}) as GalleryConfig;
 };
 
 export const SITE = getSite();
