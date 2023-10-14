@@ -98,7 +98,7 @@ export interface RssConfig {
 export interface GalleryConfig {
   isEnabled: boolean;
   postsPerPage: number;
-  post: {
+  gallery: {
     isEnabled: boolean;
     permalink: string;
     robots: {
@@ -106,7 +106,7 @@ export interface GalleryConfig {
       follow: boolean;
     };
   };
-  list: {
+  all: {
     isEnabled: boolean;
     pathname: string;
     robots: {
@@ -277,7 +277,7 @@ const getGalleries = () => {
   const _default = {
     isEnabled: false,
     postsPerPage: 6,
-    post: {
+    gallery: {
       isEnabled: true,
       permalink: '/galeria/%slug%',
       robots: {
@@ -285,9 +285,9 @@ const getGalleries = () => {
         follow: true,
       },
     },
-    list: {
+    all: {
       isEnabled: true,
-      pathname: '/galeria',
+      pathname: 'galeria',
       robots: {
         index: true,
         follow: true,

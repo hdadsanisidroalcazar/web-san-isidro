@@ -87,15 +87,15 @@ apps:
     isEnabled: true
     postsPerPage: 6
 
-    post:
+    gallery:
       isEnabled: true
       permalink: '/galeria/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       robots:
         index: true
 
-    list:
+    all:
       isEnabled: true
-      pathname: '/galeria'
+      pathname: 'galeria'
       robots:
         index: true
 

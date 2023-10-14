@@ -64,11 +64,11 @@ let _galleries: Array<Gallery>;
 
 /** */
 export const isGalleryEnabled = APP_GALLERY.isEnabled;
-export const isGalleryListRouteEnabled = APP_GALLERY.list.isEnabled;
-export const isGalleryPostRouteEnabled = APP_GALLERY.post.isEnabled;
+export const isGalleryListRouteEnabled = APP_GALLERY.all.isEnabled;
+export const isGalleryPostRouteEnabled = APP_GALLERY.gallery.isEnabled;
 
-export const galleryListRobots = APP_GALLERY.list.robots;
-export const galleryPostRobots = APP_GALLERY.post.robots;
+export const galleryListRobots = APP_GALLERY.all.robots;
+export const galleryPostRobots = APP_GALLERY.gallery.robots;
 
 export const galleryPostsPerPage = APP_GALLERY?.postsPerPage;
 
@@ -114,7 +114,7 @@ export const getStaticPathsGalleryList = async ({ paginate }) => {
   if (!isGalleryEnabled || !isGalleryListRouteEnabled) return [];
   const posts = await fetchGalleries();
   return paginate(posts, {
-    params: { blog: APP_GALLERY?.list?.pathname },
+    params: { gallery: APP_GALLERY?.all?.pathname },
     pageSize: galleryPostsPerPage,
   });
 };
@@ -122,10 +122,10 @@ export const getStaticPathsGalleryList = async ({ paginate }) => {
 /** */
 export const getStaticPathsGalleryPost = async () => {
   if (!isGalleryEnabled || !isGalleryPostRouteEnabled) return [];
-  return (await fetchGalleries()).flatMap((post) => ({
+  return (await fetchGalleries()).flatMap((gallery) => ({
     params: {
-      blog: post.permalink,
+      gallery: gallery.permalink,
     },
-    props: { post },
+    props: { gallery },
   }));
 };

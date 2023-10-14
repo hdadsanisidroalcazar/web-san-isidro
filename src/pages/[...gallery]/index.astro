@@ -15,15 +15,15 @@ export async function getStaticPaths() {
   return await getStaticPathsGalleryPost();
 }
 
-const { post } = Astro.props;
+const { gallery } = Astro.props;
 
-const url = getCanonical(getPermalink(post.permalink, 'post'));
-const image = (await findImage(post.image)) as ImageMetadata | undefined;
+const url = getCanonical(getPermalink(gallery.permalink, 'post'));
+const image = (await findImage(gallery.image)) as ImageMetadata | undefined;
 
 const metadata = merge(
   {
-    title: post.title,
-    description: post.description,
+    title: gallery.title,
+    description: gallery.description,
     robots: {
       index: galleryPostRobots?.index,
       follow: galleryPostRobots?.follow,
@@ -33,11 +33,11 @@ const metadata = merge(
       ...(image ? { images: [{ url: image, width: image?.width, height: image?.height }] } : {}),
     },
   },
-  { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || url } : {}) }
+  { ...(gallery?.metadata ? { ...gallery.metadata, canonical: gallery.metadata?.canonical || url } : {}) }
 );
 ---
 
 <Layout metadata={metadata}>
   <!-- <SinglePost post={{ ...post, image: image }} url={url} /> -->
-  <ToBlogLink category="galeria" />
+  <ToBlogLink page="galeria" />
 </Layout>
