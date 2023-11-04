@@ -82,6 +82,12 @@
           "description": "",
           "location": "Iglesia de san isidro",
           "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6"
+        },
+        {
+          "title": "Subasta de los objetos donados al Santo",
+          "time": "12:45",
+          "location": "Ermita de San Isidro",
+          "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
         }
       ]
     }
