@@ -70,10 +70,11 @@
       "title": "Martes 15 de Mayo",
       "event": [
         {
-          "title": "Inicio",
-          "time": "09:00",
-          "description": "Descripción\n",
-          "location": "Iglesia de San Francisco"
+          "title": "Función solemne",
+          "time": "11:00",
+          "description": "",
+          "location": "Iglesia de San Francisco",
+          "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6"
         },
         {
           "title": "Evento 2",
