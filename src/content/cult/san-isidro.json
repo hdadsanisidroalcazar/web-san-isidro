@@ -44,6 +44,14 @@
       "title": "Domingo 14 de Mayo",
       "event": [
         {
+          "title": "Juegos populares",
+          "time": "12:00",
+          "description": "Carrera de sacos, relevos con cuchara y carrera de triciclos. Inscripciones gratuitas.\n",
+          "location": "Ermita de San Isidro",
+          "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
+          "image": "/images/carteles/juegos-populares.webp"
+        },
+        {
           "title": "I Carrera de Orientación \"San Isidro\"",
           "time": "10:00",
           "description": "",
