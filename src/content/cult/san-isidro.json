@@ -77,9 +77,11 @@
           "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6"
         },
         {
-          "title": "Evento 2",
-          "time": "10: 00",
-          "description": "Esta es la descrpción del evento\n"
+          "title": "Subida de San Isidro a su ermita",
+          "time": "12: 00",
+          "description": "",
+          "location": "Iglesia de san isidro",
+          "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6"
         }
       ]
     }
