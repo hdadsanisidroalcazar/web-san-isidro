@@ -44,6 +44,12 @@
       "title": "Domingo 14 de Mayo",
       "event": [
         {
+          "title": "I Carrera de Orientación \"San Isidro\"",
+          "time": "10:00",
+          "description": "",
+          "image": "/images/carteles/i-carrera-orientacion.webp"
+        },
+        {
           "title": "Juegos populares",
           "time": "12:00",
           "description": "Carrera de sacos, relevos con cuchara y carrera de triciclos. Inscripciones gratuitas.\n",
@@ -52,10 +58,11 @@
           "image": "/images/carteles/juegos-populares.webp"
         },
         {
-          "title": "I Carrera de Orientación \"San Isidro\"",
-          "time": "10:00",
-          "description": "",
-          "image": "/images/carteles/i-carrera-orientacion.webp"
+          "title": "I Concurso de dibujo infantil",
+          "time": "12:00",
+          "description": "Temática: ¿Que es San Isidro para ti? Inscripciones gratuitas\n",
+          "location": "Ermita de San Isidro",
+          "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
         }
       ]
     },
