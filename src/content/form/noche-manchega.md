@@ -1,5 +1,5 @@
 ---
-closed: false
+closed: true
 title: Incripción I Noche Manchega
 field:
   - label: Nombre y apellidos de la persona responsable
@@ -21,4 +21,4 @@ field:
 7. El donativo por inscripción es de 5 € por cuadrilla.
 8. A todas las personas que se inscriban, se les enviará un correo indicándoles el número de parcela o, por contra, si el cupo está completo.
 
-Para cualquier información e incidencia, puede contactar con la Hermandad de San Isidro a través del correo electrónico hdadsanisidroalcazar@outlook.es o el teléfono 654538229 (Jesús).
+Para cualquier información e incidencia, puede contactar con la Hermandad de San Isidro a través del correo electrónico [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es) o el teléfono 654538229 (Jesús).
