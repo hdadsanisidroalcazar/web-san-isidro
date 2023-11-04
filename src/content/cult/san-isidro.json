@@ -48,6 +48,8 @@
           "title": "I Carrera de Orientación \"San Isidro\"",
           "time": "10:00",
           "description": "",
+          "location": "Cerro de San Isidro",
+          "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
           "image": "/images/carteles/i-carrera-orientacion.webp"
         },
         {
@@ -87,18 +89,21 @@
         {
           "title": "Subasta de los objetos donados al Santo",
           "time": "12:45",
+          "description": "",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
         },
         {
           "title": "Sorteo de los premios de las papeletas",
           "time": "19:30",
+          "description": "",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
         },
         {
           "title": "Bajada del Santo a la Iglesia de San Francisco",
           "time": "20:00",
+          "description": "",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
         }
