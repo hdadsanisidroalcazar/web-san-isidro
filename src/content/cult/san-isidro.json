@@ -94,6 +94,12 @@
           "time": "19:30",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
+        },
+        {
+          "title": "Bajada del Santo a la Iglesia de San Francisco",
+          "time": "20:00",
+          "location": "Ermita de San Isidro",
+          "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
         }
       ]
     }
