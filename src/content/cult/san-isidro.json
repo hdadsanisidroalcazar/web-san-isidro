@@ -9,14 +9,17 @@
           "title": "Presentación de Damas de Honor San Isidro 2023 e imposición de ramos y bandas",
           "time": "20:30",
           "description": "",
-          "location": "Iglesia de San francisco"
+          "location": "Iglesia de San Francisco",
+          "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6",
+          "image": "/images/carteles/presentacion-damas.webp"
         },
         {
           "title": "Mayos en honor a San Isidro",
           "time": "21:00",
           "description": "A cargi de Asociaciones y Grupos Locales\n",
           "location": "Iglesia de San Francisco",
-          "map": "https://goo.gl/maps/Juk88fLdCBqRcEqF7"
+          "map": "https://goo.gl/maps/Juk88fLdCBqRcEqF7",
+          "image": "/images/carteles/mayos.webp"
         }
       ]
     },
@@ -45,7 +48,24 @@
           "title": "I Carrera de Orientación \"San Isidro\"",
           "time": "10:00",
           "description": "",
+          "location": "Cerro de San Isidro",
+          "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
           "image": "/images/carteles/i-carrera-orientacion.webp"
+        },
+        {
+          "title": "Juegos populares",
+          "time": "12:00",
+          "description": "Carrera de sacos, relevos con cuchara y carrera de triciclos. Inscripciones gratuitas.\n",
+          "location": "Ermita de San Isidro",
+          "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
+          "image": "/images/carteles/juegos-populares.webp"
+        },
+        {
+          "title": "I Concurso de dibujo infantil",
+          "time": "12:00",
+          "description": "Temática: ¿Que es San Isidro para ti? Inscripciones gratuitas\n",
+          "location": "Ermita de San Isidro",
+          "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
         }
       ]
     },
@@ -53,15 +73,39 @@
       "title": "Martes 15 de Mayo",
       "event": [
         {
-          "title": "Inicio",
-          "time": "09:00",
-          "description": "Descripción\n",
-          "location": "Iglesia de San Francisco"
+          "title": "Función solemne",
+          "time": "11:00",
+          "description": "",
+          "location": "Iglesia de San Francisco",
+          "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6"
         },
         {
-          "title": "Evento 2",
-          "time": "10: 00",
-          "description": "Esta es la descrpción del evento\n"
+          "title": "Subida de San Isidro a su ermita",
+          "time": "12: 00",
+          "description": "",
+          "location": "Iglesia de san isidro",
+          "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6"
+        },
+        {
+          "title": "Subasta de los objetos donados al Santo",
+          "time": "12:45",
+          "description": "",
+          "location": "Ermita de San Isidro",
+          "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
+        },
+        {
+          "title": "Sorteo de los premios de las papeletas",
+          "time": "19:30",
+          "description": "",
+          "location": "Ermita de San Isidro",
+          "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
+        },
+        {
+          "title": "Bajada del Santo a la Iglesia de San Francisco",
+          "time": "20:00",
+          "description": "",
+          "location": "Ermita de San Isidro",
+          "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
         }
       ]
     }
