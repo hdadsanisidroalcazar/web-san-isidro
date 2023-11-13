@@ -47,6 +47,7 @@ export const headerData = {
           text: 'Historia',
           href: getPermalink('/san-isidro/historia'),
         },
+        { text: 'Evolución de la Romería', href: getPermalink('/san-isidro/evolucion') },
         {
           text: 'Programa de cultos y actos',
           href: getPermalink('/san-isidro/cultos'),
@@ -64,6 +65,7 @@ export const headerData = {
           text: 'Historia',
           href: getPermalink('/santa-agueda-y-santa-apolonia/historia'),
         },
+        { text: 'Evolución de las festividades', href: getPermalink('/santa-agueda-y-santa-apolonia/evolucion') },
         {
           text: 'Programa de cultos y actos',
           href: getPermalink('/santa-agueda-y-santa-apolonia/cultos'),
@@ -95,6 +97,7 @@ export const footerData = {
       title: 'San Isidro',
       links: [
         { text: 'Historia', href: '/san-isidro/historia' },
+        { text: 'Evolución de la Romería', href: '/san-isidro/evolucion' },
         { text: 'Programa de cultos y actos', href: '/san-isidro/cultos' },
         { text: 'Revistas', href: '/revistas' },
         { text: 'Cartelería', href: '/san-isidro/carteleria' },
@@ -104,6 +107,7 @@ export const footerData = {
       title: 'Santa Águeda y Santa Apolonia',
       links: [
         { text: 'Historia', href: '/santa-agueda-y-santa-apolonia/historia' },
+        { text: 'Evolución de las festividades', href: '/santa-agueda-y-santa-apolonia/evolucion' },
         { text: 'Programa de cultos y actos', href: '/santa-agueda-y-santa-apolonia/cultos' },
       ],
     },
