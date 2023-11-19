@@ -93,6 +93,7 @@ export interface AppBlogConfig {
 export interface RssConfig {
   instagram: string;
   facebook: string;
+  whatsapp: string;
 }
 
 export interface GalleryConfig {
