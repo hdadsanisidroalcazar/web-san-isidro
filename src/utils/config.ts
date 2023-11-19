@@ -93,6 +93,7 @@ export interface AppBlogConfig {
 export interface RssConfig {
   instagram: string;
   facebook: string;
+  whatsapp: string;
 }
 
 const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
