@@ -66,11 +66,11 @@ const imagetitles = images.map(
 
       document.addEventListener(
         fullscreenAPI.change,
-        (event) => {
+        () => {
           pswpContainer.style.display = "block";
           // delay to make sure that browser fullscreen animation is finished
           setTimeout(function () {
-            resolve();
+            resolve(0);
           }, 300);
         },
         { once: true }

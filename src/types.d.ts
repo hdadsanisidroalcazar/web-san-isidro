@@ -91,7 +91,6 @@ export interface Gallery {
   folder?: string;
 }
 
-
 export interface Generic {
   /** A unique ID number that identifies a post. */
   id: string;
