@@ -39,10 +39,9 @@ export const Gallery: Collection = {
       isBody: true,
     },
     {
-      type: 'image',
-      name: 'images',
-      label: 'Images',
-      list: true,
+      type: 'string',
+      name: 'folder',
+      label: 'Nombre de la carpeta de la galería',
     },
   ],
 };

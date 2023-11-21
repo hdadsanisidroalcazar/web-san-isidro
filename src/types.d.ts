@@ -88,7 +88,7 @@ export interface Gallery {
   metadata?: MetaData;
   Content?: unknown;
   content?: string;
-  images?: string[];
+  folder?: string;
 }
 
 
