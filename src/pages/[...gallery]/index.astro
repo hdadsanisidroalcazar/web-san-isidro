@@ -3,11 +3,12 @@ import merge from 'lodash.merge';
 import type { ImageMetadata } from 'astro';
 import Layout from '~/layouts/PageLayout.astro';
 import ToBlogLink from '~/components/blog/ToBlogLink.astro';
-import Gallery from '~/components/common/Gallery.astro';
 
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import { getStaticPathsGalleryPost, galleryPostRobots } from '~/utils/gallery';
 import { findImage } from '~/utils/images';
+import Gallery from '~/components/ui/Gallery.astro';
+import SocialShare from '~/components/common/SocialShare.astro';
 
 export const prerender = true;
 
@@ -17,7 +18,7 @@ export async function getStaticPaths() {
 
 const { gallery } = Astro.props;
 
-const url = getCanonical(getPermalink(gallery.permalink, 'post'));
+const url = getCanonical(getPermalink(gallery.permalink));
 const image = (await findImage(gallery.image)) as ImageMetadata | undefined;
 
 const metadata = merge(
@@ -35,9 +36,40 @@ const metadata = merge(
   },
   { ...(gallery?.metadata ? { ...gallery.metadata, canonical: gallery.metadata?.canonical || url } : {}) }
 );
+
+const Content = gallery?.Content || Fragment;
 ---
 
 <Layout metadata={metadata}>
-  <Gallery a="hola" />
+  <section class="py-8 sm:py-16 lg:py-20 mx-auto">
+    <article>
+      <header>
+        <h1
+          class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading"
+        >
+          {gallery.title}
+        </h1>
+        <p
+          class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify"
+        >
+          {gallery.description}
+        </p>
+      </header>
+      <div
+        class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
+      >
+        {Content ? <Content /> : <Fragment set:html={gallery.content} />}
+        {gallery.images && <Gallery images={gallery.images} />}
+      </div>
+      <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between flex-col sm:flex-row">
+        <SocialShare
+          url={url}
+          text={gallery.title}
+          class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600"
+        />
+      </div>
+    </article>
+  </section>
+
   <ToBlogLink page="galeria" />
 </Layout>
