@@ -85,7 +85,9 @@ import { UI } from '~/utils/config';
         case 'mail':
           href = `mailto:?subject=%22${text}%22&body=${text}%20${url}`;
           break;
-
+        case 'telegram':
+          href = `https://t.me/share/url?url=${url}&text=${text}`;
+          break;
         default:
           return;
       }
