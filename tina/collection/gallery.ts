@@ -1,9 +1,9 @@
 import type { Collection } from 'tinacms';
 
-export const Post: Collection = {
-  name: 'post',
-  label: 'Publicaciones',
-  path: 'src/content/post',
+export const Gallery: Collection = {
+  name: 'gallery',
+  label: 'Galerías',
+  path: 'src/content/gallery',
   format: 'mdx',
   fields: [
     {
@@ -12,11 +12,6 @@ export const Post: Collection = {
       label: 'Titulo',
       isTitle: true,
       required: true,
-    },
-    {
-      type: 'string',
-      name: 'author',
-      label: 'Autor',
     },
     {
       type: 'string',
@@ -42,6 +37,11 @@ export const Post: Collection = {
       name: 'body',
       label: 'Cuerpo',
       isBody: true,
+    },
+    {
+      type: 'string',
+      name: 'folder',
+      label: 'Nombre de la carpeta de la galería',
     },
   ],
 };

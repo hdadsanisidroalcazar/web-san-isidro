@@ -5,17 +5,18 @@ import Button from '~/components/ui/Button.astro';
 
 interface Props {
   category?: string;
+  page?: string;
 }
 
-const { category } = Astro.props;
+const { category, page } = Astro.props;
 ---
 
 <div class="mx-auto px-6 sm:px-6 max-w-3xl pt-8 md:pt-4 pb-12 md:pb-20">
   <Button
     variant="tertiary"
     class="px-3 md:px-3"
-    href={category ? getPermalink(category, 'category') : getBlogPermalink()}
+    href={page ? getPermalink(page) : category ? getPermalink(category, 'category') : getBlogPermalink()}
   >
-    <Icon name="tabler:chevron-left" class="w-5 h-5 mr-1 -ml-1.5" /> Ir a {category || 'actualidad'}
+    <Icon name="tabler:chevron-left" class="w-5 h-5 mr-1 -ml-1.5" /> Ir a {page || category || 'actualidad'}
   </Button>
 </div>

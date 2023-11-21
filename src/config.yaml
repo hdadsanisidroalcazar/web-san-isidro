@@ -87,15 +87,15 @@ apps:
     isEnabled: true
     postsPerPage: 6
 
-    post:
+    gallery:
       isEnabled: true
-      permalink: '/galerias/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      permalink: '/galeria/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       robots:
         index: true
 
-    list:
+    all:
       isEnabled: true
-      pathname: 'galerias' # Blog main path, you can change this to "articles" (/articles)
+      pathname: 'galeria'
       robots:
         index: true
 
@@ -142,4 +142,4 @@ ui:
 rss:
   instagram: hdadsanisidroalcazar
   facebook: hermandadsanisidro
-  whatsapp: "channel/0029VaEjr5LInlqKsafYtN0Q"
+  whatsapp: 'channel/0029VaEjr5LInlqKsafYtN0Q'

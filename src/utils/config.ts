@@ -96,6 +96,27 @@ export interface RssConfig {
   whatsapp: string;
 }
 
+export interface GalleryConfig {
+  isEnabled: boolean;
+  postsPerPage: number;
+  gallery: {
+    isEnabled: boolean;
+    permalink: string;
+    robots: {
+      index: boolean;
+      follow: boolean;
+    };
+  };
+  all: {
+    isEnabled: boolean;
+    pathname: string;
+    robots: {
+      index: boolean;
+      follow: boolean;
+    };
+  };
+}
+
 const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
   site?: SiteConfig;
   metadata?: MetaDataConfig;
@@ -104,6 +125,7 @@ const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
     generic?: AppGenericConfig;
     cults?: AppCultConfig;
     forms?: AppFormConfig;
+    gallery?: GalleryConfig;
   };
   ui?: unknown;
   rss?: RssConfig;
@@ -252,11 +274,37 @@ const getRss = () => {
   return merge({}, _default, config?.rss ?? {});
 };
 
+const getGalleries = () => {
+  const _default = {
+    isEnabled: false,
+    postsPerPage: 6,
+    gallery: {
+      isEnabled: true,
+      permalink: '/galeria/%slug%',
+      robots: {
+        index: true,
+        follow: true,
+      },
+    },
+    all: {
+      isEnabled: true,
+      pathname: 'galeria',
+      robots: {
+        index: true,
+        follow: true,
+      },
+    },
+  };
+
+  return merge({}, _default, config?.apps?.gallery ?? {}) as GalleryConfig;
+};
+
 export const SITE = getSite();
 export const METADATA = getMetadata();
 export const APP_BLOG = getAppBlog();
 export const APP_GENERIC = getAppGeneric();
 export const APP_CULTS = getAppCults();
 export const APP_FORMS = getAppForms();
+export const APP_GALLERY = getGalleries();
 export const UI = getUI();
 export const RSS = getRss();

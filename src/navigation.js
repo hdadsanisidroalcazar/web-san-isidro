@@ -72,10 +72,10 @@ export const headerData = {
         },
       ],
     },
-    // {
-    //   text: 'Galería',
-    //   href: getPermalink('/galeria'),
-    // },
+    {
+      text: 'Galería',
+      href: getPermalink('/galeria'),
+    },
     {
       text: 'Contacto',
       href: getPermalink('/contacto'),
@@ -113,9 +113,9 @@ export const footerData = {
     },
     {
       links: [
+        { text: 'Galería de fotos', href: '/galería' },
         { text: 'Artículos', href: '/categoria/articulos' },
         { text: 'Entrevistas', href: '/categoria/entrevistas' },
-        // { text: 'Galería de fotos', href: '/galería' },
         { text: 'Poemas', href: '/categoria/poemas' },
         // { text: 'Patrocinadores', href: '/patrocinadores' },
       ],
