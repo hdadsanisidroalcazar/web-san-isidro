@@ -1,0 +1,170 @@
+---
+import 'photoswipe/style.css'
+import { Image } from 'astro:assets'
+import type { ImageMetadata } from 'astro';
+
+export interface Props {
+  id: string;
+  images: ImageMetadata[];
+}
+
+const { id, images } = Astro.props;
+
+const imagetitles = images.map(
+	(image) => image.src.split('/').reverse()[0].split('.')[0]
+);
+---
+
+<lightbox-inner data-id={id}>
+	{
+		images.map((image, i) => (
+			<figure
+				itemscope
+				itemtype='http://schema.org/ImageObject'
+				class='my-1 inline-block rounded bg-gray-300 text-center text-sm italic text-gray-800 shadow-lg shadow-gray-400 dark:bg-gray-800 dark:text-gray-300 dark:shadow-black lg:my-2'
+			>
+				<a
+					href={image.src}
+					itemprop='contentUrl'
+					data-pswp-width={image.width}
+					data-pswp-height={image.height}
+				>
+					<Image
+						src={image}
+						alt={imagetitles[i]}
+						width={600}
+						height={(image.height * 600) / image.width}
+						format='webp'
+						class='rounded'
+					/>
+				</a>
+			</figure>
+		))
+	}
+</lightbox-inner>
+<script>
+  import PhotoSwipeLightbox from "photoswipe/lightbox";
+
+  function getContainer() {
+    const pswpContainer = document.createElement("div");
+    pswpContainer.style.background = "#000";
+    pswpContainer.style.width = "100%";
+    pswpContainer.style.height = "100%";
+    pswpContainer.style.display = "none";
+    document.body.appendChild(pswpContainer);
+    return pswpContainer;
+  }
+
+  const pswpContainer = getContainer();
+
+  function getFullscreenPromise() {
+    return new Promise((resolve) => {
+      if (!fullscreenAPI || fullscreenAPI.isFullscreen()) {
+        resolve();
+        return;
+      }
+
+      document.addEventListener(
+        fullscreenAPI.change,
+        (event) => {
+          pswpContainer.style.display = "block";
+          // delay to make sure that browser fullscreen animation is finished
+          setTimeout(function () {
+            resolve();
+          }, 300);
+        },
+        { once: true }
+      );
+
+      fullscreenAPI.request(pswpContainer);
+    });
+  }
+
+  function getFullscreenAPI() {
+    let api;
+    let enterFS;
+    let exitFS;
+    let elementFS;
+    let changeEvent;
+    let errorEvent;
+
+    if (document.documentElement.requestFullscreen) {
+      enterFS = "requestFullscreen";
+      exitFS = "exitFullscreen";
+      elementFS = "fullscreenElement";
+      changeEvent = "fullscreenchange";
+      errorEvent = "fullscreenerror";
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      enterFS = "webkitRequestFullscreen";
+      exitFS = "webkitExitFullscreen";
+      elementFS = "webkitFullscreenElement";
+      changeEvent = "webkitfullscreenchange";
+      errorEvent = "webkitfullscreenerror";
+    }
+
+    if (enterFS) {
+      api = {
+        request: function (el) {
+          if (enterFS === "webkitRequestFullscreen") {
+            el[enterFS](Element.ALLOW_KEYBOARD_INPUT);
+          } else {
+            el[enterFS]();
+          }
+        },
+
+        exit: function () {
+          return document[exitFS]();
+        },
+
+        isFullscreen: function () {
+          return document[elementFS];
+        },
+
+        change: changeEvent,
+        error: errorEvent,
+      };
+    }
+
+    return api;
+  }
+
+  const fullscreenAPI = getFullscreenAPI();
+
+  class LightboxInner extends HTMLElement {
+    constructor() {
+      super();
+
+      const id = this.dataset.id;
+
+      const lightbox = new PhotoSwipeLightbox({
+        gallerySelector: "#" + id,
+        childSelector: "a",
+        pswpModule: () => import("photoswipe"),
+        paddingFn: () => {
+          return {
+            top: 0,
+            bottom: 30,
+            left: 0,
+            right: 0,
+          };
+        },
+        openPromise: getFullscreenPromise,
+        appendToEl: fullscreenAPI ? pswpContainer : document.body,
+        preloadFirstSlide: false,
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0,
+      });
+
+      lightbox.on("close", () => {
+        pswpContainer.style.display = "none";
+        if (fullscreenAPI && fullscreenAPI.isFullscreen()) {
+          fullscreenAPI.exit();
+        }
+      });
+
+      lightbox.init();
+    }
+  }
+
+  customElements.define("lightbox-inner", LightboxInner);
+</script>

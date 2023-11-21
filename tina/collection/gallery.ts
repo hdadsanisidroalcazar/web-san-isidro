@@ -40,7 +40,7 @@ export const Gallery: Collection = {
     },
     {
       type: 'image',
-      name: 'gallery',
+      name: 'images',
       label: 'Images',
       list: true,
     },
