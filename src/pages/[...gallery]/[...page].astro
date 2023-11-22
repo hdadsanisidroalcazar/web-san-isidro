@@ -8,7 +8,7 @@ import { galleryListRobots, getStaticPathsGalleryList } from '~/utils/gallery';
 
 export const prerender = true;
 
-export async function getStaticPaths ({ paginate }) {
+export async function getStaticPaths({ paginate }) {
   return await getStaticPathsGalleryList({ paginate });
 }
 
@@ -29,11 +29,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline
-      subtitle="Últimas galerías de imágenes"
-    >
-      Galerías
-    </Headline>
+    <Headline subtitle="Últimas galerías de imágenes">Galerías</Headline>
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>

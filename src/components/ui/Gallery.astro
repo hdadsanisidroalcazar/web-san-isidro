@@ -13,8 +13,6 @@ const imageFiles = import.meta.glob<ImageMetadata>('../../../public/images/galer
   eager: true,
 });
 
-console.log(imageFiles)
-
 const folderFiles = Object.keys(imageFiles).filter((image) => image.search(folder) >= 0);
 const imageSrcs = folderFiles.map((image) => imageFiles[image]);
 const gallery = 'gallery-' + folder;
