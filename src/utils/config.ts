@@ -269,6 +269,7 @@ const getRss = () => {
   const _default = {
     instagram: '',
     facebook: '',
+    whatsapp: '',
   };
 
   return merge({}, _default, config?.rss ?? {});

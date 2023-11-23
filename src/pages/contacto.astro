@@ -5,6 +5,7 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import { findImage } from '~/utils/images';
 import { fetchContact } from '~/utils/page';
+import { RSS } from '~/utils/config';
 
 const metadata = {
   title: 'Contacto',
@@ -14,7 +15,6 @@ const contactData = await fetchContact();
 ---
 
 <PageLayout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
 
   <Hero
     title={contactData.title}
@@ -42,17 +42,17 @@ const contactData = await fetchContact();
     inputs={[
       {
         type: 'text',
-        name: 'name',
+        name: 'nombre',
         label: 'Nombre',
       },
       {
         type: 'email',
-        name: 'email',
+        name: 'correo',
         label: 'Correo electrónico',
       },
       {
         type: 'tel',
-        name: 'phone',
+        name: 'telefono',
         label: 'Teléfono',
       },
     ]}
@@ -80,6 +80,36 @@ const contactData = await fetchContact();
         title: 'Dirección',
         description: contactData.address,
         icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Facebook',
+        icon: 'tabler:brand-facebook',
+        callToAction: {
+          text: 'Ir a la página de Facebook',
+          href: `https://www.facebook.com/${RSS.facebook}`,
+          variant: 'link',
+          target: '_blank',
+        },
+      },
+      {
+        title: 'Instagram',
+        icon: 'tabler:brand-instagram',
+        callToAction: {
+          text: 'Ir al perfil de Instagram',
+          href: `https://www.instagram.com/${RSS.instagram}`,
+          variant: 'link',
+          target: '_blank',
+        },
+      },
+      {
+        title: 'Instagram',
+        icon: 'tabler:brand-whatsapp',
+        callToAction: {
+          text: 'Ir al canal de Whatsapp',
+          href: `https://whatsapp.com/${RSS.whatsapp}`,
+          variant: 'link',
+          target: '_blank',
+        },
       },
     ]}
   />
