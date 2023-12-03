@@ -32,4 +32,4 @@ Si deseas ejecutar este proyecto localmente, sigue estos pasos:
 
 ## Contribuciones y colaboración 👋
 
-¡Eres bienvenido/a a contribuir a este proyecto! Si tienes ideas, correcciones o mejoras, siéntete libre de hacer un "fork" del repositorio y abrir una solicitud de extracción. Estamos abiertos a colaboraciones para hacer de esta web una fuente de información aún mejor sobre Alameda de Cervera.
+¡Eres bienvenido/a a contribuir a este proyecto! Si tienes ideas, correcciones o mejoras, siéntete libre de hacer un "fork" del repositorio y abrir una solicitud de extracción. Estamos abiertos a colaboraciones para mejorar la web de nuestra Hermandad.
