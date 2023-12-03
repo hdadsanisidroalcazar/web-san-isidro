@@ -19,7 +19,7 @@
     "@astrojs/mdx": "^1.1.0",
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "5.0.2",
-    "@iconify-json/flat-color-icons": "^1.1.7",
+    "@iconify-json/flat-color-icons": "^1.1.9",
     "@iconify-json/tabler": "^1.1.92",
     "@tailwindcss/typography": "^0.5.10",
     "@types/lodash.merge": "^4.6.7",
