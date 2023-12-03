@@ -16,9 +16,9 @@ metadata:
   openGraph:
     site_name: Hermandad de San Isidro labrador
     images:
-      - url: '~/assets/images/default.png'
-        width: 1200
-        height: 628
+      - url: '~/assets/images/hero.webp'
+        width: 900
+        height: 500
     type: website
   twitter:
     cardType: summary_large_image
