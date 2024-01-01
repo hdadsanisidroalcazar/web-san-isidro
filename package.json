@@ -53,6 +53,6 @@
     "lodash.merge": "^4.6.2",
     "photoswipe": "^5.4.3",
     "tinacms": "^1.5.20",
-    "unpic": "^3.10.1"
+    "unpic": "^3.16.0"
   }
 }
