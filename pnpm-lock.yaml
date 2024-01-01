@@ -12,8 +12,8 @@ dependencies:
     specifier: ^5.0.1
     version: 5.2.0(astro@3.6.0)
   '@astrolib/seo':
-    specifier: ^1.0.0-beta.4
-    version: 1.0.0-beta.4(astro@3.6.0)
+    specifier: ^1.0.0-beta.5
+    version: 1.0.0-beta.5(astro@3.6.0)
   '@fontsource-variable/inter':
     specifier: ^5.0.8
     version: 5.0.15
@@ -291,10 +291,10 @@ packages:
       - supports-color
     dev: false
 
-  /@astrolib/seo@1.0.0-beta.4(astro@3.6.0):
-    resolution: {integrity: sha512-cZWXJY4TKaZ1V419wV4TUVSZaPC2CEVYMaD6mgC9iJS7pmpwVbtFCUwnzodxE8c23cEi4kb5DIOJHgPvUrMibQ==}
+  /@astrolib/seo@1.0.0-beta.5(astro@3.6.0):
+    resolution: {integrity: sha512-poBnSB9TzkmOyf+PoMR642zVLSoVVZbUIKnYDHXHrKi/upkaegNiaBdVRsyqaQC93SIxxyagQrIbLRtnSJT4Xg==}
     peerDependencies:
-      astro: ^1.2.1 || ^2.0.0 || ^3.0.0-beta.0 || ^3.0.0
+      astro: ^1.2.1 || ^2.0.0 || ^3.0.0-beta.0 || ^3.0.0 || ^4.0.0
     dependencies:
       astro: 3.6.0(typescript@5.3.2)
     dev: false
