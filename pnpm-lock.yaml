@@ -39,8 +39,8 @@ dependencies:
     specifier: ^1.5.20
     version: 1.5.26(@babel/core@7.23.3)(react-dom@18.2.0)(react@18.2.0)
   unpic:
-    specifier: ^3.10.1
-    version: 3.14.1
+    specifier: ^3.16.0
+    version: 3.16.0
 
 devDependencies:
   '@astrojs/mdx':
@@ -15998,8 +15998,8 @@ packages:
       normalize-path: 2.1.1
     dev: false
 
-  /unpic@3.14.1:
-    resolution: {integrity: sha512-MTr2ktf65nAjxSoX6YGnbZv+YfHcz41H5UJ6v+Bz/cMjNmOxPfcTRfkOOR8RaxI4p4SR126JAiaRizlZvcMHAw==}
+  /unpic@3.16.0:
+    resolution: {integrity: sha512-XXvQGL+fvzwEX3aPXggTCrzySFPqvpC8r1LKy5ft9573AoX8CrszmA0uOzi6xgylCvvqFg46IDOudJKzM2lQ5A==}
     dev: false
 
   /unpipe@1.0.0:
