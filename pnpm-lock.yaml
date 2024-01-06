@@ -24,8 +24,8 @@ dependencies:
     specifier: ^3.2.2
     version: 3.6.0(typescript@5.3.2)
   astro-icon:
-    specifier: ^1.0.0-next.2
-    version: 1.0.0-next.2
+    specifier: ^1.0.1
+    version: 1.0.1
   limax:
     specifier: 4.1.0
     version: 4.1.0
@@ -4405,7 +4405,6 @@ packages:
     resolution: {integrity: sha512-wmyg8HUhcn6ACjsn8oKYjkN/zUzQeNtMy44weTJSM6p4MMzEOuKbA3OjJ267uPCOW7Xex9dyrNTful8XTQYoDA==}
     dependencies:
       undici-types: 5.26.5
-    dev: false
 
   /@types/parse-json@4.0.2:
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
@@ -4442,7 +4441,7 @@ packages:
   /@types/sax@1.2.7:
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 20.9.4
     dev: true
 
   /@types/scheduler@0.16.8:
@@ -8063,8 +8062,8 @@ packages:
       - supports-color
     dev: true
 
-  /astro-icon@1.0.0-next.2:
-    resolution: {integrity: sha512-LruCSCnTX16w5p8G+afyRqL8i4SKDVbaEvs7d5wudahum+7pibuFDp//LvKL+QBTLctEzoS/o0387yuOAKli6A==}
+  /astro-icon@1.0.1:
+    resolution: {integrity: sha512-NtPyGeoSe/TJsGsea6T+8SDcW/wwZ7OIUq731DT7M6nw2B1p5BHuChiQI0bQvIIL79r48nMN7mQ8GBtwsDEucA==}
     dependencies:
       '@iconify/tools': 3.0.6
       '@iconify/types': 2.0.0
