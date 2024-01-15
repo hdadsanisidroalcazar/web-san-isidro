@@ -17,7 +17,16 @@
       ]
     },
     {
-      "title": "4 de febrero de 2024"
+      "title": "4 de febrero de 2024",
+      "event": [
+        {
+          "title": "SANTA MISA EN HONOR A SANTA ÁGUEDA Y SANTA APOLONIA",
+          "time": "13.00 H.",
+          "description": "A las 13.00 H., tendrá lugar la Santa Misa en honor a Santa Águeda y Santa Apolonia. Durante la misma se bendecirán las tortas de las meriendas.\n\nAquellas personas que no puedan subir para celebrar ambas festividades al cerro de San Isidro los días 5 y 9, podrán adquirir tortas al finalizar la eucaristía a un precio de 0,50 €/ud.\n",
+          "location": "Iglesia de San Francisco",
+          "map": "https://www.google.com/maps/place/Iglesia+y+convento+de+San+Francisco/@39.3887919,-3.210218,17z/data=!3m1!4b1!4m6!3m5!1s0xd69aeefb3165823:0x169fe142d9dfcbbe!8m2!3d39.3887879!4d-3.2053471!16s%2Fg%2F11bxg1p81f?entry=ttu"
+        }
+      ]
     },
     {
       "title": "5 de febrero",
