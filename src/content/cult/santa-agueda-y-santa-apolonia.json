@@ -1,5 +1,13 @@
 {
   "title": "Programa de cultos y actos",
-  "subtitle": "Próximamente",
-  "tagline": "Sta. Águeda y Sta. Apolonia 2024"
+  "subtitle": "",
+  "tagline": "Santa Águeda y Santa Apolonia 2024",
+  "days": [
+    {
+      "title": "",
+      "event": [
+        {}
+      ]
+    }
+  ]
 }
