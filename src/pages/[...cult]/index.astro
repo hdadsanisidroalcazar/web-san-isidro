@@ -46,7 +46,7 @@ const metadata = {
                         target="_blank"
                       />
                       <p class="font-bold uppercase">{event.title}</p>
-                      <div class="mt-2" set:html={event.description} />
+                      <div class="mt-2" set:html={event.description?.replaceAll('\n', '<br/>')} />
                       {event.buttons && (
                         <div class="flex">
                           {event.buttons.map((button) => (
