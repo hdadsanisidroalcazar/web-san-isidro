@@ -36,6 +36,7 @@ export interface Cult {
     event: {
       title: string;
       time: string;
+      map: string;
       description?: string;
       location?: string;
       image?: string;
