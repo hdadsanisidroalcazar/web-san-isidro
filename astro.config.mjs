@@ -87,7 +87,8 @@ export default defineConfig({
     '/paginas/articulos/2016_concurso-arado.html': '/actualidad/2016_concurso-arado',
     '/paginas/articulos/2016_san-isidro-cine.html': '/actualidad/2016_san-isidro-cine',
     '/paginas/articulos/2016_san-isidro-en-el-ejido.html': '/actualidad/2016_san-isidro-en-el-ejido',
-    '/paginas/entrevistas/2014_entrevista-presidente-hermandad.html': '/actualidad/2014_entrevista-presidente-hermandad',
+    '/paginas/entrevistas/2014_entrevista-presidente-hermandad.html':
+      '/actualidad/2014_entrevista-presidente-hermandad',
     '/paginas/entrevistas/2014_saluda.html': '/actualidad/2014_saluda',
     '/paginas/entrevistas/2016_saluda01.html': '/actualidad/2016_saluda01',
     '/paginas/entrevistas/2016_saluda02.html': '/actualidad/2016_saluda02',
@@ -98,5 +99,5 @@ export default defineConfig({
     '/paginas/poemas/2016_poema-espigas-amapolas.html': '/actualidad/2016_poema-espigas-amapolas',
     '/paginas/romeria.html': '/san-isidro/evolucion',
     '/paginas/programa.html': '/san-isidro/cultos',
-  }
+  },
 });
