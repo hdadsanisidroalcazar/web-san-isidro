@@ -14,8 +14,10 @@ export async function getStaticPaths() {
 const { cult: schedule } = Astro.props;
 const metadata = {
   title: `${schedule.title} | Hermandad de San Isidro Labrador`,
+  description: `${schedule.title} de ${schedule.tagline} en Alcázar de San Juan`,
   ignoreTitleTemplate: true,
 };
+
 ---
 
 <Layout metadata={metadata}>
