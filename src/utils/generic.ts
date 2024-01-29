@@ -24,6 +24,8 @@ const getNormalizedPost = async (generic: CollectionEntry<'generic'>): Promise<G
     slug: slug,
     permalink: await generatePermalink({ id, slug }),
     title: data.title,
+    index: data.index,
+    follow: data.follow,
 
     Content: Content,
   };

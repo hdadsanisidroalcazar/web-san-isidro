@@ -106,6 +106,8 @@ export interface Generic {
   content?: string;
 
   title?: string;
+  index?: boolean;
+  follow?: boolean;
 }
 
 export interface Post {
