@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@astrojs/mdx": "^1.1.0",
-    "@astrojs/sitemap": "^3.0.4",
+    "@astrojs/sitemap": "^3.0.5",
     "@astrojs/tailwind": "5.0.2",
     "@iconify-json/flat-color-icons": "^1.1.9",
     "@iconify-json/tabler": "^1.1.92",
