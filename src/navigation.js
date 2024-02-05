@@ -129,6 +129,7 @@ export const footerData = {
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: `https://www.instagram.com/${RSS.instagram}` },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: `https://www.facebook.com/${RSS.facebook}` },
     { ariaLabel: 'WhatsApp', icon: 'tabler:brand-whatsapp', href: `https://whatsapp.com/${RSS.whatsapp}` },
+    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: `https://www.youtube.com//${RSS.youtube}` },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
 };

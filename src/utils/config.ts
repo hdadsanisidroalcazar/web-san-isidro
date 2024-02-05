@@ -270,6 +270,7 @@ const getRss = () => {
     instagram: '',
     facebook: '',
     whatsapp: '',
+    youtube: '',
   };
 
   return merge({}, _default, config?.rss ?? {});
