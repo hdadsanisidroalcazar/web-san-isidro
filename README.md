@@ -1,5 +1,5 @@
 # Web de la Hermandad de San Isidro Labrador - Alcázar de San Juan
-[![Node.js Version](https://img.shields.io/badge/Node.js-18-green)](https://nodejs.org/)
+[![Node.js Version](https://img.shields.io/badge/Node.js-20-green)](https://nodejs.org/)
 ![Licencia](https://img.shields.io/github/license/hdadsanisidroalcazar/web-san-isidro%20)
 [![Astro](https://img.shields.io/badge/Built%20with-Astro-0b8e4b)](https://astro.build/)
 [![Tailwind CSS](https://img.shields.io/badge/Styled%20with-Tailwind%20CSS-38b2ac)](https://tailwindcss.com/)
