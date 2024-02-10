@@ -56,8 +56,8 @@ devDependencies:
     specifier: ^1.1.9
     version: 1.1.9
   '@iconify-json/tabler':
-    specifier: ^1.1.92
-    version: 1.1.98
+    specifier: ^1.1.105
+    version: 1.1.105
   '@tailwindcss/typography':
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.3.5)
@@ -2043,8 +2043,8 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
-  /@iconify-json/tabler@1.1.98:
-    resolution: {integrity: sha512-icA0KXNyhaREHZmIDD570lXZnC5TNApiCVwrWOla+Z5KlNNgwfCh1J76MCb3TYQ5gTdB0eC+MGsLqDdBSayR6Q==}
+  /@iconify-json/tabler@1.1.105:
+    resolution: {integrity: sha512-USJbNfa0fAHBLilxTKn70wkvFnopmfcomfpqD0ul/69uyZnonztHhyrbM8MI9Ua4eYXaPymoB7tuZ+Ionx6xfg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
