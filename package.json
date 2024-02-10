@@ -48,7 +48,7 @@
     "@fontsource-variable/inter": "^5.0.16",
     "@tinacms/cli": "^1.5.38",
     "astro": "^3.2.2",
-    "astro-icon": "^1.0.1",
+    "astro-icon": "^1.1.0",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
     "photoswipe": "^5.4.3",
