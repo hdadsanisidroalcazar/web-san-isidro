@@ -39,8 +39,8 @@ dependencies:
     specifier: ^1.5.28
     version: 1.5.28(@babel/core@7.23.3)(react-dom@18.2.0)(react@18.2.0)
   unpic:
-    specifier: ^3.16.0
-    version: 3.16.0
+    specifier: ^3.17.0
+    version: 3.17.0
 
 devDependencies:
   '@astrojs/mdx':
@@ -8952,6 +8952,7 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
     dev: false
+    bundledDependencies: false
 
   /cross-fetch@3.1.8:
     resolution: {integrity: sha512-cvA+JwZoU0Xq+h6WkMvAUqPEYy92Obet6UdKLfW60qn99ftItKjB5T+BkyWOFWe2pUyfQ+IJHmpOTznqk1M6Kg==}
@@ -16172,8 +16173,8 @@ packages:
       normalize-path: 2.1.1
     dev: false
 
-  /unpic@3.16.0:
-    resolution: {integrity: sha512-XXvQGL+fvzwEX3aPXggTCrzySFPqvpC8r1LKy5ft9573AoX8CrszmA0uOzi6xgylCvvqFg46IDOudJKzM2lQ5A==}
+  /unpic@3.17.0:
+    resolution: {integrity: sha512-1b0ACPDLWqDE4MJ+IW5e48pGVSA5zKU2nF05EDxl/vvHq610MnfHNczIm6RBNPKuAA+G1tQ2ef1mgxj5J7+plw==}
     dev: false
 
   /unpipe@1.0.0:
