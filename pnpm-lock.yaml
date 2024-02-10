@@ -53,8 +53,8 @@ devDependencies:
     specifier: 5.1.0
     version: 5.1.0(astro@3.6.0)(tailwindcss@3.3.5)
   '@iconify-json/flat-color-icons':
-    specifier: ^1.1.9
-    version: 1.1.9
+    specifier: ^1.1.10
+    version: 1.1.10
   '@iconify-json/tabler':
     specifier: ^1.1.105
     version: 1.1.105
@@ -1839,8 +1839,8 @@ packages:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
     dev: false
 
-  /@iconify-json/flat-color-icons@1.1.9:
-    resolution: {integrity: sha512-wAERKPF+PZ41TJrpTsq5KUSoXLy1lvuXi9fz0NmMFOdUFbkknuyZZmBu3LTUKPD4Ow8JgeFXTzVsBQyv/wSGyg==}
+  /@iconify-json/flat-color-icons@1.1.10:
+    resolution: {integrity: sha512-tkkxTEPMYqDtss8tFij/gWfwrnt/NeChZoUGr6l71sWi7jYMwD35dYjFhM2bjtww5MCkVIAJaVx/3QJGUmMD/g==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
