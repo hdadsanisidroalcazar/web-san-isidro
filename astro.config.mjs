@@ -7,7 +7,7 @@ import mdx from '@astrojs/mdx';
 import compress from 'astro-compress';
 import icon from 'astro-icon';
 import tasks from './src/utils/tasks';
-import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
+import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter.mjs';
 import { SITE } from './src/utils/config.ts';
 import vercel from '@astrojs/vercel/static';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -56,6 +56,7 @@ export default defineConfig({
   ],
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin],
+    rehypePlugins: [responsiveTablesRehypePlugin],
   },
   vite: {
     resolve: {
