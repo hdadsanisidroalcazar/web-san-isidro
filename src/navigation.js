@@ -73,8 +73,8 @@ export const headerData = {
       ],
     },
     {
-        text: 'Galería',
-       href: getPermalink('/galeria'),
+      text: 'Galería',
+      href: getPermalink('/galeria'),
     },
     {
       text: 'Contacto',
