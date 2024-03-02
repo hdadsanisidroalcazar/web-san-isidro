@@ -1,0 +1,7 @@
+iframe {
+	visibility: hidden;
+}
+
+img {
+	visibility: hidden !important;
+}
