@@ -10,10 +10,10 @@ dependencies:
     version: 4.0.5
   '@astrojs/vercel':
     specifier: ^7.3.0
-    version: 7.3.0(astro@4.4.8)
+    version: 7.3.0(astro@4.4.9)
   '@astrolib/seo':
     specifier: ^1.0.0-beta.5
-    version: 1.0.0-beta.5(astro@4.4.8)
+    version: 1.0.0-beta.5(astro@4.4.9)
   '@fontsource-variable/inter':
     specifier: ^5.0.16
     version: 5.0.16
@@ -21,8 +21,8 @@ dependencies:
     specifier: ^1.5.39
     version: 1.5.39(@babel/core@7.23.3)(react-dom@18.2.0)(react@18.2.0)
   astro:
-    specifier: ^4.4.8
-    version: 4.4.8(typescript@5.3.3)
+    specifier: ^4.4.9
+    version: 4.4.9(typescript@5.3.3)
   astro-icon:
     specifier: ^1.1.0
     version: 1.1.0
@@ -45,13 +45,13 @@ dependencies:
 devDependencies:
   '@astrojs/mdx':
     specifier: ^2.1.1
-    version: 2.1.1(astro@4.4.8)
+    version: 2.1.1(astro@4.4.9)
   '@astrojs/sitemap':
     specifier: ^3.1.1
     version: 3.1.1
   '@astrojs/tailwind':
     specifier: 5.1.0
-    version: 5.1.0(astro@4.4.8)(tailwindcss@3.4.1)
+    version: 5.1.0(astro@4.4.9)(tailwindcss@3.4.1)
   '@iconify-json/flat-color-icons':
     specifier: ^1.1.10
     version: 1.1.10
@@ -195,7 +195,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/mdx@2.1.1(astro@4.4.8):
+  /@astrojs/mdx@2.1.1(astro@4.4.9):
     resolution: {integrity: sha512-AgGFdE7HOGmoFooGvMSatkA9FiSKwyVW7ImHot/bXJ6uAbFfu6iG2ht18Cf1pT22Hda/6iSCGWusFvBv0/EnKQ==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
@@ -204,7 +204,7 @@ packages:
       '@astrojs/markdown-remark': 4.2.1
       '@mdx-js/mdx': 3.0.0
       acorn: 8.11.2
-      astro: 4.4.8(typescript@5.3.3)
+      astro: 4.4.9(typescript@5.3.3)
       es-module-lexer: 1.4.1
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -241,13 +241,13 @@ packages:
       zod: 3.22.4
     dev: true
 
-  /@astrojs/tailwind@5.1.0(astro@4.4.8)(tailwindcss@3.4.1):
+  /@astrojs/tailwind@5.1.0(astro@4.4.9)(tailwindcss@3.4.1):
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.4.8(typescript@5.3.3)
+      astro: 4.4.9(typescript@5.3.3)
       autoprefixer: 10.4.16(postcss@8.4.31)
       postcss: 8.4.31
       postcss-load-config: 4.0.2(postcss@8.4.31)
@@ -270,7 +270,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/vercel@7.3.0(astro@4.4.8):
+  /@astrojs/vercel@7.3.0(astro@4.4.9):
     resolution: {integrity: sha512-xpGg9i+Wae8hSY/p2P+pbP5pbRbgaIbmtfO29qLndxQoDDygDf/GAaEgEd9y1qMI5Huhl0MbYbEPG5thgt82ng==}
     peerDependencies:
       astro: ^4.2.0
@@ -278,7 +278,7 @@ packages:
       '@astrojs/internal-helpers': 0.2.1
       '@vercel/analytics': 1.1.1
       '@vercel/nft': 0.24.4
-      astro: 4.4.8(typescript@5.3.3)
+      astro: 4.4.9(typescript@5.3.3)
       esbuild: 0.19.7
       fast-glob: 3.3.2
       set-cookie-parser: 2.6.0
@@ -288,12 +288,12 @@ packages:
       - supports-color
     dev: false
 
-  /@astrolib/seo@1.0.0-beta.5(astro@4.4.8):
+  /@astrolib/seo@1.0.0-beta.5(astro@4.4.9):
     resolution: {integrity: sha512-poBnSB9TzkmOyf+PoMR642zVLSoVVZbUIKnYDHXHrKi/upkaegNiaBdVRsyqaQC93SIxxyagQrIbLRtnSJT4Xg==}
     peerDependencies:
       astro: ^1.2.1 || ^2.0.0 || ^3.0.0-beta.0 || ^3.0.0 || ^4.0.0
     dependencies:
-      astro: 4.4.8(typescript@5.3.3)
+      astro: 4.4.9(typescript@5.3.3)
     dev: false
 
   /@babel/code-frame@7.23.4:
@@ -8124,8 +8124,8 @@ packages:
       - supports-color
     dev: false
 
-  /astro@4.4.8(typescript@5.3.3):
-    resolution: {integrity: sha512-jAAfzvgHOfuZmqJjnSDownVNuWKYmsGkrFqecEppHarMA/cZ5QIboW6GQHZ8eGZQdtYRCjON3h4i64XFZfuwSg==}
+  /astro@4.4.9(typescript@5.3.3):
+    resolution: {integrity: sha512-FTWhzKjao7rHHiF/CqPqPS18AFad+fmUcYUFhWWIsYETHcc9g0IIIiv6cHXUE7g6mEZf7ycAa+WdboeEHUhraQ==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
