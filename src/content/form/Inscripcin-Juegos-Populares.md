@@ -1,5 +1,5 @@
 ---
-title: Inscripción Juegos Populares
+title: Inscripción II Concurso de dibujo "¿Qué es San Isidro para tí?"
 field:
   - label: 'Nombre y apellidos del participante:'
     name: Nombre
@@ -9,11 +9,9 @@ field:
     name: Teléfono
 ---
 
-En este formulario podrás inscribir a los participantes en los juegos populares, los cuales se llevarán a cabo en la ermita de San Isidro, el día 12 a las 12.00 H.
+**BASES DEL CONCURSO:**
 
-La inscripción es gratuita y también se podrá hacer el mismo día, aunque es aconsejable hacerlo vía web para una mejor organización.
 
-BASES DEL CONCURSO:
 1\. Podrá presentarse cualquier niño o niña cuya edad esté comprendida entre los 3 y los 14 años.
 2\. Se establecerán dos categorías: De 3 a 7 años y de 9 a 14 años.
 3\. Los trabajos versarán sobre San Isidro Labrador, respondiendo a la siguiente temática: ¿Qué es San Isidro para tí? Se puede hacer referencia a aspectos religiosos o culturales.
