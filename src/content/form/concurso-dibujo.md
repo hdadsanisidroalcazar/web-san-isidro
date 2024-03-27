@@ -1,4 +1,5 @@
 ---
+closed: true
 title: Inscripción II Concurso de dibujo "¿Qué es San Isidro para tí?"
 field:
   - label: 'Nombre y apellidos del participante:'
