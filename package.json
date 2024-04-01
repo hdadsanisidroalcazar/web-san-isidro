@@ -20,7 +20,7 @@
     "@astrojs/sitemap": "^3.1.1",
     "@astrojs/tailwind": "5.1.0",
     "@iconify-json/flat-color-icons": "^1.1.10",
-    "@iconify-json/tabler": "^1.1.105",
+    "@iconify-json/tabler": "^1.1.109",
     "@tailwindcss/typography": "^0.5.10",
     "@types/lodash.merge": "^4.6.7",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
