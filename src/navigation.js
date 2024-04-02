@@ -100,7 +100,6 @@ export const footerData = {
         { text: 'Evolución de la Romería', href: '/san-isidro/evolucion' },
         { text: 'Programa de cultos y actos', href: '/san-isidro/cultos' },
         { text: 'Revistas', href: '/revistas' },
-        { text: 'Cartelería', href: '/san-isidro/carteleria' },
       ],
     },
     {
@@ -113,7 +112,7 @@ export const footerData = {
     },
     {
       links: [
-        { text: 'Galería de fotos', href: '/galería' },
+        { text: 'Galería de fotos', href: '/galeria' },
         { text: 'Artículos', href: '/categoria/articulos' },
         { text: 'Entrevistas', href: '/categoria/entrevistas' },
         { text: 'Poemas', href: '/categoria/poemas' },
