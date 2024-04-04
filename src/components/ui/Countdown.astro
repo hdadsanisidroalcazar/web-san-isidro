@@ -58,10 +58,10 @@ const countdownDate = new Date(date).getTime();
     const minTime = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const secTime = Math.floor((distance % (1000 * 60)) / 1000);
 
-    days.textContent = dayTime;
-    hours.textContent = hourTime;
-    minutes.textContent = minTime;
-    seconds.textContent = secTime;
+    days.textContent = dayTime.toString().padStart(2, '0')
+    hours.textContent = hourTime.toString().padStart(2, '0');
+    minutes.textContent = minTime.toString().padStart(2, '0');
+    seconds.textContent = secTime.toString().padStart(2, '0');
   };
 
   setInterval(updateCountdown, 1000);
