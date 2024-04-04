@@ -1,0 +1,68 @@
+---
+export interface Props {
+  date: string;
+  title: string;
+}
+
+const { date, title } = Astro.props;
+
+const countdownDate = new Date(date).getTime();
+---
+
+<div class="left-0 right-0 top-0 z-50 w-full bg-green-600 px-2 py-0.5 text-white shadow-md">
+  <div class="mx-auto flex w-fit max-w-5xl flex-wrap items-center justify-center gap-x-4 text-xs md:text-sm">
+    <span class="font-semibold hidden md:block">{title}</span>
+    <div class="flex w-fit items-center justify-center gap-1.5 py-2">
+      <span
+        class="relative w-full overflow-hidden text-center block font-mono text-sm font-semibold md:text-base"
+        id="days">0</span
+      >
+      <span>dias</span>
+    </div>
+    <div class="flex w-fit items-center justify-center gap-1.5 py-2">
+      <span
+        class="relative w-full overflow-hidden text-center block font-mono text-sm font-semibold md:text-base"
+        id="hours">0</span
+      >
+      <span>horas</span>
+    </div>
+    <div class="flex w-fit items-center justify-center gap-1.5 py-2">
+      <span
+        class="relative w-full overflow-hidden text-center block font-mono text-sm font-semibold md:text-base"
+        id="minutes">0</span
+      >
+      <span>minutos</span>
+    </div>
+    <div class="flex w-fit items-center justify-center gap-1.5 py-2">
+      <span
+        class="relative w-full overflow-hidden text-center block font-mono text-sm font-semibold md:text-base"
+        id="seconds">0</span
+      >
+      <span>segundos</span>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" is:inline define:vars={{ countdownDate }}>
+  const days = document.getElementById('days');
+  const hours = document.getElementById('hours');
+  const minutes = document.getElementById('minutes');
+  const seconds = document.getElementById('seconds');
+
+  const updateCountdown = () => {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+
+    const dayTime = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hourTime = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minTime = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const secTime = Math.floor((distance % (1000 * 60)) / 1000);
+
+    days.textContent = dayTime;
+    hours.textContent = hourTime;
+    minutes.textContent = minTime;
+    seconds.textContent = secTime;
+  };
+
+  setInterval(updateCountdown, 1000);
+</script>

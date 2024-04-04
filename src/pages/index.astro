@@ -7,6 +7,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { fetchHome, fetchLastMagazine } from '~/utils/page';
 import SponsorBrand from '~/components/widgets/SponsorBrand.astro';
+import Countdown from '~/components/ui/Countdown.astro';
 
 const metadata = {
   title: 'Inicio | Hermandad de San Isidro Labrador',
@@ -15,6 +16,9 @@ const metadata = {
 
 const homeData = await fetchHome();
 const lastMagazine = await fetchLastMagazine();
+
+const dateRomeria = '2024-05-15T00:00:01';
+const isNotYetRomeria = new Date().getTime() < new Date(dateRomeria).getTime();
 ---
 
 <Layout metadata={metadata}>
@@ -22,6 +26,7 @@ const lastMagazine = await fetchLastMagazine();
 
   <div class="w-full bg-cover bg-top" style="height:32rem; background-image: url(/images/hero.webp);"></div>
 
+  {isNotYetRomeria && <Countdown date={dateRomeria} title="Hasta la romería: " />}
   <!-- Note Widget ******************* -->
 
   <Note note={homeData.announce} />
