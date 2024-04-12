@@ -1,6 +1,6 @@
 {
   "title": "Programa de cultos y actos",
-  "tagline": "San Isidro 2023",
+  "tagline": "San Isidro 2024",
   "days": [
     {
       "title": "Viernes 12 de Mayo",
@@ -42,15 +42,15 @@
       ]
     },
     {
-      "title": "Domingo 14 de Mayo",
+      "title": "Domingo 12 de mayo de 2024",
       "event": [
         {
-          "title": "I Carrera de Orientación \"San Isidro\"",
+          "title": "II Carrera de Orientación \"San Isidro\"",
           "time": "10:00",
           "description": "",
-          "location": "Cerro de San Isidro",
+          "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
-          "image": "/images/carteles/i-carrera-orientacion.webp"
+          "image": "/images/carteles/CARTEL II CARRERA DE ORIENTACIÓN SAN ISIDRO .png"
         },
         {
           "title": "Juegos populares",
