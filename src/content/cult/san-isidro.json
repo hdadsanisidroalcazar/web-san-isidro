@@ -3,6 +3,22 @@
   "tagline": "San Isidro 2024",
   "days": [
     {
+      "title": "Del 16 al 29 de mayo de 2024",
+      "event": [
+        {
+          "title": "I Concurso de fotografía \"San Isidro a través del objetivo\"",
+          "time": "-",
+          "description": "import Button from '\\~/components/ui/Button.astro';\nEntrega de fotografías a través del correo electrónico: [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es)\n\nConsulta las bases. <Button icon=\"tabler:map-pin\" variant=\"link\" text='Texto del enlace' prevIcon href='http://mienlace.com' target=\"\\_blank\" />\n",
+          "buttons": [
+            {
+              "text": "Bases del concurso",
+              "link": "https://hermandadsanisidrolabrador.es/san-isidro/concurso-fotografia"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "Sábado 11 de mayo de 2024",
       "event": [
         {
