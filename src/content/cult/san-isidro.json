@@ -27,13 +27,6 @@
       "title": "Domingo 12 de mayo de 2024",
       "event": [
         {
-          "title": "Triduo en honor a San Isidro",
-          "time": "20.00 H.",
-          "description": "Familia Vargas Quiralte por sus difuntos.\n",
-          "location": "Iglesia de San Francisco",
-          "map": "https://www.google.com/maps/place/Iglesia+y+convento+de+San+Francisco/@39.3887919,-3.210218,17z/data=!3m1!4b1!4m6!3m5!1s0xd69aeefb3165823:0x169fe142d9dfcbbe!8m2!3d39.3887879!4d-3.2053471!16s%2Fg%2F11bxg1p81f?entry=ttu"
-        },
-        {
           "title": "II Carrera de Orientación \"San Isidro\"",
           "time": "10:00",
           "description": "Inscripciones en [https://www.deporticket.com/web-evento/9765-ii-carrera-de-orientacion-san-isidro](https://www.deporticket.com/web-evento/9765-ii-carrera-de-orientacion-san-isidro)\n",
@@ -55,6 +48,13 @@
           "description": "Temática: ¿Que es San Isidro para ti? Inscripciones gratuitas\n",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
+        },
+        {
+          "title": "Triduo en honor a San Isidro",
+          "time": "20.00 H.",
+          "description": "Familia Vargas Quiralte por sus difuntos.\n",
+          "location": "Iglesia de San Francisco",
+          "map": "https://www.google.com/maps/place/Iglesia+y+convento+de+San+Francisco/@39.3887919,-3.210218,17z/data=!3m1!4b1!4m6!3m5!1s0xd69aeefb3165823:0x169fe142d9dfcbbe!8m2!3d39.3887879!4d-3.2053471!16s%2Fg%2F11bxg1p81f?entry=ttu"
         }
       ]
     },
