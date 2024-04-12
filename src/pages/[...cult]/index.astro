@@ -38,14 +38,16 @@ const metadata = {
                       <span class="text-sm sm:text-base text-primary font-bold dark:text-secondary">{event.time}</span>
                     </div>
                     <div class="col-span-7 sm:col-span-6 px-3 w-full">
-                      <Button
-                        icon="tabler:map-pin"
-                        variant="link"
-                        text={event.location}
-                        prevIcon
-                        href={event.map}
-                        target="_blank"
-                      />
+                      {event.location && (
+                        <Button
+                          icon="tabler:map-pin"
+                          variant="link"
+                          text={event.location}
+                          prevIcon
+                          href={event.map}
+                          target="_blank"
+                        />
+                      )}
                       <p class="font-bold uppercase">{event.title}</p>
                       <div class="mt-2" set:html={event.description?.replaceAll('\n', '<br/>')} />
                       {event.buttons && (
