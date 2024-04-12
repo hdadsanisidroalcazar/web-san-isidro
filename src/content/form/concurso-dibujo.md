@@ -10,8 +10,6 @@ field:
     name: Teléfono
 ---
 
-`import Button from '~/components/ui/Button.astro';`
-
 **BASES DEL CONCURSO:**
 
 1. Podrá presentarse cualquier niño o niña cuya edad esté comprendida entre los 3 y los 14 años.
@@ -25,5 +23,3 @@ field:
 9. Los dibujos ganadores de cada categoría podrán ser publicados en la revista de la Hermandad de San Isidro de 2025.
 10. La inscripción en dicho concurso implica la autorización para la publicación de imágenes en el Facebook, Instagram y web de la Hermandad de San Isidro, así como de los dibujos realizados.
 11. A efectos de cumplir con la Ley de Protección de Datos, se publicará únicamente el nombre y las iniciales de los apellidos en Facebook. 
-
-`<Button icon="tabler:map-pin" variant="link" text='Texto del enlace' prevIcon href='http://mienlace.com' target="\_blank" />`
