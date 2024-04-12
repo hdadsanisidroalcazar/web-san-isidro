@@ -3,6 +3,27 @@
   "tagline": "San Isidro 2024",
   "days": [
     {
+      "title": "Sábado 11 de mayo de 2024",
+      "event": [
+        {
+          "title": "Presentación de Damas de Honor San Isidro 2024 e imposición de ramos y bandas",
+          "time": "20:30",
+          "description": "",
+          "location": "Iglesia de San Francisco",
+          "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6",
+          "image": "/images/carteles/PRESENTACIÓN DE DAMAS Y CANTO DE MAYOS A SAN ISIDRO.webp"
+        },
+        {
+          "title": "Mayos en honor a San Isidro",
+          "time": "21:00",
+          "description": "A cargo de Asociaciones y Grupos Locales\n",
+          "location": "Iglesia de San Francisco",
+          "map": "https://goo.gl/maps/Juk88fLdCBqRcEqF7",
+          "image": ""
+        }
+      ]
+    },
+    {
       "title": "Domingo 12 de mayo de 2024",
       "event": [
         {
@@ -31,35 +52,14 @@
       ]
     },
     {
-      "title": "Sábado 11 de mayo de 2024",
+      "title": "Martes 14 de mayo de 2024",
       "event": [
         {
-          "title": "Presentación de Damas de Honor San Isidro 2024 e imposición de ramos y bandas",
-          "time": "20:30",
-          "description": "",
-          "location": "Iglesia de San Francisco",
-          "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6",
-          "image": "/images/carteles/PRESENTACIÓN DE DAMAS Y CANTO DE MAYOS A SAN ISIDRO.webp"
-        },
-        {
-          "title": "Mayos en honor a San Isidro",
+          "title": "II Noche Manchega",
           "time": "21:00",
-          "description": "A cargo de Asociaciones y Grupos Locales\n",
-          "location": "Iglesia de San Francisco",
-          "map": "https://goo.gl/maps/Juk88fLdCBqRcEqF7",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "title": "Sábado 13 de Mayo",
-      "event": [
-        {
-          "title": "I Noche Manchega",
-          "time": "21:00",
-          "description": "Las cuadrillas que deseen participar en la elaboración de platos manchegos típicos frios, como ensalada de limón. bizcochá, machacón o pipirrana, deberán apuntarse a traves del enlace o llamando al teléfono 654 538 299 (Jesús). Se prohibe la realización de fuego. Límite de inscripciones: 15 cuadrillas.<br/><br/>\n\nDonativo de la inscripción por cuadrilla: 5€.<br/><br/>\n\nHorario de descarga de sillas, mesas y enseres: de 20:00 a 21:00\n",
+          "description": "Las cuadrillas que deseen participar en la elaboración de platos manchegos típicos frios, como ensalada de limón. bizcochá, machacón o pipirrana, deberán apuntarse a través del formulario. Se prohibe la realización de fuego. Límite de inscripciones: 8 cuadrillas.<br/><br/>\n\nInscripciones gratuitas <br/>\n\nHorario de descarga de sillas, mesas y enseres: de 20:00 a 21:00\n",
           "location": "Ermita de San Isidro",
-          "image": "/images/carteles/i-noche-manchega.webp",
+          "image": "/images/carteles/I NOCHE MANCHEGA.webp",
           "buttons": [
             {
               "text": "Inscribirme",
