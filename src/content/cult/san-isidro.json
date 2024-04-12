@@ -29,7 +29,7 @@
         {
           "title": "II Carrera de Orientación \"San Isidro\"",
           "time": "10:00",
-          "description": "Inscripciones en\n",
+          "description": "",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
           "image": "/images/carteles/CARTEL II CARRERA DE ORIENTACIÓN SAN ISIDRO .png",
@@ -101,7 +101,7 @@
         {
           "title": "II Noche Manchega",
           "time": "21:00",
-          "description": "Las cuadrillas que deseen participar en la elaboración de platos manchegos típicos frios, como ensalada de limón. bizcochá, machacón o pipirrana, deberán apuntarse a través del formulario. Se prohibe la realización de fuego. Límite de inscripciones: 8 cuadrillas. \n\nInscripciones gratuitas \n\nHorario de descarga de sillas, mesas y enseres: de 20:00 a 21:00\n",
+          "description": "Las cuadrillas que deseen participar en la elaboración de platos manchegos típicos frios, como ensalada de limón. bizcochá, machacón o pipirrana, deberán apuntarse a través del formulario. Se prohibe la realización de fuego. Límite de inscripciones: 8 cuadrillas.\n\nInscripciones gratuitas\n\nHorario de descarga de sillas, mesas y enseres: de 20:00 a 21:00\n",
           "location": "Ermita de San Isidro",
           "image": "/images/carteles/I NOCHE MANCHEGA.webp",
           "buttons": [
@@ -158,7 +158,7 @@
       "event": [
         {
           "title": "I Concurso de fotografía \"San Isidro a través del objetivo\"",
-          "description": "Entrega de fotografías a través del correo electrónico: <a href=\"mailto:hdadsanisidroalcazar@outlook.es\">hdadsanisidroalcazar@outlook.es</a>\n\nConsulta las bases.",
+          "description": "Entrega de fotografías a través del correo electrónico: <a href=\"mailto:hdadsanisidroalcazar@outlook.es\">[hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es)</a>\n\nConsulta las bases.\n",
           "buttons": [
             {
               "text": "Bases del concurso",
