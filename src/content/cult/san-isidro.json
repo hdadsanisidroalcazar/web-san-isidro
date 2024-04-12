@@ -29,7 +29,7 @@
         {
           "title": "II Carrera de Orientación \"San Isidro\"",
           "time": "10:00",
-          "description": "Inscripciones en \n",
+          "description": "Inscripciones en\n",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
           "image": "/images/carteles/CARTEL II CARRERA DE ORIENTACIÓN SAN ISIDRO .png",
@@ -53,7 +53,13 @@
           "time": "13:00",
           "description": "Temática: ¿Que es San Isidro para ti? Inscripciones gratuitas\n",
           "location": "Ermita de San Isidro",
-          "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
+          "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
+          "buttons": [
+            {
+              "text": "Inscribirme",
+              "link": "https://hermandadsanisidrolabrador.es/inscripciones/concurso-dibujo"
+            }
+          ]
         },
         {
           "title": "Triduo en honor a San Isidro",
