@@ -29,10 +29,16 @@
         {
           "title": "II Carrera de Orientación \"San Isidro\"",
           "time": "10:00",
-          "description": "Inscripciones en [https://www.deporticket.com/web-evento/9765-ii-carrera-de-orientacion-san-isidro](https://www.deporticket.com/web-evento/9765-ii-carrera-de-orientacion-san-isidro)\n",
+          "description": "Inscripciones en \n",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
-          "image": "/images/carteles/CARTEL II CARRERA DE ORIENTACIÓN SAN ISIDRO .png"
+          "image": "/images/carteles/CARTEL II CARRERA DE ORIENTACIÓN SAN ISIDRO .png",
+          "buttons": [
+            {
+              "text": "Inscribirme",
+              "link": "https://www.deporticket.com/web-evento/9765-ii-carrera-de-orientacion-san-isidro"
+            }
+          ]
         },
         {
           "title": "Juegos populares",
