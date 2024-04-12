@@ -3,18 +3,6 @@
   "tagline": "San Isidro 2024",
   "days": [
     {
-      "title": "Lunes 13 de mayo",
-      "event": [
-        {
-          "title": "Triduo en honor a San Isidro",
-          "time": "20.00",
-          "description": "Familia Quirós Cencerrado por sus difuntos.\n",
-          "location": "Iglesia de San Francisco",
-          "map": "https://www.google.com/maps/place/Iglesia+y+convento+de+San+Francisco/@39.3887879,-3.207922,17z/data=!4m14!1m7!3m6!1s0xd69aeefb3165823:0x169fe142d9dfcbbe!2sIglesia+y+convento+de+San+Francisco!8m2!3d39.3887879!4d-3.2053471!16s%2Fg%2F11bxg1p81f!3m5!1s0xd69aeefb3165823:0x169fe142d9dfcbbe!8m2!3d39.3887879!4d-3.2053471!16s%2Fg%2F11bxg1p81f?entry=ttu"
-        }
-      ]
-    },
-    {
       "title": "Sábado 11 de mayo de 2024",
       "event": [
         {
@@ -71,12 +59,24 @@
       ]
     },
     {
+      "title": "Lunes 13 de mayo",
+      "event": [
+        {
+          "title": "Triduo en honor a San Isidro",
+          "time": "20.00",
+          "description": "Familia Quirós Cencerrado por sus difuntos.\n",
+          "location": "Iglesia de San Francisco",
+          "map": "https://www.google.com/maps/place/Iglesia+y+convento+de+San+Francisco/@39.3887879,-3.207922,17z/data=!4m14!1m7!3m6!1s0xd69aeefb3165823:0x169fe142d9dfcbbe!2sIglesia+y+convento+de+San+Francisco!8m2!3d39.3887879!4d-3.2053471!16s%2Fg%2F11bxg1p81f!3m5!1s0xd69aeefb3165823:0x169fe142d9dfcbbe!8m2!3d39.3887879!4d-3.2053471!16s%2Fg%2F11bxg1p81f?entry=ttu"
+        }
+      ]
+    },
+    {
       "title": "Martes 14 de mayo de 2024",
       "event": [
         {
           "title": "Triduo en honor a San Isidro",
           "time": "20.00 ",
-          "description": "Familia Quirós Cencerrado por sus difuntos.\n",
+          "description": "Familia Vargas Parras en acción de gracias.\n",
           "location": "Iglesia de San Francisco",
           "map": "https://www.google.es/maps/place/Iglesia+y+convento+de+San+Francisco/@39.388792,-3.207922,17z/data=!3m1!4b1!4m6!3m5!1s0xd69aeefb3165823:0x169fe142d9dfcbbe!8m2!3d39.3887879!4d-3.2053471!16s%2Fg%2F11bxg1p81f?entry=ttu"
         },
