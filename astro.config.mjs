@@ -4,12 +4,12 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
-import compress from 'astro-compress';
 import icon from 'astro-icon';
 import tasks from './src/utils/tasks';
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter.mjs';
 import { SITE } from './src/utils/config.ts';
 import vercel from '@astrojs/vercel/static';
+import playformCompress from '@playform/compress';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
@@ -43,12 +43,12 @@ export default defineConfig({
       },
     }),
     tasks(),
-    compress({
+    playformCompress({
       CSS: true,
       HTML: {
         removeAttributeQuotes: false,
       },
-      Image: false,
+      Image: true,
       JavaScript: true,
       SVG: true,
       Logger: 1,
