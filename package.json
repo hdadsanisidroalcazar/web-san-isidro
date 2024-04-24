@@ -16,15 +16,15 @@
     "lint:fix": "eslint . --ext .js,.ts,.astro --fix"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^2.3.0",
-    "@astrojs/sitemap": "^3.1.2",
+    "@astrojs/mdx": "^2.3.1",
+    "@astrojs/sitemap": "^3.1.4",
     "@astrojs/tailwind": "5.1.0",
     "@iconify-json/flat-color-icons": "^1.1.10",
     "@iconify-json/tabler": "^1.1.110",
     "@playform/compress": "^0.0.3",
     "@tailwindcss/typography": "^0.5.12",
     "@types/lodash.merge": "^4.6.9",
-    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^8.57.0",
     "eslint-plugin-astro": "^0.31.4",
@@ -43,16 +43,16 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.5",
-    "@astrojs/vercel": "^7.5.3",
+    "@astrojs/vercel": "^7.5.4",
     "@astrolib/seo": "1.0.0-beta.5",
-    "@fontsource-variable/inter": "^5.0.17",
-    "@tinacms/cli": "^1.5.43",
-    "astro": "^4.6.1",
+    "@fontsource-variable/inter": "^5.0.18",
+    "@tinacms/cli": "^1.5.44",
+    "astro": "^4.6.4",
     "astro-icon": "^1.1.0",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
     "photoswipe": "^5.4.3",
-    "tinacms": "^1.6.1",
+    "tinacms": "^1.6.2",
     "unpic": "^3.18.0"
   }
 }
