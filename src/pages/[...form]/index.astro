@@ -22,7 +22,7 @@ const Content = form?.Content || null;
   {
     !form.closed && (
       <div class="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full">
-        <FormContainer inputs={form.field} />
+        <FormContainer inputs={form.field} id={form.id} />
       </div>
     )
   }
