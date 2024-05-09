@@ -7,10 +7,13 @@ const {
   disclaimer = { label: 'Acepto la ' },
   button = 'Enviar',
   description = '',
+  id,
 } = Astro.props as Form;
 ---
 
 <form action="https://formsubmit.co/9dd8d4ebc4c198d324c4cd52c2305086" method="POST">
+  {id && <input type="hidden" name="Formulario" value={id} />}
+
   {
     inputs &&
       inputs.map(
