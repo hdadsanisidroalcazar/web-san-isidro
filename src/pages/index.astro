@@ -17,8 +17,8 @@ const metadata = {
 const homeData = await fetchHome();
 const lastMagazine = await fetchLastMagazine();
 
-const dateRomeria = '2024-05-15T11:00:00+02:00';
-const isNotYetRomeria = new Date().getTime() < new Date(dateRomeria).getTime();
+const dateRomeria = '2025-05-15T11:00:00+02:00';
+const isNotYetRomeria = false && new Date().getTime() < new Date(dateRomeria).getTime();
 ---
 
 <Layout metadata={metadata}>
