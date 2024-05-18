@@ -26,6 +26,7 @@ const getNormalizedPost = async (post: CollectionEntry<'gallery'>): Promise<Gall
     image,
     metadata = {},
     folder,
+    galleries = [],
   } = data;
 
   const slug = cleanSlug(rawSlug); // cleanSlug(rawSlug.split('/').pop());
@@ -44,6 +45,7 @@ const getNormalizedPost = async (post: CollectionEntry<'gallery'>): Promise<Gall
     description: description,
     image: image,
     folder,
+    galleries,
 
     metadata,
 

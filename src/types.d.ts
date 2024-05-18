@@ -1,5 +1,6 @@
 import type { HTMLAttributes } from 'astro/types';
 export interface Home {
+  announceTitle?: string;
   announce?: string;
   titlefaqs?: string;
   subtitlefaqs?: string;
@@ -90,6 +91,11 @@ export interface Gallery {
   Content?: unknown;
   content?: string;
   folder?: string;
+  galleries?: {
+    title?: string;
+    description?: string;
+    folder: string;
+  }[];
 }
 
 export interface Generic {

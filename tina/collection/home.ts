@@ -14,6 +14,11 @@ export const Home: Collection = {
   fields: [
     {
       type: 'string',
+      name: 'announceTitle',
+      label: 'Título anuncio (Ej. Anuncio:)',
+    },
+    {
+      type: 'string',
       name: 'announce',
       label: 'Anuncio',
     },

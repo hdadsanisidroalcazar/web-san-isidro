@@ -17,8 +17,9 @@ const metadata = {
 const homeData = await fetchHome();
 const lastMagazine = await fetchLastMagazine();
 
-const dateRomeria = '2025-05-15T11:00:00+02:00';
-const isNotYetRomeria = false && new Date().getTime() < new Date(dateRomeria).getTime();
+const dateRomeria = `${new Date().getFullYear()}-05-15T11:00:00+02:00`;
+const isNotYetRomeria = new Date().getTime() < new Date(dateRomeria).getTime();
+const lessThan30Days = new Date().getTime() > new Date(dateRomeria).getTime() - 30 * 24 * 60 * 60 * 1000;
 ---
 
 <Layout metadata={metadata}>
@@ -26,10 +27,10 @@ const isNotYetRomeria = false && new Date().getTime() < new Date(dateRomeria).ge
 
   <div class="w-full bg-cover bg-top" style="height:32rem; background-image: url(/images/hero.webp);"></div>
 
-  {isNotYetRomeria && <Countdown date={dateRomeria} title="Hasta la romería: " />}
+  {isNotYetRomeria && lessThan30Days && <Countdown date={dateRomeria} title="Hasta la romería: " />}
   <!-- Note Widget ******************* -->
 
-  <Note note={homeData.announce} />
+  <Note note={homeData.announce} title={homeData.announceTitle} />
 
   <BlogLatestPosts title="Actualidad" information="Noticias y eventos de la Hermandad" />
 
