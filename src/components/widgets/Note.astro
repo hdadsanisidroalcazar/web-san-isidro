@@ -3,9 +3,10 @@ import { Icon } from 'astro-icon/components';
 
 export interface Props {
   note?: string;
+  title?: string;
 }
 
-const { note } = Astro.props;
+const { note, title } = Astro.props;
 ---
 
 {
@@ -13,7 +14,7 @@ const { note } = Astro.props;
     <section class="bg-blue-50 dark:bg-slate-800 not-prose">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-md text-center font-medium">
         <span class="font-bold">
-          <Icon name="tabler:info-square" class="w-5 h-5 inline-block align-text-bottom" /> Aviso:
+          <Icon name="tabler:info-square" class="w-5 h-5 inline-block align-text-bottom" /> {` ${title} `}
         </span>
         {note}
       </div>

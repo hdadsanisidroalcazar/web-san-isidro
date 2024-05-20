@@ -39,9 +39,32 @@ export const Gallery: Collection = {
       isBody: true,
     },
     {
-      type: 'string',
-      name: 'folder',
-      label: 'Nombre de la carpeta de la galería',
+      type: 'object',
+      name: 'galleries',
+      label: 'Galerías',
+      list: true,
+      ui: {
+        itemProps: (item) => {
+          return { label: item?.title };
+        },
+      },
+      fields: [
+        {
+          type: 'string',
+          name: 'title',
+          label: 'Título (opcional)',
+        },
+        {
+          type: 'string',
+          name: 'description',
+          label: 'Descripción (opcional)',
+        },
+        {
+          type: 'string',
+          name: 'folder',
+          label: 'Carpeta de la galería',
+        },
+      ],
     },
   ],
 };

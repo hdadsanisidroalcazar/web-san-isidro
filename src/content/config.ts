@@ -66,6 +66,7 @@ const postCollection = defineCollection({
 const homeCollection = defineCollection({
   type: 'data',
   schema: z.object({
+    announceTitle: z.string().optional(),
     announce: z.string().optional(),
     titlefaqs: z.string().optional(),
     subtitlefaqs: z.string().optional(),
