@@ -54,5 +54,10 @@
     "photoswipe": "^5.4.4",
     "tinacms": "^1.6.7",
     "unpic": "^3.18.0"
+  },
+    "pnpm": {
+    "overrides": {
+      "@iconify/tools": "^4.0.5"
+    }
   }
 }
