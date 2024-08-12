@@ -55,7 +55,7 @@
     "tinacms": "^1.6.7",
     "unpic": "^3.18.0"
   },
-    "pnpm": {
+  "pnpm": {
     "overrides": {
       "@iconify/tools": "^4.0.5"
     }
