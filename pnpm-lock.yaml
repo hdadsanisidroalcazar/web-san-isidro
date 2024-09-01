@@ -58,8 +58,8 @@ importers:
         specifier: 5.1.0
         version: 5.1.0(astro@4.13.3(@types/node@22.2.0)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.5.4))(tailwindcss@3.4.9)
       '@iconify-json/flat-color-icons':
-        specifier: ^1.1.11
-        version: 1.1.11
+        specifier: ^1.2.0
+        version: 1.2.0
       '@iconify-json/tabler':
         specifier: ^1.1.119
         version: 1.1.120
@@ -1231,8 +1231,8 @@ packages:
   '@iarna/toml@2.2.5':
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
 
-  '@iconify-json/flat-color-icons@1.1.11':
-    resolution: {integrity: sha512-t0DQmT8L+biKqcM5v2EoORZf47c4YWeLCDeuLQiCitNNPCmDWfLo3e1Z0744uPGhXvIpwTs2fG2rVfIN17pDcA==}
+  '@iconify-json/flat-color-icons@1.2.0':
+    resolution: {integrity: sha512-CluocFRgwnVsjfLbHnoaToSJs8II6dGDNvFu+uIMz8WvgMDwNZASFJdS2UT4mU8aG0MWl2GyLcKaFjQR6HeZSA==}
 
   '@iconify-json/tabler@1.1.120':
     resolution: {integrity: sha512-G9of3jPsYUfFkdaeqfILQF3xkCuZeitqJDjMkqmzjfJcWzl7JW/PoPJRby28dIUHTyO6eLqOlKhFP4/EQCg44Q==}
@@ -8655,7 +8655,7 @@ snapshots:
 
   '@iarna/toml@2.2.5': {}
 
-  '@iconify-json/flat-color-icons@1.1.11':
+  '@iconify-json/flat-color-icons@1.2.0':
     dependencies:
       '@iconify/types': 2.0.0
 
