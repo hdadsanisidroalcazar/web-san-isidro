@@ -21,7 +21,7 @@
     "@astrojs/tailwind": "5.1.0",
     "@iconify-json/flat-color-icons": "^1.2.0",
     "@iconify-json/tabler": "^1.1.119",
-    "@playform/compress": "^0.0.3",
+    "@playform/compress": "^0.1.1",
     "@tailwindcss/typography": "^0.5.13",
     "@types/lodash.merge": "^4.6.9",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
