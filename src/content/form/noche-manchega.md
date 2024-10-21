@@ -1,5 +1,5 @@
 ---
-closed: false
+closed: true
 title: Inscripción II Noche Manchega
 field:
   - label: Nombre y apellidos de la persona responsable
