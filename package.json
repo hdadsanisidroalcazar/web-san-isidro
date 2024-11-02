@@ -53,7 +53,7 @@
     "lodash.merge": "^4.6.2",
     "photoswipe": "^5.4.4",
     "tinacms": "^2.2.8",
-    "unpic": "^3.18.0"
+    "unpic": "^3.19.0"
   },
   "pnpm": {
     "overrides": {
