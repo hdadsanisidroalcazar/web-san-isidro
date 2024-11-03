@@ -10,7 +10,7 @@ import playformCompress from '@playform/compress';
 
 import tasks from './src/utils/tasks';
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter.mjs';
-import { SITE } from './src/utils/config.ts';
+import { SITE } from './src/utils/config';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
@@ -18,6 +18,12 @@ export default defineConfig({
   site: SITE.site,
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
+
+  build: {
+    // Example: Generate `page.html` instead of `page/index.html` during build.
+    format: 'file'
+  },
+
   output: 'static',
   integrations: [
     tailwind({
