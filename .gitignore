@@ -24,3 +24,4 @@ package-lock.json
 .astro
 node_modules
 .vercel
+.idea

@@ -41,6 +41,7 @@ module.exports = {
           { argsIgnorePattern: '^_', destructuredArrayIgnorePattern: '^_' },
         ],
         '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
       },
     },
     {
