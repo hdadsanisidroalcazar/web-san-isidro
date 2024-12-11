@@ -82,7 +82,136 @@ const homeCollection = defineCollection({
   }),
 });
 
+const magazineCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    year: z.string(),
+    pdf: z.string().optional(),
+    image: z.string(),
+    description: z.string().optional(),
+    url: z.string().optional(),
+  }),
+});
+
+const contactCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string(),
+    tagline: z.string(),
+    image: z.string(),
+    map: z.string(),
+    titleform: z.string(),
+    subtitleform: z.string(),
+    disclaimer: z.string(),
+    descrptionform: z.string().optional(),
+    email: z.string(),
+    phone: z.string(),
+    address: z.string(),
+  }),
+});
+
+const sponsorCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string(),
+    sponsor: z.array(z.string()),
+  }),
+});
+
+const cultCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string().optional(),
+    tagline: z.string(),
+    pdf: z.string().optional(),
+    days: z
+      .array(
+        z.object({
+          title: z.string(),
+          event: z
+            .array(
+              z.object({
+                title: z.string(),
+                time: z.string(),
+                description: z.string(),
+                location: z.string().optional(),
+                map: z.string().optional(),
+                image: z.string().optional(),
+                buttons: z
+                  .array(
+                    z.object({
+                      text: z.string(),
+                      link: z.string(),
+                    })
+                  )
+                  .optional(),
+              })
+            )
+            .optional(),
+        })
+      )
+      .optional(),
+  }),
+});
+
+const formCollection = defineCollection({
+  schema: z.object({
+    closed: z.boolean().optional(),
+    title: z.string(),
+    body: z.string().optional(),
+    field: z
+      .array(
+        z.object({
+          label: z.string(),
+          name: z.string(),
+        })
+      )
+      .optional(),
+  }),
+});
+
+
+const galleryCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    publishDate: z.date(),
+    image: z.string(),
+    body: z.string().optional(),
+    folder: z.string().optional(),
+    galleries: z
+      .array(
+        z.object({
+          title: z.string().optional(),
+          description: z.string().optional(),
+          folder: z.string(),
+        })
+      )
+      .optional(),
+  }),
+});
+
+
+const genericCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    title: z.string(),
+    body: z.string(),
+  }),
+});
+
+
 export const collections = {
   post: postCollection,
   home: homeCollection,
+  magazine: magazineCollection,
+  contact: contactCollection,
+  sponsor: sponsorCollection,
+  cult: cultCollection,
+  form: formCollection,
+  gallery: galleryCollection,
+  generic: genericCollection,
 };
