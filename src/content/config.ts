@@ -196,10 +196,10 @@ const galleryCollection = defineCollection({
 
 
 const genericCollection = defineCollection({
-  type: 'data',
+  type: 'content',
   schema: z.object({
     title: z.string(),
-    body: z.string(),
+    body: z.string().optional(),
   }),
 });
 
