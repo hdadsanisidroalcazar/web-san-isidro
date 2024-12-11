@@ -6,11 +6,12 @@ import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import icon from 'astro-icon';
 import vercel from '@astrojs/vercel/static';
-import playformCompress from '@playform/compress';
 
 import tasks from './src/utils/tasks';
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter.mjs';
 import { SITE } from './src/utils/config';
+import compressor from 'astro-compressor';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
@@ -36,29 +37,12 @@ export default defineConfig({
     icon({
       include: {
         tabler: ['*'],
-        'flat-color-icons': [
-          'template',
-          'gallery',
-          'approval',
-          'document',
-          'advertising',
-          'currency-exchange',
-          'voice-presentation',
-          'business-contact',
-          'database',
-        ],
       },
     }),
     tasks(),
-    playformCompress({
-      CSS: true,
-      HTML: {
-        removeAttributeQuotes: false,
-      },
-      Image: true,
-      JavaScript: true,
-      SVG: true,
-      Logger: 1,
+    compressor({
+      gzip: false,
+      brotli: true,
     }),
   ],
   markdown: {
