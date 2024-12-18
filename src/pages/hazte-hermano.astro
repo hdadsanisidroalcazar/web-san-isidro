@@ -75,52 +75,39 @@ const metadata = {
           </div>
         </div>
 
-        <div class="space-y-4">
-          <div class="flex items-start">
-            <div class="flex items-center h-5">
-              <input
-                type="checkbox"
-                id="conoce-hermanos"
-                name="conoce-hermanos"
-                class="w-4 h-4 border-gray-300 rounded text-green-600 focus:ring-green-500"
-              />
-            </div>
-            <div class="ml-3">
-              <label for="conoce-hermanos" class="text-sm font-medium text-gray-700"> ¿Conoces a algún hermano? </label>
-            </div>
-          </div>
-
-          <div id="hermanos" class="hidden my-6">
-            <Input label="Hermano 1" name="hermano-1" />
-            <Input label="Hermano 2" name="hermano-2" />
-          </div>
+        <div class="mt-3">
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Avalado por lo siguientes hermanos: (indicar dos hermanos que le avalen, en caso de no conocer a ninguno,
+            dejarlo en blanco, ya que será avalado por miembros de la Junta de Gobierno)
+          </p>
         </div>
 
-        <div class="flex items-start mb-4">
-          <div class="flex items-center h-5">
-            <input
-              type="checkbox"
-              id="privacyPolicy"
-              name="privacyPolicy"
-              required
-              class="w-4 h-4 border-gray-300 rounded text-green-600 focus:ring-green-500"
-            />
-          </div>
-          <div class="ml-3">
-            <label for="privacyPolicy" class="text-sm text-gray-700">
-              Texto de
-              <a href="#" class="text-green-600 hover:text-green-700"> política de privacidad </a>
-              .
-            </label>
-          </div>
-        </div>
-
-        <div class="mt-10 grid">
-          <button class="btn-primary" type="submit">
-            Enviar solicitud
-          </button>
-        </div>
+        <Input label="Hermano 1" name="hermano-1" />
+        <Input label="Hermano 2" name="hermano-2" />
       </form>
+
+      <div class="flex items-start mb-4">
+        <div class="flex items-center h-5">
+          <input
+            type="checkbox"
+            id="privacyPolicy"
+            name="privacyPolicy"
+            required
+            class="w-4 h-4 border-gray-300 rounded text-green-600 focus:ring-green-500"
+          />
+        </div>
+        <div class="ml-3">
+          <label for="privacyPolicy" class="text-sm text-gray-700">
+            Texto de
+            <a href="#" class="text-green-600 hover:text-green-700"> política de privacidad </a>
+            .
+          </label>
+        </div>
+      </div>
+
+      <div class="mt-10 grid">
+        <button class="btn-primary" type="submit"> Enviar solicitud</button>
+      </div>
     </div>
   </div>
 </PageLayout>
@@ -134,19 +121,6 @@ const metadata = {
       relativeNameField?.classList.remove('hidden');
     } else {
       relativeNameField?.classList.add('hidden');
-    }
-  });
-</script>
-
-<script>
-  const conoceHermanosCheckbox = document.getElementById('conoce-hermanos');
-  const hermanosFields = document.getElementById('hermanos');
-
-  conoceHermanosCheckbox?.addEventListener('change', function () {
-    if (this.checked) {
-      hermanosFields?.classList.remove('hidden');
-    } else {
-      hermanosFields?.classList.add('hidden');
     }
   });
 </script>
