@@ -1,0 +1,152 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Input from '../components/ui/Input.astro';
+
+const metadata = {
+  title: 'Hazte Hermano',
+  description: 'Hazte hermano de la Hermandad de San Isidro Labrador de Alcázar de San Juan',
+};
+// <div class="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full">
+---
+
+<PageLayout metadata={metadata}>
+  <div class="container mx-auto py-6 px-4">
+    <div
+      class="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-sm backdrop-blur border border-gray-200 dark:border-gray-700 dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8"
+    >
+      <form class="p-6 space-y-6" method="POST">
+        <div class="grid gap-4 md:grid-cols-2 mb-4">
+          <Input label="DNI" name="dni" />
+          <Input label="Nombre" name="name" />
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 mb-4">
+          <Input label="Primer apellido" name="apellido1" />
+          <Input label="Segundo apellido" name="apellido2" />
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-3 mb-4">
+          <Input label="Fecha de nacimiento" name="fecha-facimiento" type="date" />
+          <Input label="Localidad de Nacimiento" name="localidad-nacimiento" />
+          <Input label="Provincia de Nacimiento" name="provincia-nacimiento" />
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-2 mb-4">
+          <Input label="Teléfono" name="telefono" type="tel" />
+          <Input label="Correo electrónico" name="email" type="email" />
+        </div>
+
+        <Input label="Dirección" name="direccion" class="mb-4" />
+        <div class="grid gap-4 md:grid-cols-3 mb-4">
+          <Input label="Localidad" name="localidad" />
+          <Input label="Provincia" name="provincia" />
+          <Input label="Código Postal" name="codigo-postal" />
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-3 mb-4">
+          <Input label="Parroquia de Bautismo" name="parroquia-bautismo" />
+          <Input label="Localidad de Bautismo" name="localidad-bautismo" />
+          <Input label="Provincia de Bautismo" name="provincia-bautismo" />
+        </div>
+
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <div class="flex items-center h-5">
+              <input
+                type="checkbox"
+                id="hasRelative"
+                name="hasRelative"
+                class="w-4 h-4 border-gray-300 rounded text-green-600 focus:ring-green-500"
+              />
+            </div>
+            <div class="ml-3">
+              <label for="hasRelative" class="text-sm font-medium text-gray-700">
+                Autorización para menores de edad
+              </label>
+            </div>
+          </div>
+
+          <div id="relativeNameField" class="hidden">
+            <Input
+              label="Nombre y Apellidos del padre/madre/tutor como representante legal"
+              name="representante"
+              class="mt-6"
+            />
+            <Input label="DNI representante legal" name="dni-representante" class="mt-6" />
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <div class="flex items-center h-5">
+              <input
+                type="checkbox"
+                id="conoce-hermanos"
+                name="conoce-hermanos"
+                class="w-4 h-4 border-gray-300 rounded text-green-600 focus:ring-green-500"
+              />
+            </div>
+            <div class="ml-3">
+              <label for="conoce-hermanos" class="text-sm font-medium text-gray-700"> ¿Conoces a algún hermano? </label>
+            </div>
+          </div>
+
+          <div id="hermanos" class="hidden my-6">
+            <Input label="Hermano 1" name="hermano-1" />
+            <Input label="Hermano 2" name="hermano-2" />
+          </div>
+        </div>
+
+        <div class="flex items-start mb-4">
+          <div class="flex items-center h-5">
+            <input
+              type="checkbox"
+              id="privacyPolicy"
+              name="privacyPolicy"
+              required
+              class="w-4 h-4 border-gray-300 rounded text-green-600 focus:ring-green-500"
+            />
+          </div>
+          <div class="ml-3">
+            <label for="privacyPolicy" class="text-sm text-gray-700">
+              Texto de
+              <a href="#" class="text-green-600 hover:text-green-700"> política de privacidad </a>
+              .
+            </label>
+          </div>
+        </div>
+
+        <div class="mt-10 grid">
+          <button class="btn-primary" type="submit">
+            Enviar solicitud
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</PageLayout>
+
+<script>
+  const hasRelativeCheckbox = document.getElementById('hasRelative');
+  const relativeNameField = document.getElementById('relativeNameField');
+
+  hasRelativeCheckbox?.addEventListener('change', function () {
+    if (this.checked) {
+      relativeNameField?.classList.remove('hidden');
+    } else {
+      relativeNameField?.classList.add('hidden');
+    }
+  });
+</script>
+
+<script>
+  const conoceHermanosCheckbox = document.getElementById('conoce-hermanos');
+  const hermanosFields = document.getElementById('hermanos');
+
+  conoceHermanosCheckbox?.addEventListener('change', function () {
+    if (this.checked) {
+      hermanosFields?.classList.remove('hidden');
+    } else {
+      hermanosFields?.classList.add('hidden');
+    }
+  });
+</script>
