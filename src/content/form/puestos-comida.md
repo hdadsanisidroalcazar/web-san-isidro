@@ -1,5 +1,5 @@
 ---
-closed: true
+closed: false
 title: Inscripciones para puestos de comida 2025
 field:
   - label: Nombre y apellidos
