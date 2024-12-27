@@ -173,7 +173,6 @@ const formCollection = defineCollection({
   }),
 });
 
-
 const galleryCollection = defineCollection({
   schema: z.object({
     title: z.string(),
@@ -194,7 +193,6 @@ const galleryCollection = defineCollection({
   }),
 });
 
-
 const genericCollection = defineCollection({
   type: 'content',
   schema: z.object({
@@ -202,7 +200,6 @@ const genericCollection = defineCollection({
     body: z.string().optional(),
   }),
 });
-
 
 export const collections = {
   post: postCollection,
