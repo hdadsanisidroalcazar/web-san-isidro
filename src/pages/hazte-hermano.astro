@@ -1,6 +1,7 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import Input from '../components/ui/Input.astro';
+import Headline from '~/components/ui/Headline.astro';
 
 const metadata = {
   title: 'Hazte Hermano',
@@ -11,6 +12,10 @@ const metadata = {
 
 <PageLayout metadata={metadata}>
   <div class="container mx-auto py-6 px-4">
+    <Headline
+      title="Hazte hermano"
+      subtitle="Solicitud para hacerse hermano de la Hermandad de San Isidro Labrador de Alcázar de San Juan"
+    />
     <div
       class="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-sm backdrop-blur border border-gray-200 dark:border-gray-700 dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8"
     >
@@ -90,6 +95,22 @@ const metadata = {
         <div class="flex items-center h-5">
           <input
             type="checkbox"
+            id="comunicaciones"
+            name="comunicaciones"
+            class="w-4 h-4 border-gray-300 rounded text-green-600 focus:ring-green-500"
+          />
+        </div>
+        <div class="ml-3">
+          <label for="privacyPolicy" class="text-sm text-gray-700">
+            Acepto el envío de comunicaciones por parte de la Hermandad de san Isidro.
+          </label>
+        </div>
+      </div>
+
+      <div class="flex items-start mb-4">
+        <div class="flex items-center h-5">
+          <input
+            type="checkbox"
             id="privacyPolicy"
             name="privacyPolicy"
             required
@@ -98,8 +119,8 @@ const metadata = {
         </div>
         <div class="ml-3">
           <label for="privacyPolicy" class="text-sm text-gray-700">
-            Texto de
-            <a href="#" class="text-green-600 hover:text-green-700"> política de privacidad </a>
+            Acepto la
+            <a href="#privacy" class="text-green-600 hover:text-green-700"> política de privacidad </a>
             .
           </label>
         </div>
@@ -107,6 +128,48 @@ const metadata = {
 
       <div class="mt-10 grid">
         <button class="btn-primary" type="submit"> Enviar solicitud</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto py-6 px-4">
+    <div
+      class="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-sm backdrop-blur border border-gray-200 dark:border-gray-700 dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8"
+    >
+      <div class="mt-3" id="privacy">
+        <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 text-center">Política de privacidad</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+          De conformidad con lo establecido en el Reglamento General de Protección de Datos UE 2016/679 y la Ley
+          Orgánica 3/2018 de Protección de Datos Personales y Garantías de los Derechos Digitales, el interesado o su
+          representante legal en caso de que sea menor de edad, queda informado y presta su consentimiento expreso a la
+          incorporación de sus datos a los ficheros, automatizados o no, de la Hermandad de San Isidro Labrador, con
+          CIF.- R1300601J, y domicilio en la Plaza del Altozano de la Inmaculada, 17, Alcázar de San Juan (Ciudad Real).
+        </p>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+          Los datos aportados por el interesado (hermano) o su representante legal en caso de que sea menor de edad,
+          serán tratados con fines exclusivamente pastorales y de gestión de la Hermandad conforme a las obligaciones y
+          deberes que le imponga la normativa eclesiástica y diocesana vigente y sus propias Reglas y Ordenanzas.
+        </p>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+          Los datos serán tratados durante el tiempo que dure la relación del hermano con la corporación y siempre que
+          no medie una solicitud expresa de baja como miembro de la misma y de supresión de datos pasando en este último
+          caso al bloqueo de los mismos. Consiente la comunicación de determinados datos a los restantes hermanos de la
+          corporación a efecto meramente informativo, para la organización y coordinación de los cultos tanto internos
+          como externos. Igualmente consiente expresamente el uso de su imagen, nombre y apellidos, relacionados con
+          actos y cultos de la Hermandad, para las publicaciones en los medios y canales de comunicación de la misma.
+          Además, consiente la cesión de sus datos personales a las entidades de servicios de mensajería postal
+          designadas a tal efecto con la finalidad exclusiva de envío de comunicaciones y boletines o revistas de la
+          Hermandad.
+        </p>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+          Se le informa de que -en los términos establecidos en la legislación vigente- podrá ejercitar su derecho de
+          acceso, rectificación, supresión, oposición, limitación y portabilidad, sin carácter retroactivo, bien de
+          manera presencial en la sede de la Hermandad, identificándose con el Documento Nacional de Identidad, o
+          dirigiendo una comunicación con fotocopia de dicho documento, y escrito exponiendo el derecho que se ejercita
+          a: ASUNTO.- LOPD hermandadsanisidrolabradoralcazar@outlook.es. Si el interesado se siente vulnerado en el
+          tratamiento de sus datos, puede solicitar amparo ante la Agencia Española de Protección de Datos o autoridad
+          autonómica competente en la materia.
+        </p>
       </div>
     </div>
   </div>
