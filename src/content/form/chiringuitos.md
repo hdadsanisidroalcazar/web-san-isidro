@@ -4,7 +4,7 @@ title: Inscripciones chiringuitos 2025
 field:
   - label: Nombre y apellidos
     name: nombre
-  - label: DNI
+  - label: DNI / CIF
     name: dni
   - label: Teléfono
     name: telefono
