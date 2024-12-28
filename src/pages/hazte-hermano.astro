@@ -89,46 +89,69 @@ const metadata = {
 
         <Input label="Hermano 1" name="hermano-1" />
         <Input label="Hermano 2" name="hermano-2" />
+
+        <div class="grid gap-4 md:grid-cols-3 mb-4">
+          <div class="flex">
+            <input
+              type="radio"
+              name="forma-pago"
+              class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+              id="metalico"
+              checked=""
+            />
+            <label for="metalico" class="text-sm text-gray-500 ms-2 dark:text-neutral-400">Metalico</label>
+          </div>
+
+          <div class="flex">
+            <input
+              type="radio"
+              name="forma-pago"
+              class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+              id="bizum"
+            />
+            <label for="bizum" class="text-sm text-gray-500 ms-2 dark:text-neutral-400">Bizum al 09661</label>
+          </div>
+        </div>
+
+        <div class="flex items-start mb-4">
+          <div class="flex items-center h-5">
+            <input
+              type="checkbox"
+              id="comunicaciones"
+              name="comunicaciones"
+              class="w-4 h-4 border-gray-300 rounded text-green-600 focus:ring-green-500"
+            />
+          </div>
+          <div class="ml-3">
+            <label for="privacyPolicy" class="text-sm text-gray-700">
+              Acepto el envío de comunicaciones por parte de la Hermandad de san Isidro.
+            </label>
+          </div>
+        </div>
+
+        <div class="flex items-start mb-4">
+          <div class="flex items-center h-5">
+            <input
+              type="checkbox"
+              id="privacyPolicy"
+              name="privacyPolicy"
+              required
+              class="w-4 h-4 border-gray-300 rounded text-green-600 focus:ring-green-500"
+            />
+          </div>
+          <div class="ml-3">
+            <label for="privacyPolicy" class="text-sm text-gray-700">
+              Acepto la
+              <a href="#privacy" class="text-green-600 hover:text-green-700"> política de privacidad </a>
+              .
+            </label>
+          </div>
+        </div>
+
+        <div class="mt-10 grid">
+          <button class="btn-primary" type="submit"> Enviar solicitud</button>
+        </div>
       </form>
-
-      <div class="flex items-start mb-4">
-        <div class="flex items-center h-5">
-          <input
-            type="checkbox"
-            id="comunicaciones"
-            name="comunicaciones"
-            class="w-4 h-4 border-gray-300 rounded text-green-600 focus:ring-green-500"
-          />
-        </div>
-        <div class="ml-3">
-          <label for="privacyPolicy" class="text-sm text-gray-700">
-            Acepto el envío de comunicaciones por parte de la Hermandad de san Isidro.
-          </label>
-        </div>
-      </div>
-
-      <div class="flex items-start mb-4">
-        <div class="flex items-center h-5">
-          <input
-            type="checkbox"
-            id="privacyPolicy"
-            name="privacyPolicy"
-            required
-            class="w-4 h-4 border-gray-300 rounded text-green-600 focus:ring-green-500"
-          />
-        </div>
-        <div class="ml-3">
-          <label for="privacyPolicy" class="text-sm text-gray-700">
-            Acepto la
-            <a href="#privacy" class="text-green-600 hover:text-green-700"> política de privacidad </a>
-            .
-          </label>
-        </div>
-      </div>
-
-      <div class="mt-10 grid">
-        <button class="btn-primary" type="submit"> Enviar solicitud</button>
-      </div>
     </div>
   </div>
 
