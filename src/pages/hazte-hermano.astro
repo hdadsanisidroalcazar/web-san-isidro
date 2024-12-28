@@ -90,29 +90,6 @@ const metadata = {
         <Input label="Hermano 1" name="hermano-1" />
         <Input label="Hermano 2" name="hermano-2" />
 
-        <div class="grid gap-4 md:grid-cols-3 mb-4">
-          <div class="flex">
-            <input
-              type="radio"
-              name="forma-pago"
-              class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
-              id="metalico"
-              checked=""
-            />
-            <label for="metalico" class="text-sm text-gray-500 ms-2 dark:text-neutral-400">Metalico</label>
-          </div>
-
-          <div class="flex">
-            <input
-              type="radio"
-              name="forma-pago"
-              class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
-              id="bizum"
-            />
-            <label for="bizum" class="text-sm text-gray-500 ms-2 dark:text-neutral-400">Bizum al 09661</label>
-          </div>
-        </div>
-
         <div class="flex items-start mb-4">
           <div class="flex items-center h-5">
             <input
@@ -145,6 +122,37 @@ const metadata = {
               <a href="#privacy" class="text-green-600 hover:text-green-700"> política de privacidad </a>
               .
             </label>
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 text-center">Forma de pago de la cuota</h2>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+            La cuota de hermano es de 5€ al año. Se puede abonar en metálico durante la celebración de la festividades
+            de Santa Águeda, Santa Apolonia y San Isidro Labrador, o mediante bizum al número 09661.
+          </p>
+
+          <div class="grid gap-4 md:grid-cols-3 mb-4 mt-3">
+            <div class="flex">
+              <input
+                type="radio"
+                name="forma-pago"
+                class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                id="metalico"
+                checked=""
+              />
+              <label for="metalico" class="text-sm text-gray-500 ms-2 dark:text-neutral-400">Metalico</label>
+            </div>
+
+            <div class="flex">
+              <input
+                type="radio"
+                name="forma-pago"
+                class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                id="bizum"
+              />
+              <label for="bizum" class="text-sm text-gray-500 ms-2 dark:text-neutral-400">Bizum al 09661</label>
+            </div>
           </div>
         </div>
 
