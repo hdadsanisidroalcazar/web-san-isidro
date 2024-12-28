@@ -10,7 +10,7 @@ field:
     name: telefono
   - label: Email
     name: email
-  - label: Medida de la caseta
+  - label: Medida de la caseta (si se dispone de ella)
     name: medidas
 ---
 
