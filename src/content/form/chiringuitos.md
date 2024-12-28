@@ -39,4 +39,6 @@ La Hermandad de San Isidro Labrador, como en años anteriores, cederá un espaci
 
 9\. Existen dos plazos de inscripción: Del 7 al 15 de enero para empresas, Hermandades o particulares que montaron en la Romería de 2024 y a partir del 15 de enero, hasta el 30 de abril, para el resto de interesados que nunca hayan participado. La inscripción se realizará en orden de recepción del formulario.
 
+10\. Por el hecho de inscribirse, se aceptan todas las condiciones expuestas anteriormente.
+
 *
