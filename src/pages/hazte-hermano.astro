@@ -2,19 +2,23 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import Input from '../components/ui/Input.astro';
 import Headline from '~/components/ui/Headline.astro';
+import { fetchHazteHermano } from '~/utils/page';
+
+const hazteHermanoData = await fetchHazteHermano();
+
+console.log(hazteHermanoData);
 
 const metadata = {
   title: 'Hazte Hermano',
   description: 'Hazte hermano de la Hermandad de San Isidro Labrador de Alcázar de San Juan',
 };
-// <div class="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full">
 ---
 
 <PageLayout metadata={metadata}>
   <div class="container mx-auto py-6 px-4">
     <Headline
-      title="Hazte hermano"
-      subtitle="Solicitud para hacerse hermano de la Hermandad de San Isidro Labrador de Alcázar de San Juan"
+      title={hazteHermanoData.title}
+      subtitle={hazteHermanoData.subtitle}
     />
     <div
       class="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-sm backdrop-blur border border-gray-200 dark:border-gray-700 dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8"

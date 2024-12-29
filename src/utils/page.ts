@@ -1,10 +1,11 @@
 import { getCollection } from 'astro:content';
-import type { Home, Contact, Sponsor, Magazine } from '~/types';
+import type { Home, Contact, Sponsor, Magazine, HazteHermano } from '~/types';
 
 let _home: Home;
 let _contact: Contact;
 let _sponsor: Sponsor;
 let _magazines: Magazine[];
+let _hazteHermano: HazteHermano;
 
 /** */
 export const fetchHome = async (): Promise<Home> => {
@@ -28,7 +29,7 @@ export const fetchSponsors = async (): Promise<Sponsor> => {
 export const fetchContact = async (): Promise<Contact> => {
   if (!_contact) {
     const contacts = await getCollection('contact');
-    _contact = contacts[0]?.data;
+    _contact = contacts[0]?.data as Contact;
   }
 
   return _contact;
@@ -54,4 +55,13 @@ export const fetchMagazines = async (): Promise<Magazine[]> => {
 export const fetchLastMagazine = async (): Promise<Magazine> => {
   const magazines = await fetchMagazines();
   return magazines[0];
+};
+
+export const fetchHazteHermano = async (): Promise<HazteHermano> => {
+  if (!_hazteHermano) {
+    const hazteHermano = await getCollection('haztehermano');
+    _hazteHermano = hazteHermano[0]?.data;
+  }
+
+  return _hazteHermano;
 };
