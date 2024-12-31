@@ -235,7 +235,6 @@ const hazteHermanoCollection = defineCollection({
     bizum: z.string(),
     enviar: z.string(),
     titlePrivacidad: z.string(),
-
   }),
 });
 

@@ -1,5 +1,17 @@
 import { defineConfig } from 'tinacms';
-import { Home, Magazine, Sponsor, Contact, Generic, Post, Cultos, Form, Instruction, Gallery, HazteHermano } from './collection';
+import {
+  Home,
+  Magazine,
+  Sponsor,
+  Contact,
+  Generic,
+  Post,
+  Cultos,
+  Form,
+  Instruction,
+  Gallery,
+  HazteHermano,
+} from './collection';
 
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.VERCEL_GIT_COMMIT_REF || 'master';
