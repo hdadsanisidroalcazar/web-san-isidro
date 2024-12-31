@@ -1,0 +1,194 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Input from '../components/ui/Input.astro';
+import Headline from '~/components/ui/Headline.astro';
+import { fetchHazteHermano } from '~/utils/page';
+
+const hazteHermanoData = await fetchHazteHermano();
+const { DescriptionPrivacidad } = hazteHermanoData as any;
+
+const metadata = {
+  title: 'Hazte Hermano',
+  description: 'Hazte hermano de la Hermandad de San Isidro Labrador de Alcázar de San Juan',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <div class="container mx-auto py-6 px-4">
+    <Headline title={hazteHermanoData.title} subtitle={hazteHermanoData.subtitle} />
+    <div
+      class="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-sm backdrop-blur border border-gray-200 dark:border-gray-700 dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8"
+    >
+      <form class="p-6 space-y-6" method="POST">
+        <div class="grid gap-4 md:grid-cols-2 mb-4">
+          <Input label={hazteHermanoData.dni} name="dni" />
+          <Input label={hazteHermanoData.nombre} name="name" />
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 mb-4">
+          <Input label={hazteHermanoData.primerapellido} name="apellido1" />
+          <Input label={hazteHermanoData.segundoapellido} name="apellido2" />
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-3 mb-4">
+          <Input label={hazteHermanoData.fechadenacimiento} name="fecha-facimiento" type="date" />
+          <Input label={hazteHermanoData.localidadnacimiento} name="localidad-nacimiento" />
+          <Input label={hazteHermanoData.provincianacimiento} name="provincia-nacimiento" />
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-2 mb-4">
+          <Input label={hazteHermanoData.telefono} name="telefono" type="tel" />
+          <Input label={hazteHermanoData.email} name="email" type="email" />
+        </div>
+
+        <Input label={hazteHermanoData.direccion} name="direccion" class="mb-4" />
+        <div class="grid gap-4 md:grid-cols-3 mb-4">
+          <Input label={hazteHermanoData.localidad} name="localidad" />
+          <Input label={hazteHermanoData.provincia} name="provincia" />
+          <Input label={hazteHermanoData.codigopostal} name="codigo-postal" />
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-3 mb-4">
+          <Input label={hazteHermanoData.parroquiabaustismo} name="parroquia-bautismo" />
+          <Input label={hazteHermanoData.localidadbaustismo} name="localidad-bautismo" />
+          <Input label={hazteHermanoData.provinciabaustismo} name="provincia-bautismo" />
+        </div>
+
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <div class="flex items-center h-5">
+              <input
+                type="checkbox"
+                id="hasRelative"
+                name="hasRelative"
+                class="w-4 h-4 border-gray-300 rounded text-green-600 focus:ring-green-500"
+              />
+            </div>
+            <div class="ml-3">
+              <label for="hasRelative" class="text-sm font-medium text-gray-700">
+                {hazteHermanoData.menores}
+              </label>
+            </div>
+          </div>
+
+          <div id="relativeNameField" class="hidden">
+            <Input label={hazteHermanoData.padremenor} name="representante" class="mt-6" />
+            <Input label={hazteHermanoData.dnimenor} name="dni-representante" class="mt-6" />
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Avalado por lo siguientes hermanos: (indicar dos hermanos que le avalen, en caso de no conocer a ninguno,
+            dejarlo en blanco, ya que será avalado por miembros de la Junta de Gobierno)
+          </p>
+        </div>
+
+        <Input label={`${hazteHermanoData.hermano} 1`} name="hermano-1" />
+        <Input label={`${hazteHermanoData.hermano} 2`} name="hermano-2" />
+
+        <div class="flex items-start mb-4">
+          <div class="flex items-center h-5">
+            <input
+              type="checkbox"
+              id="comunicaciones"
+              name="comunicaciones"
+              class="w-4 h-4 border-gray-300 rounded text-green-600 focus:ring-green-500"
+            />
+          </div>
+          <div class="ml-3">
+            <label for="privacyPolicy" class="text-sm text-gray-700">
+              {hazteHermanoData.comunicaciones}
+            </label>
+          </div>
+        </div>
+
+        <div class="flex items-start mb-4">
+          <div class="flex items-center h-5">
+            <input
+              type="checkbox"
+              id="privacyPolicy"
+              name="privacyPolicy"
+              required
+              class="w-4 h-4 border-gray-300 rounded text-green-600 focus:ring-green-500"
+            />
+          </div>
+          <div class="ml-3">
+            <label for="privacyPolicy" class="text-sm text-gray-700">
+              {hazteHermanoData.aceptacion}
+              <a href="#privacy" class="text-green-600 hover:text-green-700"> política de privacidad </a>
+              .
+            </label>
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 text-center">
+            {hazteHermanoData.titlepago}
+          </h2>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+            {hazteHermanoData.desciptionpago}
+          </p>
+
+          <div class="grid gap-4 md:grid-cols-3 mb-4 mt-3">
+            <div class="flex">
+              <input
+                type="radio"
+                name="forma-pago"
+                class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                id="metalico"
+                checked=""
+              />
+              <label for="metalico" class="text-sm text-gray-500 ms-2 dark:text-neutral-400"
+                >{hazteHermanoData.metalico}</label
+              >
+            </div>
+
+            <div class="flex">
+              <input
+                type="radio"
+                name="forma-pago"
+                class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                id="bizum"
+              />
+              <label for="bizum" class="text-sm text-gray-500 ms-2 dark:text-neutral-400"
+                >{hazteHermanoData.bizum}</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 grid">
+          <button class="btn-primary" type="submit">{hazteHermanoData.enviar}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container mx-auto py-6 px-4">
+    <div
+      class="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-sm backdrop-blur border border-gray-200 dark:border-gray-700 dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8"
+    >
+      <div class="mt-3" id="privacy">
+        <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 text-center">
+          {hazteHermanoData.titlePrivacidad}
+        </h2>
+        <article class="text-sm text-gray-600 dark:text-gray-400 prose max-w-none mt-2">
+          <DescriptionPrivacidad />
+        </article>
+      </div>
+    </div>
+  </div>
+</PageLayout>
+
+<script>
+  const hasRelativeCheckbox = document.getElementById('hasRelative');
+  const relativeNameField = document.getElementById('relativeNameField');
+
+  hasRelativeCheckbox?.addEventListener('change', function () {
+    if (this.checked) {
+      relativeNameField?.classList.remove('hidden');
+    } else {
+      relativeNameField?.classList.add('hidden');
+    }
+  });
+</script>

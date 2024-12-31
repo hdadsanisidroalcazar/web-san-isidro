@@ -201,6 +201,43 @@ const genericCollection = defineCollection({
   }),
 });
 
+const hazteHermanoCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string(),
+    dni: z.string(),
+    nombre: z.string(),
+    primerapellido: z.string(),
+    segundoapellido: z.string(),
+    fechadenacimiento: z.string(),
+    localidadnacimiento: z.string(),
+    provincianacimiento: z.string(),
+    telefono: z.string(),
+    email: z.string(),
+    direccion: z.string(),
+    localidad: z.string(),
+    provincia: z.string(),
+    codigopostal: z.string(),
+    parroquiabaustismo: z.string(),
+    localidadbaustismo: z.string(),
+    provinciabaustismo: z.string(),
+    menores: z.string(),
+    padremenor: z.string(),
+    dnimenor: z.string(),
+    titleavalista: z.string(),
+    hermano: z.string(),
+    comunicaciones: z.string(),
+    aceptacion: z.string(),
+    titlepago: z.string(),
+    desciptionpago: z.string(),
+    metalico: z.string(),
+    bizum: z.string(),
+    enviar: z.string(),
+    titlePrivacidad: z.string(),
+  }),
+});
+
 export const collections = {
   post: postCollection,
   home: homeCollection,
@@ -211,4 +248,5 @@ export const collections = {
   form: formCollection,
   gallery: galleryCollection,
   generic: genericCollection,
+  haztehermano: hazteHermanoCollection,
 };
