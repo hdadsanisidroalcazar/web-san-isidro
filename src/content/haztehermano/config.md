@@ -3,6 +3,9 @@ title: Hazte Hermano
 subtitle: >-
   Solicitud para hacerse hermano de la Hermandad de San Isidro Labrador de
   Alcázar de San Juan
+descargar: >-
+  Rellena el siguiente formulario o si lo prefieres puedes descargarlo y
+  entregarlo a cualquier miembro de la Junta de Gobierno.
 dni: DNI
 nombre: Nombre
 primerapellido: Primer Apellido

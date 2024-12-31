@@ -60,6 +60,7 @@ export interface Magazine {
 export interface HazteHermano {
   title: string;
   subtitle: string;
+  descargar: string;
   dni: string;
   nombre: string;
   primerapellido: string;

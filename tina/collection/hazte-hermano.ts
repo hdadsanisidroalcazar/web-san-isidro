@@ -24,6 +24,11 @@ export const HazteHermano: Collection = {
     },
     {
       type: 'string',
+      name: 'descargar',
+      label: 'Texto para descargar',
+    },
+    {
+      type: 'string',
       name: 'dni',
       label: 'DNI',
     },

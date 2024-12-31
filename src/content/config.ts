@@ -206,6 +206,7 @@ const hazteHermanoCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     subtitle: z.string(),
+    descargar: z.string(),
     dni: z.string(),
     nombre: z.string(),
     primerapellido: z.string(),
