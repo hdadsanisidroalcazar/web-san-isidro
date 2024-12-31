@@ -5,8 +5,7 @@ import Headline from '~/components/ui/Headline.astro';
 import { fetchHazteHermano } from '~/utils/page';
 
 const hazteHermanoData = await fetchHazteHermano();
-
-console.log(hazteHermanoData);
+const { DescriptionPrivacidad } = hazteHermanoData as any;
 
 const metadata = {
   title: 'Hazte Hermano',
@@ -16,45 +15,42 @@ const metadata = {
 
 <PageLayout metadata={metadata}>
   <div class="container mx-auto py-6 px-4">
-    <Headline
-      title={hazteHermanoData.title}
-      subtitle={hazteHermanoData.subtitle}
-    />
+    <Headline title={hazteHermanoData.title} subtitle={hazteHermanoData.subtitle} />
     <div
       class="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-sm backdrop-blur border border-gray-200 dark:border-gray-700 dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8"
     >
       <form class="p-6 space-y-6" method="POST">
         <div class="grid gap-4 md:grid-cols-2 mb-4">
-          <Input label="DNI" name="dni" />
-          <Input label="Nombre" name="name" />
+          <Input label={hazteHermanoData.dni} name="dni" />
+          <Input label={hazteHermanoData.nombre} name="name" />
         </div>
         <div class="grid gap-4 md:grid-cols-2 mb-4">
-          <Input label="Primer apellido" name="apellido1" />
-          <Input label="Segundo apellido" name="apellido2" />
+          <Input label={hazteHermanoData.primerapellido} name="apellido1" />
+          <Input label={hazteHermanoData.segundoapellido} name="apellido2" />
         </div>
 
         <div class="grid gap-4 md:grid-cols-3 mb-4">
-          <Input label="Fecha de nacimiento" name="fecha-facimiento" type="date" />
-          <Input label="Localidad de Nacimiento" name="localidad-nacimiento" />
-          <Input label="Provincia de Nacimiento" name="provincia-nacimiento" />
+          <Input label={hazteHermanoData.fechadenacimiento} name="fecha-facimiento" type="date" />
+          <Input label={hazteHermanoData.localidadnacimiento} name="localidad-nacimiento" />
+          <Input label={hazteHermanoData.provincianacimiento} name="provincia-nacimiento" />
         </div>
 
         <div class="grid gap-4 md:grid-cols-2 mb-4">
-          <Input label="Teléfono" name="telefono" type="tel" />
-          <Input label="Correo electrónico" name="email" type="email" />
+          <Input label={hazteHermanoData.telefono} name="telefono" type="tel" />
+          <Input label={hazteHermanoData.email} name="email" type="email" />
         </div>
 
-        <Input label="Dirección" name="direccion" class="mb-4" />
+        <Input label={hazteHermanoData.direccion} name="direccion" class="mb-4" />
         <div class="grid gap-4 md:grid-cols-3 mb-4">
-          <Input label="Localidad" name="localidad" />
-          <Input label="Provincia" name="provincia" />
-          <Input label="Código Postal" name="codigo-postal" />
+          <Input label={hazteHermanoData.localidad} name="localidad" />
+          <Input label={hazteHermanoData.provincia} name="provincia" />
+          <Input label={hazteHermanoData.codigopostal} name="codigo-postal" />
         </div>
 
         <div class="grid gap-4 md:grid-cols-3 mb-4">
-          <Input label="Parroquia de Bautismo" name="parroquia-bautismo" />
-          <Input label="Localidad de Bautismo" name="localidad-bautismo" />
-          <Input label="Provincia de Bautismo" name="provincia-bautismo" />
+          <Input label={hazteHermanoData.parroquiabaustismo} name="parroquia-bautismo" />
+          <Input label={hazteHermanoData.localidadbaustismo} name="localidad-bautismo" />
+          <Input label={hazteHermanoData.provinciabaustismo} name="provincia-bautismo" />
         </div>
 
         <div class="space-y-4">
@@ -69,18 +65,14 @@ const metadata = {
             </div>
             <div class="ml-3">
               <label for="hasRelative" class="text-sm font-medium text-gray-700">
-                Autorización para menores de edad
+                {hazteHermanoData.menores}
               </label>
             </div>
           </div>
 
           <div id="relativeNameField" class="hidden">
-            <Input
-              label="Nombre y Apellidos del padre/madre/tutor como representante legal"
-              name="representante"
-              class="mt-6"
-            />
-            <Input label="DNI representante legal" name="dni-representante" class="mt-6" />
+            <Input label={hazteHermanoData.padremenor} name="representante" class="mt-6" />
+            <Input label={hazteHermanoData.dnimenor} name="dni-representante" class="mt-6" />
           </div>
         </div>
 
@@ -91,8 +83,8 @@ const metadata = {
           </p>
         </div>
 
-        <Input label="Hermano 1" name="hermano-1" />
-        <Input label="Hermano 2" name="hermano-2" />
+        <Input label={`${hazteHermanoData.hermano} 1`} name="hermano-1" />
+        <Input label={`${hazteHermanoData.hermano} 2`} name="hermano-2" />
 
         <div class="flex items-start mb-4">
           <div class="flex items-center h-5">
@@ -105,7 +97,7 @@ const metadata = {
           </div>
           <div class="ml-3">
             <label for="privacyPolicy" class="text-sm text-gray-700">
-              Acepto el envío de comunicaciones por parte de la Hermandad de san Isidro.
+              {hazteHermanoData.comunicaciones}
             </label>
           </div>
         </div>
@@ -122,7 +114,7 @@ const metadata = {
           </div>
           <div class="ml-3">
             <label for="privacyPolicy" class="text-sm text-gray-700">
-              Acepto la
+              {hazteHermanoData.aceptacion}
               <a href="#privacy" class="text-green-600 hover:text-green-700"> política de privacidad </a>
               .
             </label>
@@ -130,10 +122,11 @@ const metadata = {
         </div>
 
         <div class="mt-3">
-          <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 text-center">Forma de pago de la cuota</h2>
+          <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 text-center">
+            {hazteHermanoData.titlepago}
+          </h2>
           <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
-            La cuota de hermano es de 5€ al año. Se puede abonar en metálico durante la celebración de la festividades
-            de Santa Águeda, Santa Apolonia y San Isidro Labrador, o mediante bizum al número 09661.
+            {hazteHermanoData.desciptionpago}
           </p>
 
           <div class="grid gap-4 md:grid-cols-3 mb-4 mt-3">
@@ -145,7 +138,9 @@ const metadata = {
                 id="metalico"
                 checked=""
               />
-              <label for="metalico" class="text-sm text-gray-500 ms-2 dark:text-neutral-400">Metalico</label>
+              <label for="metalico" class="text-sm text-gray-500 ms-2 dark:text-neutral-400"
+                >{hazteHermanoData.metalico}</label
+              >
             </div>
 
             <div class="flex">
@@ -155,13 +150,15 @@ const metadata = {
                 class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
                 id="bizum"
               />
-              <label for="bizum" class="text-sm text-gray-500 ms-2 dark:text-neutral-400">Bizum al 09661</label>
+              <label for="bizum" class="text-sm text-gray-500 ms-2 dark:text-neutral-400"
+                >{hazteHermanoData.bizum}</label
+              >
             </div>
           </div>
         </div>
 
         <div class="mt-10 grid">
-          <button class="btn-primary" type="submit"> Enviar solicitud</button>
+          <button class="btn-primary" type="submit">{hazteHermanoData.enviar}</button>
         </div>
       </form>
     </div>
@@ -172,39 +169,12 @@ const metadata = {
       class="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-sm backdrop-blur border border-gray-200 dark:border-gray-700 dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8"
     >
       <div class="mt-3" id="privacy">
-        <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 text-center">Política de privacidad</h2>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
-          De conformidad con lo establecido en el Reglamento General de Protección de Datos UE 2016/679 y la Ley
-          Orgánica 3/2018 de Protección de Datos Personales y Garantías de los Derechos Digitales, el interesado o su
-          representante legal en caso de que sea menor de edad, queda informado y presta su consentimiento expreso a la
-          incorporación de sus datos a los ficheros, automatizados o no, de la Hermandad de San Isidro Labrador, con
-          CIF.- R1300601J, y domicilio en la Plaza del Altozano de la Inmaculada, 17, Alcázar de San Juan (Ciudad Real).
-        </p>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
-          Los datos aportados por el interesado (hermano) o su representante legal en caso de que sea menor de edad,
-          serán tratados con fines exclusivamente pastorales y de gestión de la Hermandad conforme a las obligaciones y
-          deberes que le imponga la normativa eclesiástica y diocesana vigente y sus propias Reglas y Ordenanzas.
-        </p>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
-          Los datos serán tratados durante el tiempo que dure la relación del hermano con la corporación y siempre que
-          no medie una solicitud expresa de baja como miembro de la misma y de supresión de datos pasando en este último
-          caso al bloqueo de los mismos. Consiente la comunicación de determinados datos a los restantes hermanos de la
-          corporación a efecto meramente informativo, para la organización y coordinación de los cultos tanto internos
-          como externos. Igualmente consiente expresamente el uso de su imagen, nombre y apellidos, relacionados con
-          actos y cultos de la Hermandad, para las publicaciones en los medios y canales de comunicación de la misma.
-          Además, consiente la cesión de sus datos personales a las entidades de servicios de mensajería postal
-          designadas a tal efecto con la finalidad exclusiva de envío de comunicaciones y boletines o revistas de la
-          Hermandad.
-        </p>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
-          Se le informa de que -en los términos establecidos en la legislación vigente- podrá ejercitar su derecho de
-          acceso, rectificación, supresión, oposición, limitación y portabilidad, sin carácter retroactivo, bien de
-          manera presencial en la sede de la Hermandad, identificándose con el Documento Nacional de Identidad, o
-          dirigiendo una comunicación con fotocopia de dicho documento, y escrito exponiendo el derecho que se ejercita
-          a: ASUNTO.- LOPD hermandadsanisidrolabradoralcazar@outlook.es. Si el interesado se siente vulnerado en el
-          tratamiento de sus datos, puede solicitar amparo ante la Agencia Española de Protección de Datos o autoridad
-          autonómica competente en la materia.
-        </p>
+        <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 text-center">
+          {hazteHermanoData.titlePrivacidad}
+        </h2>
+        <article class="text-sm text-gray-600 dark:text-gray-400 prose max-w-none mt-2">
+          <DescriptionPrivacidad />
+        </article>
       </div>
     </div>
   </div>

@@ -57,6 +57,41 @@ export interface Magazine {
   url?: string;
 }
 
+export interface HazteHermano {
+  title: string;
+  subtitle: string;
+  dni: string;
+  nombre: string;
+  primerapellido: string;
+  segundoapellido: string;
+  fechadenacimiento: string;
+  localidadnacimiento: string;
+  provincianacimiento: string;
+  telefono: string;
+  email: string;
+  direccion: string;
+  localidad: string;
+  provincia: string;
+  codigopostal: string;
+  parroquiabaustismo: string;
+  localidadbaustismo: string;
+  provinciabaustismo: string;
+  menores: string;
+  padremenor: string;
+  dnimenor: string;
+  titleavalista: string;
+  hermano: string;
+  comunicaciones: string;
+  aceptacion: string;
+  titlepago: string;
+  desciptionpago: string;
+  metalico: string;
+  bizum: string;
+  enviar: string;
+  titlePrivacidad: string;
+  DescriptionPrivacidad: unknown;
+}
+
 export interface Sponsor {
   title?: string;
   subtitle?: string;

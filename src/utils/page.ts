@@ -61,6 +61,8 @@ export const fetchHazteHermano = async (): Promise<HazteHermano> => {
   if (!_hazteHermano) {
     const hazteHermano = await getCollection('haztehermano');
     _hazteHermano = hazteHermano[0]?.data;
+    const { Content } = await hazteHermano[0].render();
+    _hazteHermano.DescriptionPrivacidad = Content;
   }
 
   return _hazteHermano;

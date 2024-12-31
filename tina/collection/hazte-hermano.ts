@@ -4,7 +4,7 @@ export const HazteHermano: Collection = {
   name: 'haztehermano',
   label: 'Hazte Hermano',
   path: 'src/content/haztehermano',
-  format: 'json',
+  format: 'md',
   ui: {
     allowedActions: {
       create: false,
@@ -171,6 +171,7 @@ export const HazteHermano: Collection = {
       type: 'rich-text',
       name: 'descriptionPrivacidad',
       label: 'Descripción Privacidad',
+      isBody: true,
     },
   ],
 };

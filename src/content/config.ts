@@ -202,7 +202,7 @@ const genericCollection = defineCollection({
 });
 
 const hazteHermanoCollection = defineCollection({
-  type: 'data',
+  type: 'content',
   schema: z.object({
     title: z.string(),
     subtitle: z.string(),
@@ -235,7 +235,6 @@ const hazteHermanoCollection = defineCollection({
     bizum: z.string(),
     enviar: z.string(),
     titlePrivacidad: z.string(),
-    descriptionPrivacidad: z.string(),
 
   }),
 });
