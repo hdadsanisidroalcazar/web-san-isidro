@@ -61,8 +61,8 @@ importers:
         specifier: 5.1.4
         version: 5.1.4(astro@5.1.1(@types/node@22.10.2)(jiti@1.21.6)(lightningcss@1.27.0)(rollup@4.28.1)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.16)
       '@iconify-json/tabler':
-        specifier: ^1.2.10
-        version: 1.2.10
+        specifier: ^1.2.13
+        version: 1.2.13
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.15(tailwindcss@3.4.16)
@@ -1256,8 +1256,8 @@ packages:
   '@iarna/toml@2.2.5':
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
 
-  '@iconify-json/tabler@1.2.10':
-    resolution: {integrity: sha512-P58U/e0rZNYptzMjnExcFOtSt712xJnqwJI7KoF4iaUJ7EeFQNJawjUXT8X1rvbLMUk/O/fgrzAfhD163XuckA==}
+  '@iconify-json/tabler@1.2.13':
+    resolution: {integrity: sha512-vXnl0db3Q/v1e+lMEGmdrzJeFVyR//20gbUU2HFOrJP08nbz1EGRa8urNS4zL3oEV6Wjgo11AHJLSs628I6swQ==}
 
   '@iconify/tools@4.0.7':
     resolution: {integrity: sha512-zOJxKIfZn96ZRGGvIWzDRLD9vb2CsxjcLuM+QIdvwWbv6SWhm49gECzUnd4d2P0sq9sfodT7yCNobWK8nvavxQ==}
@@ -8654,7 +8654,7 @@ snapshots:
 
   '@iarna/toml@2.2.5': {}
 
-  '@iconify-json/tabler@1.2.10':
+  '@iconify-json/tabler@1.2.13':
     dependencies:
       '@iconify/types': 2.0.0
 
