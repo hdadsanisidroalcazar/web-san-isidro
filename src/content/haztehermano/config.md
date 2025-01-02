@@ -30,7 +30,7 @@ titleavalista: >-
   caso de no conocer a ninguno, dejarlo en blanco, ya que será avalado por
   miembros de la Junta de Gobierno)
 hermano: Hermano
-comunicaciones: Acepto el envío de comunicaciones por parte de la Hermandad de san Isidro.
+comunicaciones: Acepto el envío de comunicaciones por parte de la Hermandad de San Isidro.
 aceptacion: Acepto la
 titlepago: Forma de pago de la cuota
 desciptionpago: >-
