@@ -42,7 +42,7 @@ const tasksIntegration = () => {
               });
             }
           }
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (err) {
           /* empty */
         }
