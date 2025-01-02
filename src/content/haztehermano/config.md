@@ -38,7 +38,7 @@ desciptionpago: >-
   celebración de la festividades de Santa Águeda, Santa Apolonia y San Isidro
   Labrador, o mediante bizum al número 09661.
 metalico: Metalico
-bizum: Bizum al 09661
+bizum: 'Donación por Bizum al 09661 '
 enviar: Enviar solicitud
 titlePrivacidad: Política de privacidad
 ---
