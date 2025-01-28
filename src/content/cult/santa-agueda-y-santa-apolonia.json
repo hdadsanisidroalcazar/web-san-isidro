@@ -4,18 +4,6 @@
   "tagline": "Santa Águeda y Santa Apolonia 2025",
   "days": [
     {
-      "title": "9 de febrero de 2025",
-      "event": [
-        {
-          "title": "SANTA MISA EN HONOR A SANTA ÁGUEDA Y SANTA APOLONIA",
-          "time": "13.00 H.",
-          "description": "A las 13.00 H., tendrá lugar la Santa Misa en honor a Santa Águeda y Santa Apolonia. Durante la misma se bendecirán las tortas de las meriendas.\n\nAquellas personas que no puedan subir para celebrar ambas festividades al cerro de San Isidro los días 5 y 9, podrán adquirir tortas al finalizar la eucaristía a un precio de 0,70 €/ud.\n",
-          "location": "Iglesia de San Francisco",
-          "map": "https://maps.app.goo.gl/9Nj3i1xaiaCRp5SHA"
-        }
-      ]
-    },
-    {
       "title": "5 de febrero",
       "event": [
         {
@@ -25,6 +13,18 @@
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/kpdzb72sQ4bTanPv9",
           "image": "/images/genericas/Logo_Asociación_Española_Contra_el_Cáncer.svg.png"
+        }
+      ]
+    },
+    {
+      "title": "9 de febrero de 2025",
+      "event": [
+        {
+          "title": "SANTA MISA EN HONOR A SANTA ÁGUEDA Y SANTA APOLONIA",
+          "time": "13.00 H.",
+          "description": "A las 13.00 H., tendrá lugar la Santa Misa en honor a Santa Águeda y Santa Apolonia. Durante la misma se bendecirán las tortas de las meriendas.\n\nAquellas personas que no puedan subir para celebrar ambas festividades al cerro de San Isidro los días 5 y 9, podrán adquirir tortas al finalizar la eucaristía a un precio de 0,70 €/ud.\n",
+          "location": "Iglesia de San Francisco",
+          "map": "https://maps.app.goo.gl/9Nj3i1xaiaCRp5SHA"
         }
       ]
     },
