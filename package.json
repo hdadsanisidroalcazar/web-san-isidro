@@ -42,7 +42,7 @@
     "node": ">=20.10"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.10",
+    "@astrojs/rss": "^4.0.11",
     "@astrojs/vercel": "^8.0.1",
     "@astrolib/seo": "1.0.0-beta.8",
     "@fontsource-variable/inter": "^5.1.1",
