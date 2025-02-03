@@ -12,6 +12,8 @@ import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/uti
 import { SITE } from './src/utils/config';
 import compressor from 'astro-compressor';
 
+import { CopyFilesPlugin } from './copy-files.ts';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
@@ -44,6 +46,7 @@ export default defineConfig({
       gzip: false,
       brotli: true,
     }),
+    CopyFilesPlugin(),
   ],
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin],
