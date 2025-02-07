@@ -1,5 +1,5 @@
 ---
-closed: true
+closed: false
 title: Inscripciones vendedores ambulantes 2025
 field:
   - label: Nombre y apellidos
