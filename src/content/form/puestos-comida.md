@@ -21,3 +21,5 @@ A continuación, se deberán rellenar los campos requeridos para realizar la sol
 5. La tasa que deberá pagar a la Hermandad de San Isidro por ocupación del espacio y desarrollo de la actividad es de 150 €.
 6. Deberá cumplir con todas las medidas higiénicas y normativa sanitaria aplicable a dichos puestos.
 7. En todo momento deberá respetar las indicaciones realizadas por la Hermandad de San Isidro para un buen funcionamiento del evento.
+
+El no cumplimiento de algunas de las condiciones anteriores, será motivo para la desestimación de la solicitud.
