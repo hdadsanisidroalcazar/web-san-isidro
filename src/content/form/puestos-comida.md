@@ -1,5 +1,5 @@
 ---
-closed: true
+closed: false
 title: INSICRIPCIONES PARA PUESTOS DE COMIDA ROMERÍA DE SAN ISIDRO 2025
 field:
   - label: Nombre y apellidos
