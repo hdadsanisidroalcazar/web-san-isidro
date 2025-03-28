@@ -23,7 +23,7 @@ Para la instalación de atracciones de feria en la explanada de la ermita, se de
 De igual forma, las condiciones para realizar el montaje serán:
 
 1. Se deberá respetar el lugar marcado por la Hermandad, sin sobrepasar las líneas que delimitan el espacio disponible.
-2. El empresario deberá traer su grupo generador para proporcionar luz y sonido a la atracción.
+2. El empresario deberá traer su grupo generador para proporcionar luz y sonido a la atracción. Éste deberá permanecer el un lugar vallado inaccesible para el público.
 3. El precio fijado para la instalación es de 150 € por atracción.
 
-La no entrega de la documentación requerida, o el incumplimiento de las condiciones, conllevará el desestimiento de la solicitud.
+La no entrega de la documentación requerida, o el incumplimiento de las condiciones, conllevará la desestimación de la solicitud.
