@@ -1,6 +1,6 @@
 ---
 closed: false
-title: Inscripciones chiringuitos 2025
+title: SOLICITUD MONTAJE DE CHIRINGUITOS EN LA ROMERÍA DE SAN ISIDRO 2025
 field:
   - label: Nombre y apellidos
     name: nombre
@@ -32,10 +32,7 @@ La Hermandad de San Isidro Labrador, como en años anteriores, cederá un espaci
 * b. Espectáculos de música para dinamizar la fiesta en el terreno de explotación de los chiringuitos durante los días 14 y 15 de mayo.
 * c. Instalar foco de luz hacia la parte trasera del chiringuito a fin de aumentar la iluminación en dicha parte.
 
-6. Cada chiringuito deberá instalar su sistema de sombraje. Se deberá evitar dañar los árboles en la instalación del mismo, evitando poner clavos, escarpias o elementos similares en los mismos. Una vez acabada la Romería, cada chiringuito debe recoger todos los cordeles o elementos atados a los árboles, ya que el hecho de dejar los mismos, produce un estrangulamiento en el árbol potenciando el riesgo de caída de troncos y ramas.
-
-7. Ningún chiringuito podrá montar fuera del espacio designado, ya que éste está diseñado para cumplir con la ley vigente en materia de evacuación ante emergencias.
-
-8. Existen dos plazos de inscripción: Del 7 al 15 de enero para empresas, Hermandades o particulares que montaron en la Romería de 2024 y a partir del 15 de enero, hasta el 30 de abril, para el resto de interesados. La inscripción se realizará en orden de recepción del formulario.
-
-9. Por el hecho de inscribirse, se aceptan todas las condiciones expuestas anteriormente.
+1. Cada chiringuito deberá instalar su sistema de sombraje. Se deberá evitar dañar los árboles en la instalación del mismo, evitando poner clavos, escarpias o elementos similares en los mismos. Una vez acabada la Romería, cada chiringuito debe recoger todos los cordeles o elementos atados a los árboles, ya que el hecho de dejar los mismos, produce un estrangulamiento en el árbol potenciando el riesgo de caída de troncos y ramas.
+2. Ningún chiringuito podrá montar fuera del espacio designado, ya que éste está diseñado para cumplir con la ley vigente en materia de evacuación ante emergencias.
+3. Existen dos plazos de inscripción: Del 7 al 15 de enero para empresas, Hermandades o particulares que montaron en la Romería de 2024 y a partir del 15 de enero, hasta el 30 de abril, para el resto de interesados. La inscripción se realizará en orden de recepción del formulario.
+4. Por el hecho de inscribirse, se aceptan todas las condiciones expuestas anteriormente.
