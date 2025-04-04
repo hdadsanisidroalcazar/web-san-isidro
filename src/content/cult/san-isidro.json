@@ -55,11 +55,12 @@
           ]
         },
         {
-          "title": "II Concurso de dibujo infantil",
+          "title": "III Concurso de dibujo infantil",
           "time": "13:00",
           "description": "Temática: ¿Que es San Isidro para ti? Inscripciones gratuitas\n",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
+          "image": "/images/carteles/Concurso de Dibujo.webp",
           "buttons": [
             {
               "text": "Inscribirme",
