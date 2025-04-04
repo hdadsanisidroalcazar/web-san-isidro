@@ -18,93 +18,96 @@ const metadata = {
   ignoreTitleTemplate: true,
 };
 ---
+
 <Layout metadata={metadata}>
   <HeroText tagline={schedule.tagline} title={schedule.title} subtitle={schedule.subtitle} />
   <div class="mx-auto pb-8 w-full max-w-7xl">
     <div class="mx-auto max-w-4xl">
       <div class="mt-5 sm:mt-10 flex flex-col">
         {
-          !schedule.closed && schedule?.days?.map((day) => (
-            <div>
-              <span class="bg-green-100 dark:bg-slate-800 not-prose flex items-center py-3 px-5">
-                <Icon name="tabler:calendar" class="mr-4 w-6 h-6" />
-                <h3 class="text-sm font-semibold uppercase tracking-wide">{day.title}</h3>
-              </span>
-              <ul class="py-1 flex flex-col w-full">
-                {day.event?.map((event) => (
-                  <li class="group py-3 px-2 sm:px-5 flex items-center">
-                    {event.time !== '-' && (
-                      <div class="flex-shrink-0 mr-5 sm:mr-20 px-2 flex flex-col bg-green-50 dark:bg-slate-700">
-                        <span class="text-sm sm:text-base text-primary font-bold dark:text-secondary">
-                          {event.time}
-                        </span>
-                      </div>
-                    )}
-                    <div class="col-span-7 sm:col-span-6 px-3 w-full">
-                      {event.location && (
-                        <Button
-                          icon="tabler:map-pin"
-                          variant="link"
-                          text={event.location}
-                          prevIcon
-                          href={event.map}
-                          target="_blank"
+          !schedule.closed &&
+            schedule?.days?.map((day) => (
+              <div>
+                <span class="bg-green-100 dark:bg-slate-800 not-prose flex items-center py-3 px-5">
+                  <Icon name="tabler:calendar" class="mr-4 w-6 h-6" />
+                  <h3 class="text-sm font-semibold uppercase tracking-wide">{day.title}</h3>
+                </span>
+                <ul class="py-1 flex flex-col w-full">
+                  {day.event?.map((event) => (
+                    <li class="group py-3 px-2 sm:px-5 flex items-center">
+                      {event.time !== '-' && (
+                        <div class="flex-shrink-0 mr-5 sm:mr-20 px-2 flex flex-col bg-green-50 dark:bg-slate-700">
+                          <span class="text-sm sm:text-base text-primary font-bold dark:text-secondary">
+                            {event.time}
+                          </span>
+                        </div>
+                      )}
+                      <div class="col-span-7 sm:col-span-6 px-3 w-full">
+                        {event.location && (
+                          <Button
+                            icon="tabler:map-pin"
+                            variant="link"
+                            text={event.location}
+                            prevIcon
+                            href={event.map}
+                            target="_blank"
+                          />
+                        )}
+                        <p class="font-bold uppercase">{event.title}</p>
+                        <div
+                          class="mt-2"
+                          set:html={event.description
+                            ?.replaceAll('\n', '<br/>')
+                            .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>')}
                         />
-                      )}
-                      <p class="font-bold uppercase">{event.title}</p>
-                      <div
-                        class="mt-2"
-                        set:html={event.description
-                          ?.replaceAll('\n', '<br/>')
-                          .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>')}
-                      />
-                      {event.buttons && (
-                        <div class="flex">
-                          {event.buttons.map((button) => (
-                            <Button
-                              variant="primary"
-                              class="h-12 mt-4 mx-auto"
-                              text={button.text}
-                              target="_blank"
-                              href={button.link}
-                            />
-                          ))}
-                        </div>
-                      )}
-                      {event.image && (
-                        <div class="relative my-6 shrink w-full">
-                          <a href={getPermalink(event.image)}>
-                            <Image
-                              src={event.image}
-                              class="rounded shadow-lg mx-auto"
-                              widths={[400, 900]}
-                              width={400}
-                              height="auto"
-                              sizes="(max-width: 900px) 400px, 900px"
-                              alt={event.title}
-                              layout="cover"
-                              loading="lazy"
-                              decoding="async"
-                            />
-                          </a>
-                        </div>
-                      )}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))
+                        {event.buttons && (
+                          <div class="flex">
+                            {event.buttons.map((button) => (
+                              <Button
+                                variant="primary"
+                                class="h-12 mt-4 mx-auto"
+                                text={button.text}
+                                target="_blank"
+                                href={button.link}
+                              />
+                            ))}
+                          </div>
+                        )}
+                        {event.image && (
+                          <div class="relative my-6 shrink w-full">
+                            <a href={getPermalink(event.image)}>
+                              <Image
+                                src={event.image}
+                                class="rounded shadow-lg mx-auto"
+                                widths={[400, 900]}
+                                width={400}
+                                height="auto"
+                                sizes="(max-width: 900px) 400px, 900px"
+                                alt={event.title}
+                                layout="cover"
+                                loading="lazy"
+                                decoding="async"
+                              />
+                            </a>
+                          </div>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
         }
-        {schedule?.closed && (
-          <div class="flex flex-col items-center justify-center">
-            <p class="text-md text-center">
-              Estamos preparando la programación de este año. <br />
-              Próximamente publicaremos la información.
-            </p>
-
-          </div>
-        )}
+        {
+          schedule?.closed && (
+            <div class="flex flex-col items-center justify-center">
+              <p class="text-md text-center">
+                Estamos preparando la programación de este año. <br />
+                Próximamente publicaremos la información.
+              </p>
+            </div>
+          )
+        }
       </div>
     </div>
   </div>
