@@ -13,6 +13,11 @@ export const Cultos: Collection = {
   },
   fields: [
     {
+      type: 'boolean',
+      name: 'closed',
+      label: 'Ocultar programa',
+    },
+    {
       type: 'string',
       name: 'title',
       label: 'Titulo',

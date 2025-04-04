@@ -127,6 +127,7 @@ const cultCollection = defineCollection({
     subtitle: z.string().optional(),
     tagline: z.string(),
     pdf: z.string().optional(),
+    closed: z.boolean().optional(),
     days: z
       .array(
         z.object({

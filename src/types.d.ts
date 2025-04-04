@@ -32,6 +32,7 @@ export interface Cult {
   subtitle?: string;
   tagline?: string;
   pdf?: string;
+  closed?: boolean;
   days: {
     title: string;
     event: {
