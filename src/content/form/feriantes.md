@@ -4,8 +4,6 @@ title: >-
   SOLICITUD PARA LA INSTALACIÓN DE ATRACCIONES DE FERIA EN LA ROMERÍA DE SAN
   ISIDRO 2025
 field:
-  - label: Dimensiones de la atracción
-    name: Dimensiones
   - label: Nombre y apellidos
     name: nombre
   - label: DNI
@@ -14,6 +12,8 @@ field:
     name: telefono
   - label: Correo electrónico
     name: email
+  - label: Dimensiones de la atracción
+    name: Dimensiones
 ---
 
 SOLICITUD PARA LA INSTALACIÓN DE ATRACCIONES DE FERIA EN LA ROMERÍA DE SAN ISIDRO 2025
