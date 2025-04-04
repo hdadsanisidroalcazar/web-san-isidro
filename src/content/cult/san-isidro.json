@@ -1,17 +1,17 @@
 {
   "title": "Programa de cultos y actos",
-  "tagline": "San Isidro 2024",
+  "tagline": "San Isidro 2025",
   "days": [
     {
-      "title": "Sábado 11 de mayo de 2024",
+      "title": "Sábado 10 de mayo de 2025",
       "event": [
         {
-          "title": "Presentación de Damas de Honor San Isidro 2024 e imposición de ramos y bandas",
+          "title": "Presentación de Damas y Caballeros de San Isidro 2024 e imposición de ramos y bandas",
           "time": "20:30",
           "description": "",
           "location": "Iglesia de San Francisco",
           "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6",
-          "image": "/images/carteles/PRESENTACIÓN DE DAMAS Y CANTO DE MAYOS A SAN ISIDRO.webp"
+          "image": "/images/carteles/Damas y Caballeros.webp"
         },
         {
           "title": "Mayos en honor a San Isidro",
