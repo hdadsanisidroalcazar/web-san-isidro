@@ -10,6 +10,8 @@ field:
     name: telefono
   - label: Correo electrónico
     name: email
+  - label: 'ACTIVIDAD PRINCIPAL (tipo de comida que se vende):'
+    name: Actividad
 ---
 
 A continuación, se deberán rellenar los campos requeridos para realizar la solicitud para la instalación de puestos de comida en la Romería de San Isidro 2025. Los solicitantes deberán cumplir las siguientes condiciones:
