@@ -1,6 +1,6 @@
 ---
 closed: true
-title: SOLICITUD DE INSCRIPCIÓN DE PUESTOS EN LA ROMERÍA DE SAN ISIDRO 2025
+title: SOLICITUD PARA EL MONTAJE DE PUESTOS EN LA ROMERÍA DE SAN ISIDRO 2025
 field:
   - label: Nombre y apellidos
     name: nombre
