@@ -1,5 +1,5 @@
 ---
-closed: true
+closed: false
 title: SOLICITUD MONTAJE DE CHIRINGUITOS EN LA ROMERÍA DE SAN ISIDRO 2025
 field:
   - label: Nombre y apellidos
@@ -36,7 +36,7 @@ La Hermandad de San Isidro Labrador, como en años anteriores, cederá un espaci
 
 7\. Ningún chiringuito podrá montar fuera del espacio designado, ya que éste está diseñado para cumplir con la ley vigente en materia de evacuación ante emergencias.
 
-8\. Todos los chiringuitos deberán tener un seguro de responsabilidad civil, que será presentado en formato papel o a través del correo electrónico hdadsanisidroalcazar\@outlook.es antes del desarrollo de la actividad. Se deberá presentar póliza del seguro y recibo de pago en vigor.
+8\. Todos los chiringuitos deberán tener un seguro de responsabilidad civil, que será presentado en formato papel o a través del correo electrónico [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es) antes del desarrollo de la actividad. Se deberá presentar póliza del seguro y recibo de pago en vigor.
 
 8\. Existen dos plazos de inscripción: Del 7 al 15 de enero para empresas, Hermandades o particulares que montaron en la Romería de 2024 y a partir del 15 de enero, hasta el 30 de abril, para el resto de interesados. La inscripción se realizará en orden de recepción del formulario.
 
