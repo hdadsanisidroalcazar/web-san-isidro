@@ -1,5 +1,5 @@
 {
-  "closed": true,
+  "closed": false,
   "title": "Programa de cultos y actos",
   "tagline": "San Isidro 2025",
   "days": [
@@ -149,6 +149,7 @@
         {
           "title": "I Concurso de indumentaria tradicional",
           "time": "13:00 - 19:00",
+          "description": "",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/N6Pahc81yXMj4JiE8",
           "buttons": [
