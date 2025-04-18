@@ -12,7 +12,7 @@ field:
     name: integrantes
 ---
 
-1. Este formulario es para inscribirse y reservar sitio en las degustaciones que tendrán lugar con motivo de la "III Noche Manchega" el día 14 de mayo de 2024 en la ermita de San Isidro.
+1. Este formulario es para inscribirse y reservar sitio en las degustaciones que tendrán lugar con motivo de la "III Noche Manchega" el día 14 de mayo de 2025 en la ermita de San Isidro.
 2. Las parcelas se situarán tanto dentro del recinto de la ermita como en la explanada adyacente, limitándose a las 8 primeras cuadrillas inscritas (no existe más espacio dentro de la explanada).
 3. Para preservar el entorno, se prohíbe la realización de fuego.
 4. Se puede llevar cualquier tipo de alimento con el único requisito de elaborar un plato típico manchego frío, entre los que se proponen el machacón, ensalada de limón, bizcochada o pipirrana.
