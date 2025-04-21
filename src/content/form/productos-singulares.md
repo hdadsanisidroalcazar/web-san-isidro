@@ -4,6 +4,10 @@ title: >-
   SOLICITUD DE INSCRIPCIÓN DE PUESTOS DE BERENJENAS, HELADOS, ALGODÓN Y
   PRODUCTOS SINGULARES EN LA ROMERÍA DE SAN ISIDRO 2025
 field:
+  - label: >-
+      Matrícula del vehículo que desea ser autorizado para acceder al recinto
+      para carga y descarga:
+    name: Matrícula
   - label: ACTIVIDAD PRINCIPAL (Tipo de producto que se vende)
     name: Actividad
   - label: Nombre y apellidos
