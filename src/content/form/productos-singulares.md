@@ -4,10 +4,6 @@ title: >-
   SOLICITUD DE INSCRIPCIÓN DE PUESTOS DE BERENJENAS, HELADOS, ALGODÓN Y
   PRODUCTOS SINGULARES EN LA ROMERÍA DE SAN ISIDRO 2025
 field:
-  - label: >-
-      Matrícula del vehículo que desea ser autorizado para acceder al recinto
-      para carga y descarga:
-    name: Matrícula
   - label: ACTIVIDAD PRINCIPAL (Tipo de producto que se vende)
     name: Actividad
   - label: Nombre y apellidos
@@ -20,6 +16,10 @@ field:
     name: email
   - label: Metros lineales del puesto
     name: medidas
+  - label: >-
+      Matrícula del vehículo que desea ser autorizado para acceder al recinto
+      para carga y descarga:
+    name: Matrícula
 ---
 
 A continuación, se deberán rellenar los campos requeridos para realizar la solicitud para la instalación de puestos de berenjenas, helados, algodón y productos singulares en la Romería de San Isidro 2025. Los solicitantes deberán cumplir las siguientes condiciones:
