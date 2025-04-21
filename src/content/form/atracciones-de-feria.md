@@ -14,6 +14,10 @@ field:
     name: email
   - label: Dimensiones de la atracción
     name: Dimensiones
+  - label: >-
+      Matrícula del vehículo que desea ser autorizado para acceder al recinto
+      para carga y descarga:
+    name: Matrícula
 ---
 
 SOLICITUD PARA LA INSTALACIÓN DE ATRACCIONES DE FERIA EN LA ROMERÍA DE SAN ISIDRO 2025
