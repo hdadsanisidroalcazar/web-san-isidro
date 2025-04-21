@@ -18,7 +18,7 @@ field:
 
 SOLICITUD PARA LA INSTALACIÓN DE ATRACCIONES DE FERIA EN LA ROMERÍA DE SAN ISIDRO 2025
 
-Para la instalación de atracciones de feria en la explanada de la ermita, se deberá entregar a la Hermandad la siguiente documentación a través del correo electrónico [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es) o en formato papel:
+Para la instalación de atracciones de feria en la explanada de la ermita, se deberá entregar a la Hermandad la siguiente documentación a través del correo electrónico [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es) o en formato papel **antes del 5 de mayo**:
 
 1. Documentación que debe aportar:
 
