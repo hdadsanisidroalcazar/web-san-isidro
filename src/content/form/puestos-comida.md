@@ -2,6 +2,10 @@
 closed: false
 title: INSCRIPCIONES PARA PUESTOS DE COMIDA ROMERÍA DE SAN ISIDRO 2025
 field:
+  - label: >-
+      Matrícula del vehículo que desea ser autorizado para acceder al recinto
+      para carga y descarga:
+    name: Matrícula
   - label: Nombre y apellidos
     name: nombre
   - label: DNI
