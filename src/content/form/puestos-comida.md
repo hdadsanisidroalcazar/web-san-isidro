@@ -2,10 +2,6 @@
 closed: false
 title: INSCRIPCIONES PARA PUESTOS DE COMIDA ROMERÍA DE SAN ISIDRO 2025
 field:
-  - label: >-
-      Matrícula del vehículo que desea ser autorizado para acceder al recinto
-      para carga y descarga:
-    name: Matrícula
   - label: Nombre y apellidos
     name: nombre
   - label: DNI
@@ -16,6 +12,10 @@ field:
     name: email
   - label: 'ACTIVIDAD PRINCIPAL (tipo de comida que se vende):'
     name: Actividad
+  - label: >-
+      Matrícula del vehículo que desea ser autorizado para acceder al recinto
+      para carga y descarga:
+    name: Matrícula
 ---
 
 A continuación, se deberán rellenar los campos requeridos para realizar la solicitud para la instalación de puestos de comida en la Romería de San Isidro 2025. Los solicitantes deberán cumplir las siguientes condiciones:
