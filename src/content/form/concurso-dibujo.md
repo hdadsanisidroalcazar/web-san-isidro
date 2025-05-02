@@ -13,7 +13,7 @@ field:
 **BASES DEL CONCURSO:**
 
 1. Podrá presentarse cualquier niño o niña cuya edad esté comprendida entre los 3 y los 14 años.
-2. Se establecerán dos categorías: De 3 a 7 años y de 9 a 14 años.
+2. Se establecerán dos categorías: De 3 a 7 años y de 8 a 14 años.
 3. Los trabajos versarán sobre San Isidro Labrador, respondiendo a la siguiente temática: ¿Qué es San Isidro para tí? Se puede hacer referencia a aspectos religiosos o culturales.
 4. Los dibujos se realizarán en la ermita de San Isidro a las 13.00 H. del día 11 de mayo, disponiendo de una hora para su realización. La Hermandad de San Isidro facilitará folios y colores.
 5. Los dibujos realizados serán expuestos en el Facebook de la Hermandad de San Isidro.
