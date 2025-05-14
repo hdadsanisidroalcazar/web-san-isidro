@@ -38,7 +38,11 @@ const lessThan30Days = new Date().getTime() > new Date(dateRomeria).getTime() - 
     title={`Revista ${lastMagazine.year}`}
     subtitle={lastMagazine.description || 'Descarga el último número de la revista anual de la hermandad'}
     tagline={lastMagazine.description && 'Descarga la revista de la hermandad'}
-    actions={[{ variant: 'primary', text: 'Ver', href: lastMagazine.url, icon: 'tabler:link', target: '_blank' }]}
+    actions={[
+      lastMagazine.url
+        ? { variant: 'primary', text: 'Ver', href: lastMagazine.url, icon: 'tabler:link', target: '_blank' }
+        : { variant: 'primary', text: 'Descargar', href: lastMagazine.pdf, icon: 'tabler:download', target: '_blank' },
+    ]}
   />
 
   <FAQs
