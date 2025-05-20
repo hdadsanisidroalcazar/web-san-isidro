@@ -1,5 +1,5 @@
 ---
-closed: false
+closed: true
 title: >-
   SOLICITUD PARA LA INSTALACIÓN DE ATRACCIONES DE FERIA EN LA ROMERÍA DE SAN
   ISIDRO 2025
