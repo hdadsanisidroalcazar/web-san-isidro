@@ -1,5 +1,5 @@
 ---
-closed: false
+closed: true
 title: 'Inscripción Juegos Populares '
 field:
   - label: 'Nombre y apellidos:'
