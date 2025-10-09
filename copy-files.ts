@@ -12,7 +12,7 @@ function formatLog(tag: string, message: string) {
     second: '2-digit',
   });
 
-  // eslint-disable-next-line no-console
+   
   console.log(
     '\n' + // Add space above
       `\x1b[90m${timestamp}\x1b[0m ` + // Gray timestamp
