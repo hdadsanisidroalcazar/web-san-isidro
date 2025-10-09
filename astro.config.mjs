@@ -2,7 +2,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind';
+
 import mdx from '@astrojs/mdx';
 import icon from 'astro-icon';
 import vercel from '@astrojs/vercel';
@@ -13,6 +13,8 @@ import { SITE } from './src/utils/config';
 import compressor from 'astro-compressor';
 
 import { CopyFilesPlugin } from './copy-files.ts';
+
+import tailwindcss from '@tailwindcss/vite';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -29,9 +31,6 @@ export default defineConfig({
 
   output: 'static',
   integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
     sitemap({
       filter: (page) => !page.includes('/cesion-de-instalaciones') && !page.includes('/admin'),
     }),
@@ -58,6 +57,8 @@ export default defineConfig({
         '~': path.resolve(__dirname, './src'),
       },
     },
+
+    plugins: [tailwindcss([{applyBaseStyles: false}])],
   },
   adapter: vercel({
     imageConfig: {

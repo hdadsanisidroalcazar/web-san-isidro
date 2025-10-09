@@ -19,7 +19,7 @@ const imagetitles = images.map((image) => image.src.split('/').reverse()[0].spli
       <figure
         itemscope
         itemtype="http://schema.org/ImageObject"
-        class="my-1 inline-block rounded bg-gray-300 text-center text-sm italic text-gray-800 shadow-lg shadow-gray-400 dark:bg-gray-800 dark:text-gray-300 dark:shadow-black lg:my-2"
+        class="my-1 inline-block rounded-sm bg-gray-300 text-center text-sm italic text-gray-800 shadow-lg shadow-gray-400 dark:bg-gray-800 dark:text-gray-300 dark:shadow-black lg:my-2"
       >
         <a href={image.src} itemprop="contentUrl" data-pswp-width={image.width} data-pswp-height={image.height}>
           <Image
@@ -28,7 +28,7 @@ const imagetitles = images.map((image) => image.src.split('/').reverse()[0].spli
             width={600}
             height={(image.height * 600) / image.width}
             format="webp"
-            class="rounded"
+            class="rounded-sm"
           />
         </a>
       </figure>

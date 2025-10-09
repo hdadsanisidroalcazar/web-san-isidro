@@ -257,7 +257,7 @@ const getAppBlog = () => {
 
 const getUI = () => {
   const _default = {
-    theme: 'system',
+    theme: 'light',
     classes: {},
     tokens: {},
   };

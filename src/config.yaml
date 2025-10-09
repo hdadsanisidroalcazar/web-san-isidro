@@ -100,7 +100,7 @@ apps:
         index: true
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'light' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
   # rgb(25.5 68.2 34.5)
   tokens:
     default:
