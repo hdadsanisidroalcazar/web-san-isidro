@@ -12,7 +12,7 @@ field:
     name: email
 ---
 
-Se abre el plazo para la solicitud de instalación de chiringuitos en la Romería de San Isidro de 2025.
+Se abre el plazo para la solicitud de instalación de chiringuitos en la Romería de San Isidro de 2026.
 
 La Hermandad de San Isidro Labrador, como en años anteriores, cederá un espacio para la instalación y explotación de chiringuitos en la Romería de San Isidro 2025 en los siguientes términos:
 
