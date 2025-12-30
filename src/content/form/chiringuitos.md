@@ -1,5 +1,5 @@
 ---
-closed: false
+closed: true
 title: SOLICITUD MONTAJE DE CHIRINGUITOS EN LA ROMERÍA DE SAN ISIDRO 2026
 field:
   - label: Nombre y apellidos
