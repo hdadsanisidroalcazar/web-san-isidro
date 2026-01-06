@@ -3,6 +3,8 @@ title: SOLICITUD PARA LA INSTALACIÓN DE CHIRINGUITOS EN LA ROMERÍA 2026
 field:
   - label: 'Nombre y apellidos / Razón social: '
     name: nombre
+  - label: DNI / CIF
+    name: dni
 ---
 
 Se abre el plazo para la solicitud de instalación de chiringuitos en la Romería de San Isidro de 2026.
@@ -51,7 +53,7 @@ CONDICIONES
 
 13\. Ningún chiringuito podrá montar barras ni terraza fuera del espacio designado, ya que éste está diseñado para cumplir con la ley vigente en materia de evacuación ante emergencias. Las casetas con los portones abiertos, no deberán sobrepasar el espacio asignado.
 
-14\. Todas las casetas deberán tener un seguro de responsabilidad civil, que será presentado en formato papel o a través del correo electrónico hdadsanisidroalcazar\@outlook.es antes del 10 de mayo. Se deberá presentar póliza del seguro y recibo de pago en vigor.
+14\. Todas las casetas deberán tener un seguro de responsabilidad civil, que será presentado en formato papel o a través del correo electrónico [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es) antes del 10 de mayo. Se deberá presentar póliza del seguro y recibo de pago en vigor.
 
 15\. Cada caseta, deberá portar, al menos, un extintor que permita hacer frente a posibles conatos de incendios derivados de la actividad.
 
