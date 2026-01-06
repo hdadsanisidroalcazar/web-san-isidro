@@ -1,4 +1,5 @@
 ---
+closed: false
 title: SOLICITUD PARA LA INSTALACIÓN DE CHIRINGUITOS EN LA ROMERÍA 2026
 field:
   - label: 'Nombre y apellidos / Razón social: '
