@@ -7,6 +7,8 @@ field:
     name: dni
   - label: 'Teléfono:'
     name: Telefono
+  - label: 'Email:'
+    name: Email
 ---
 
 Se abre el plazo para la solicitud de instalación de chiringuitos en la Romería de San Isidro de 2026.
