@@ -1,5 +1,5 @@
 ---
-closed: false
+closed: true
 title: SOLICITUD PARA LA INSTALACIÓN DE CHIRINGUITOS EN LA ROMERÍA 2026
 field:
   - label: 'Nombre y apellidos / Razón social: '
@@ -11,8 +11,6 @@ field:
   - label: 'Email:'
     name: Email
 ---
-
-
 
 Se abre el plazo para la solicitud de instalación de chiringuitos en la Romería de San Isidro de 2026.
 
