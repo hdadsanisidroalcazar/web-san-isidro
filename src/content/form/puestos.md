@@ -1,6 +1,6 @@
 ---
 closed: true
-title: SOLICITUD PARA EL MONTAJE DE PUESTOS EN LA ROMERÍA DE SAN ISIDRO 2025
+title: SOLICITUD PARA EL MONTAJE DE PUESTOS EN LA ROMERÍA DE SAN ISIDRO 2026
 field:
   - label: Nombre y apellidos
     name: nombre
@@ -12,9 +12,7 @@ field:
     name: email
   - label: Metros lineales del puesto
     name: medidas
-  - label: >-
-      Matrícula del vehículo que desea ser autorizado para acceder al recinto
-      para carga y descarga:
+  - label: 'Matrícula del vehículo que desea ser autorizado para acceder al recinto para carga y descarga:'
     name: Matrícula
 ---
 
@@ -22,12 +20,12 @@ A continuación, se deberán rellenar los campos requeridos para realizar la sol
 
 1. Se deberá respetar en todo caso el lugar designado para la instalación del puesto por parte de la Hermandad de San Isidro.
 2. En el caso de disponer de un generador, éste deberá estar vallado o protegido para evitar accidentes.
-3. Deberá disponer de un seguro de responsabilidad civil, el cual deberá ser presentado a la Hermandad de San Isidro a través del correo electrónico [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es) o en formato papel **antes del 5 de mayo.**
+3. Deberá disponer de un seguro de responsabilidad civil, el cual deberá ser presentado a la Hermandad de San Isidro a través del correo electrónico [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es) o en formato papel **antes 30 de abril.**
 4. La tasa que deberá pagar a la Hermandad de San Isidro por ocupación del espacio y desarrollo de la actividad es de 3 € por metro lineal.
 5. En todo momento deberá respetar las indicaciones realizadas por la Hermandad de San Isidro para un buen funcionamiento del evento.
 
-c
-
 La tasa deberá ser pagada el día 14 en horario de 16 a 18 H. o el día 15 antes de las 9.00 H. en la Casa de Hermandad (junto a la ermita). Cuando se reúnan todos los requisitos y abonada la cuantía, la Hermandad de San Isidro entregará al empresario una autorización, la cual deberá ser puesta en un lugar visible en la parte exterior del puesto.
+
+En caso de no asistir, se deberá comunicar con 10 días de antelación. En caso contrario, no podrá montar en el año siguiente.
 
 El no cumplimiento de algunas de las condiciones anteriores, será motivo para la desestimación de la solicitud.
