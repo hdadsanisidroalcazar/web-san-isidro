@@ -26,6 +26,6 @@ A continuación, se deberán rellenar los campos requeridos para realizar la sol
 
 La tasa deberá ser pagada el día 16 en horario de 16 a 18 H. o el día 17 antes de las 9.00 H. en la Casa de Hermandad (junto a la ermita). Cuando se reúnan todos los requisitos y abonada la cuantía, la Hermandad de San Isidro entregará al empresario una autorización, la cual deberá ser puesta en un lugar visible en la parte exterior del puesto.
 
-En caso de no asistir, se deberá comunicar con 10 días de antelación. En caso contrario, no podrá montar en el año siguiente.
+En caso de no asistencia, se deberá comunicar con 10 días de antelación a fin de que la Hermandad pueda conocer los puestos vacantes. En caso contrario, al año siguiente no se autorizará el montaje.
 
 El no cumplimiento de algunas de las condiciones anteriores, será motivo para la desestimación de la solicitud.
