@@ -24,7 +24,7 @@ A continuación, se deberán rellenar los campos requeridos para realizar la sol
 4. La tasa que deberá pagar a la Hermandad de San Isidro por ocupación del espacio y desarrollo de la actividad es de 3 € por metro lineal.
 5. En todo momento deberá respetar las indicaciones realizadas por la Hermandad de San Isidro para un buen funcionamiento del evento.
 
-La tasa deberá ser pagada el día 14 en horario de 16 a 18 H. o el día 15 antes de las 9.00 H. en la Casa de Hermandad (junto a la ermita). Cuando se reúnan todos los requisitos y abonada la cuantía, la Hermandad de San Isidro entregará al empresario una autorización, la cual deberá ser puesta en un lugar visible en la parte exterior del puesto.
+La tasa deberá ser pagada el día 16 en horario de 16 a 18 H. o el día 17 antes de las 9.00 H. en la Casa de Hermandad (junto a la ermita). Cuando se reúnan todos los requisitos y abonada la cuantía, la Hermandad de San Isidro entregará al empresario una autorización, la cual deberá ser puesta en un lugar visible en la parte exterior del puesto.
 
 En caso de no asistir, se deberá comunicar con 10 días de antelación. En caso contrario, no podrá montar en el año siguiente.
 
