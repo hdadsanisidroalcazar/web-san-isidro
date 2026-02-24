@@ -1,8 +1,6 @@
 ---
-closed: true
-title: >-
-  SOLICITUD PARA LA INSTALACIÓN DE ATRACCIONES DE FERIA EN LA ROMERÍA DE SAN
-  ISIDRO 2025
+closed: false
+title: SOLICITUD PARA LA INSTALACIÓN DE ATRACCIONES DE FERIA EN LA ROMERÍA DE SAN ISIDRO 2026
 field:
   - label: Nombre y apellidos
     name: nombre
@@ -14,15 +12,13 @@ field:
     name: email
   - label: Dimensiones de la atracción
     name: Dimensiones
-  - label: >-
-      Matrícula del vehículo que desea ser autorizado para acceder al recinto
-      para carga y descarga:
+  - label: 'Matrícula del vehículo que desea ser autorizado para acceder al recinto para carga y descarga:'
     name: Matrícula
 ---
 
-SOLICITUD PARA LA INSTALACIÓN DE ATRACCIONES DE FERIA EN LA ROMERÍA DE SAN ISIDRO 2025
+SOLICITUD PARA LA INSTALACIÓN DE ATRACCIONES DE FERIA EN LA ROMERÍA DE SAN ISIDRO 2026
 
-Para la instalación de atracciones de feria en la explanada de la ermita, se deberá entregar a la Hermandad la siguiente documentación a través del correo electrónico [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es) o en formato papel **antes del 5 de mayo**:
+Para la instalación de atracciones de feria en la explanada de la ermita, se deberá entregar a la Hermandad la siguiente documentación a través del correo electrónico [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es) o en formato papel **antes del 30 de abril**:
 
 1. Documentación que debe aportar:
 
