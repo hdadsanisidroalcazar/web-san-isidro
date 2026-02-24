@@ -5,6 +5,8 @@ field:
     name: nombre
   - label: DNI / CIF
     name: dni
+  - label: 'Teléfono:'
+    name: Telefono
 ---
 
 A continuación, se deberán rellenar los campos requeridos para realizar la solicitud para la instalación de puestos portátiles en la Romería de San Isidro 2026. Los solicitantes deberán cumplir las siguientes condiciones:
