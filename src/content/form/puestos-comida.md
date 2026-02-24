@@ -1,6 +1,6 @@
 ---
 closed: false
-title: INSCRIPCIONES PARA PUESTOS DE COMIDA ROMERÍA DE SAN ISIDRO 2025
+title: INSCRIPCIONES PARA PUESTOS DE COMIDA ROMERÍA DE SAN ISIDRO 2026
 field:
   - label: Nombre y apellidos
     name: nombre
