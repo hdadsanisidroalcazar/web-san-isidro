@@ -18,7 +18,7 @@ field:
     name: Matrícula
 ---
 
-A continuación, se deberán rellenar los campos requeridos para realizar la solicitud para la instalación de puestos de berenjenas, helados, algodón y productos singulares en la Romería de San Isidro 2025. Los solicitantes deberán cumplir las siguientes condiciones:
+A continuación, se deberán rellenar los campos requeridos para realizar la solicitud para la instalación de puestos de berenjenas, helados, algodón y productos singulares en la Romería de San Isidro 2026. Los solicitantes deberán cumplir las siguientes condiciones:
 
 1. Se deberá respetar en todo caso el lugar designado para la instalación del puesto por parte de la Hermandad de San Isidro.
 2. En el caso de disponer de un generador, éste deberá estar vallado o protegido para evitar accidentes.
