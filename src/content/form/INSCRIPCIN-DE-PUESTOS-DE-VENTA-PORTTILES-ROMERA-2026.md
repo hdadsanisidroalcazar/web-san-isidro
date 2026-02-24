@@ -11,6 +11,8 @@ field:
     name: Email
   - label: 'Número de puestos portátiles a ruedas:'
     name: Ruedas
+  - label: 'Matrícula del vehículo que desea ser autorizado para acceder al recinto para carga y descarga:'
+    name: Matrícula
 ---
 
 A continuación, se deberán rellenar los campos requeridos para realizar la solicitud para la instalación de puestos portátiles en la Romería de San Isidro 2026. Los solicitantes deberán cumplir las siguientes condiciones:
