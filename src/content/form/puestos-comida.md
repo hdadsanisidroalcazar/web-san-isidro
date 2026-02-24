@@ -12,18 +12,16 @@ field:
     name: email
   - label: 'ACTIVIDAD PRINCIPAL (tipo de comida que se vende):'
     name: Actividad
-  - label: >-
-      Matrícula del vehículo que desea ser autorizado para acceder al recinto
-      para carga y descarga:
+  - label: 'Matrícula del vehículo que desea ser autorizado para acceder al recinto para carga y descarga:'
     name: Matrícula
 ---
 
-A continuación, se deberán rellenar los campos requeridos para realizar la solicitud para la instalación de puestos de comida en la Romería de San Isidro 2025. Los solicitantes deberán cumplir las siguientes condiciones:
+A continuación, se deberán rellenar los campos requeridos para realizar la solicitud para la instalación de puestos de comida en la Romería de San Isidro 2026. Los solicitantes deberán cumplir las siguientes condiciones:
 
 1. Se deberá respetar en todo caso el lugar designado para la instalación del puesto por parte de la Hermandad de San Isidro.
 2. En el caso de disponer de un generador, éste deberá estar vallado o protegido para evitar accidentes.
-3. Deberá disponer de un seguro de responsabilidad civil, el cual deberá ser presentado a la Hermandad de San Isidro a través del correo electrónico [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es) o en formato papel **antes del 5 de mayo**. Se presentará póliza y recibo de pago en vigor.
-4. Certificado de instalación eléctrica diligenciado por el servicio de industria de Castilla La Mancha, el cual deberá ser presentado a la Hermandad de San Isidro a través del correo electrónico [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es) o en formato papel **antes del 5 de mayo**.
+3. Deberá disponer de un seguro de responsabilidad civil, el cual deberá ser presentado a la Hermandad de San Isidro a través del correo electrónico [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es) o en formato papel **antes del 30 de abril**. Se presentará póliza y recibo de pago en vigor.
+4. Certificado de instalación eléctrica diligenciado por el servicio de industria de Castilla La Mancha, el cual deberá ser presentado a la Hermandad de San Isidro a través del correo electrónico [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es) o en formato papel **antes del 30 de abril**.
 5. La tasa que deberá pagar a la Hermandad de San Isidro por ocupación del espacio y desarrollo de la actividad es de 150 €.
 6. Deberá cumplir con todas las medidas higiénicas y normativa sanitaria aplicable a dichos puestos.
 7. En todo momento deberá respetar las indicaciones realizadas por la Hermandad de San Isidro para un buen funcionamiento del evento.
