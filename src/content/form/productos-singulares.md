@@ -1,5 +1,5 @@
 ---
-closed: true
+closed: false
 title: 'SOLICITUD DE INSCRIPCIÓN DE PUESTOS DE BERENJENAS, HELADOS, ALGODÓN Y PRODUCTOS SINGULARES EN LA ROMERÍA DE SAN ISIDRO 2026'
 field:
   - label: ACTIVIDAD PRINCIPAL (Tipo de producto que se vende)
