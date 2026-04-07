@@ -1,5 +1,5 @@
 {
-  "closed": true,
+  "closed": false,
   "title": "Programa de cultos y actos",
   "tagline": "San Isidro 2026",
   "days": [
@@ -9,7 +9,8 @@
         {
           "title": "IV Carrera de Orientación \"San Isidro\"",
           "time": "10:00",
-          "description": "Fecha límite de inscripción: 7 de mayo de 2026\n\nNo se permitirán inscripciones el día de la carrera.",
+          "description": "Fecha límite de inscripción: 7 de mayo de 2026\n\nNo se permitirán inscripciones el día de la carrera.\n",
+          "remark": "",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
           "image": "/images/carteles/CARTEL II CARRERA DE ORIENTACIÓN SAN ISIDRO .webp",
@@ -23,7 +24,8 @@
         {
           "title": "Juegos populares",
           "time": "12:00",
-          "description": "Inscripciones gratuitas\n\nSe realizará una carrera de sacos, huevo con cuchara y carrera de triciclos para los más pequeños. Los participantes deberán llevar el saco, una cuchara de metal y el triciclo en caso de participar en esta última modalidad.\n\nAunque se podrán inscribir el mismo día, se recomienda hacerlo a través de la inscripción a fin de organizar las actividades.",
+          "description": "Inscripciones gratuitas\n\nSe realizará una carrera de sacos, huevo con cuchara y carrera de triciclos para los más pequeños. Los participantes deberán llevar el saco, una cuchara de metal y el triciclo en caso de participar en esta última modalidad.\n\nAunque se podrán inscribir el mismo día, se recomienda hacerlo a través de la inscripción a fin de organizar las actividades.\n",
+          "remark": "",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
           "image": "/images/carteles/Juegos Populares.webp",
@@ -37,7 +39,8 @@
         {
           "title": "IV Concurso de dibujo infantil",
           "time": "13:00",
-          "description": "Inscripciones gratuitas.\n\nLa Hermandad facilitará los folios y los colores para su desarrollo.\n\nAunque se podrán inscribir el mismo día, se recomienda hacerlo a través de la inscripción a fin de tener en cuenta los medios necesarios para llevar a cabo la actividad.",
+          "description": "Inscripciones gratuitas.\n\nLa Hermandad facilitará los folios y los colores para su desarrollo.\n\nAunque se podrán inscribir el mismo día, se recomienda hacerlo a través de la inscripción a fin de tener en cuenta los medios necesarios para llevar a cabo la actividad.\n",
+          "remark": "",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
           "image": "/images/carteles/Concurso de Dibujo.webp",
@@ -57,6 +60,7 @@
           "title": "Triduo en honor a San Isidro",
           "time": "20.00",
           "description": "Familia devota de San Isidro Labrador en acción de gracias.\n",
+          "remark": "",
           "location": "Iglesia de San Francisco",
           "map": "https://www.google.com/maps/place/Iglesia+y+convento+de+San+Francisco/@39.3887879,-3.207922,17z/data=!4m14!1m7!3m6!1s0xd69aeefb3165823:0x169fe142d9dfcbbe!2sIglesia+y+convento+de+San+Francisco!8m2!3d39.3887879!4d-3.2053471!16s%2Fg%2F11bxg1p81f!3m5!1s0xd69aeefb3165823:0x169fe142d9dfcbbe!8m2!3d39.3887879!4d-3.2053471!16s%2Fg%2F11bxg1p81f?entry=ttu",
           "image": "/images/carteles/1 (2).webp"
@@ -70,6 +74,7 @@
           "title": "Triduo en honor a San Isidro",
           "time": "20.00",
           "description": "Familia devota de San Isidro Labrador en acción de gracias.\n",
+          "remark": "",
           "location": "Iglesia de San Francisco",
           "map": "https://www.google.com/maps/place/Iglesia+y+convento+de+San+Francisco/@39.3887879,-3.207922,17z/data=!4m14!1m7!3m6!1s0xd69aeefb3165823:0x169fe142d9dfcbbe!2sIglesia+y+convento+de+San+Francisco!8m2!3d39.3887879!4d-3.2053471!16s%2Fg%2F11bxg1p81f!3m5!1s0xd69aeefb3165823:0x169fe142d9dfcbbe!8m2!3d39.3887879!4d-3.2053471!16s%2Fg%2F11bxg1p81f?entry=ttu",
           "image": "/images/carteles/1 (2).webp"
@@ -77,7 +82,8 @@
         {
           "title": "Presentación de Damas y Caballeros de San Isidro 2026 e imposición de ramos y bandas",
           "time": "20:30",
-          "description": "Al terminar la Eucaristía",
+          "description": "Al terminar la Eucaristía\n",
+          "remark": "",
           "location": "Iglesia de San Francisco",
           "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6",
           "image": "/images/carteles/Damas y Caballeros.webp"
@@ -85,7 +91,8 @@
         {
           "title": "Entrega de títulos a los nuevos hermanos",
           "time": "20:30",
-          "description": "Al terminar la Eucaristía",
+          "description": "Al terminar la Eucaristía\n",
+          "remark": "",
           "location": "Iglesia de San Francisco",
           "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6"
         },
@@ -93,11 +100,11 @@
           "title": "Canto de Mayos en honor a San Isidro",
           "time": "21:00",
           "description": "A cargo de asociaciones y grupos locales.\n",
+          "remark": "",
           "location": "Atrio de San Francisco",
           "map": "https://goo.gl/maps/Juk88fLdCBqRcEqF7",
           "image": "/images/carteles/Mayos.webp"
         }
-        
       ]
     },
     {
@@ -107,6 +114,7 @@
           "title": "Triduo en honor a San Isidro",
           "time": "20.00",
           "description": "Familia devota de San Isidro Labrador en acción de gracias.\n",
+          "remark": "",
           "location": "Iglesia de San Francisco",
           "map": "https://www.google.com/maps/place/Iglesia+y+convento+de+San+Francisco/@39.3887879,-3.207922,17z/data=!4m14!1m7!3m6!1s0xd69aeefb3165823:0x169fe142d9dfcbbe!2sIglesia+y+convento+de+San+Francisco!8m2!3d39.3887879!4d-3.2053471!16s%2Fg%2F11bxg1p81f!3m5!1s0xd69aeefb3165823:0x169fe142d9dfcbbe!8m2!3d39.3887879!4d-3.2053471!16s%2Fg%2F11bxg1p81f?entry=ttu",
           "image": "/images/carteles/1 (2).webp"
@@ -115,6 +123,7 @@
           "title": "IV Noche Manchega",
           "time": "21:00",
           "description": "Las cuadrillas que deseen participar en la elaboración de platos manchegos típicos frios, como ensalada de limón. bizcochá, machacón o pipirrana, deberán apuntarse a través del formulario. Se prohibe la realización de fuego. Límite de inscripciones: 8 cuadrillas.\n\nInscripciones gratuitas\n\nHorario de descarga de sillas, mesas y enseres: de 20:00 a 21:00\n",
+          "remark": "",
           "location": "Ermita de San Isidro",
           "image": "/images/carteles/I NOCHE MANCHEGA.jpg",
           "buttons": [
@@ -127,7 +136,8 @@
         {
           "title": "Actuación de la Escuela de la Asociación de Coros y Danzas de Alcázar de San Juan y la Escuela de Folklore",
           "time": "21:00",
-          "description": "Se invita a todos los participantes, espectadores y público en general, a ir ataviados con alguna prenda del traje típico manchego.",
+          "description": "",
+          "remark": "Se invita a todos los participantes, espectadores y público en general, a ir ataviados con alguna prenda del traje típico manchego.\n",
           "location": "Ermita de San Isidro"
         }
       ]
@@ -138,7 +148,8 @@
         {
           "title": "Función solemne",
           "time": "11:00",
-          "description": "Por el eterno descanso de María Quiralte Octavio.",
+          "description": "Por el eterno descanso de María Quiralte Octavio.\n",
+          "remark": "",
           "location": "Iglesia de San Francisco",
           "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6"
         },
@@ -146,6 +157,7 @@
           "title": "Romería de San Isidro",
           "time": "12:00",
           "description": "ITINERARIO:\n\nIglesia de San Francisco, Altozano de la Inmaculada, C/ San Francisco, Plaza de España, C/ Emilio Castelar, C/ Miguel de Unamuno, C/ Pineda, C/ San Antón, C/ Fray Indalecio Casero, C/ La Virgen, C/ Federico Álvarez, Paseo de San Isidro, camino de la ermita, ermita de San Isidro.\n",
+          "remark": "",
           "location": "Iglesia de San Francisco - Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6"
         },
@@ -153,6 +165,7 @@
           "title": "Subasta de los objetos donados al Santo",
           "time": "13:00",
           "description": "",
+          "remark": "",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
         },
@@ -160,6 +173,7 @@
           "title": "Entrega de obsequio de los diferentes concursos y sorteo de premios de las papeletas.",
           "time": "19:00",
           "description": "",
+          "remark": "",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
         },
@@ -167,6 +181,7 @@
           "title": "Regreso de la romería",
           "time": "20:00",
           "description": "ITINERARIO:\n\nCamino de la ermita, Paseo de San Isidro, C/ Federico Álvarez, C/ San Isidro, C/ Virgen, Altozano de la Inmaculada y templo.\n",
+          "remark": "Como viene siendo habitual, en la mañana del día 17, en la explanada de la ermita, se obsequiará con el típico zurra a todos los asistentes, donado por las diversas bodegas vitivinícolas.\n\nAquellas cuadrillas que participen en la Romería acompañando a San Isidro con tractor y remolque, tanto en la subida como en la bajada, recibirán un obsequio de 30 €. Colabora Cooperativas – Agroalimentarias de Castilla – La Mancha.\n\nLa Hermandad de San Isidro podrá declinar dicho obsequio en caso de considerarse que dicho acompañamiento no se adecúa a los estándares de decoro, respeto y formas que la ocasión requiere.\n",
           "location": "Ermita de San Isidro - Iglesia de San Francisco",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA"
         }
@@ -178,7 +193,8 @@
         {
           "title": "III Concurso de fotografía \"San Isidro a través del objetivo\"",
           "time": "-",
-          "description": "Entrega de fotografías a través del correo electrónico: [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es)\n\nPeriodo de votación en las Redes Sociales de la Hermandad: Del 24 al 29 de mayo de 2026.",
+          "description": "Entrega de fotografías a través del correo electrónico: [hdadsanisidroalcazar@outlook.es](mailto:hdadsanisidroalcazar@outlook.es)\n\nPeriodo de votación en las Redes Sociales de la Hermandad: Del 24 al 29 de mayo de 2026.\n",
+          "remark": "",
           "buttons": [
             {
               "text": "Bases del concurso",

@@ -138,6 +138,7 @@ const cultCollection = defineCollection({
                 title: z.string(),
                 time: z.string(),
                 description: z.string(),
+                remark: z.string().optional(),
                 location: z.string().optional(),
                 map: z.string().optional(),
                 image: z.string().optional(),

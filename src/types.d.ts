@@ -40,6 +40,7 @@ export interface Cult {
       time: string;
       map: string;
       description?: string;
+      remark?: string;
       location?: string;
       image?: string;
       buttons?: {

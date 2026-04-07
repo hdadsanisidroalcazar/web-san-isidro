@@ -84,6 +84,11 @@ export const Cultos: Collection = {
               label: 'Descripción',
             },
             {
+              type: 'rich-text',
+              name: 'remark',
+              label: 'Destacado',
+            },
+            {
               type: 'string',
               name: 'location',
               label: 'Ubicación',
