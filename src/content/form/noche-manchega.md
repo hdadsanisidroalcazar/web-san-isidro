@@ -12,6 +12,8 @@ field:
     name: integrantes
   - label: 'Matrícula 1:'
     name: Matrícula1
+  - label: Matrícula 2
+    name: Matrícula2
 ---
 
 1. Este formulario es para inscribirse y reservar sitio en las degustaciones que tendrán lugar con motivo de la "IV Noche Manchega" el día 16 de mayo de 2026 en la ermita de San Isidro.
