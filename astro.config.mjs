@@ -10,8 +10,6 @@ import vercel from '@astrojs/vercel';
 import tasks from './src/utils/tasks';
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter.mjs';
 import { SITE } from './src/utils/config';
-import compressor from 'astro-compressor';
-
 import { CopyFilesPlugin } from './copy-files.ts';
 
 import tailwindcss from '@tailwindcss/vite';
@@ -37,14 +35,32 @@ export default defineConfig({
     mdx(),
     icon({
       include: {
-        tabler: ['*'],
+        tabler: [
+          'brand-facebook',
+          'brand-instagram',
+          'brand-linkedin',
+          'brand-telegram',
+          'brand-whatsapp',
+          'brand-x',
+          'brand-youtube',
+          'calendar',
+          'chevron-down',
+          'chevron-left',
+          'chevron-right',
+          'clock',
+          'download',
+          'headset',
+          'info-square',
+          'link',
+          'mail',
+          'map-pin',
+          'rss',
+          'sun',
+          'user',
+        ],
       },
     }),
     tasks(),
-    compressor({
-      gzip: false,
-      brotli: true,
-    }),
     CopyFilesPlugin(),
   ],
   markdown: {

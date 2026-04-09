@@ -48,10 +48,10 @@
     "@tailwindcss/vite": "^4.1.18",
     "@tinacms/cli": "^2.0.5",
     "astro": "^5.16.6",
-    "astro-compressor": "^1.2.0",
     "astro-icon": "^1.1.5",
     "limax": "4.2.1",
     "lodash.merge": "^4.6.2",
+    "p-limit": "7.3.0",
     "photoswipe": "^5.4.4",
     "tinacms": "^3.1.2",
     "unpic": "^4.2.2"
