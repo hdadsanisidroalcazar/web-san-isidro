@@ -1,4 +1,4 @@
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Generic } from '~/types';
 import { cleanSlug, trimSlash, PAGE_PERMALINK_PATTERN } from './permalinks';
@@ -14,10 +14,10 @@ const generatePermalink = async ({ id, slug }: { id: string; slug: string }) => 
 };
 
 const getNormalizedPost = async (generic: CollectionEntry<'generic'>): Promise<Generic> => {
-  const { id, slug: rawSlug = '', data } = generic;
-  const { Content } = await generic.render();
+  const { id, data } = generic;
+  const { Content } = await render(generic);
 
-  const slug = cleanSlug(rawSlug); // cleanSlug(rawSlug.split('/').pop());
+  const slug = cleanSlug(id); // cleanSlug(id.split('/').pop());
 
   return {
     id: id,

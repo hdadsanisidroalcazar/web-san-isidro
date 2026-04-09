@@ -1,4 +1,4 @@
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Form } from '~/types';
 import { trimSlash, FORM_PERMALINK_PATTERN } from './permalinks';
@@ -14,8 +14,8 @@ const generatePermalink = async ({ slug }: { slug: string }) => {
 };
 
 const getNormalizedPost = async (form: CollectionEntry<'form'>): Promise<Form> => {
-  const { slug, data } = form;
-  const { Content } = await form.render();
+  const { id: slug, data } = form;
+  const { Content } = await render(form);
 
   return {
     id: slug,

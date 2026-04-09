@@ -1,4 +1,5 @@
-import { z, defineCollection } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 const metadataDefinition = () =>
   z
@@ -46,6 +47,7 @@ const metadataDefinition = () =>
     .optional();
 
 const postCollection = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/post' }),
   schema: z.object({
     publishDate: z.date().optional(),
     updateDate: z.date().optional(),
@@ -64,7 +66,7 @@ const postCollection = defineCollection({
 });
 
 const homeCollection = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '**/*.json', base: './src/content/home' }),
   schema: z.object({
     announceTitle: z.string().optional(),
     announce: z.string().optional(),
@@ -83,7 +85,7 @@ const homeCollection = defineCollection({
 });
 
 const magazineCollection = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '**/*.json', base: './src/content/magazine' }),
   schema: z.object({
     year: z.string(),
     pdf: z.string().optional(),
@@ -94,7 +96,7 @@ const magazineCollection = defineCollection({
 });
 
 const contactCollection = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '**/*.json', base: './src/content/contact' }),
   schema: z.object({
     title: z.string(),
     subtitle: z.string(),
@@ -112,7 +114,7 @@ const contactCollection = defineCollection({
 });
 
 const sponsorCollection = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '**/*.json', base: './src/content/sponsor' }),
   schema: z.object({
     title: z.string(),
     subtitle: z.string(),
@@ -121,7 +123,7 @@ const sponsorCollection = defineCollection({
 });
 
 const cultCollection = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '**/*.json', base: './src/content/cult' }),
   schema: z.object({
     title: z.string(),
     subtitle: z.string().optional(),
@@ -160,6 +162,7 @@ const cultCollection = defineCollection({
 });
 
 const formCollection = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/form' }),
   schema: z.object({
     closed: z.boolean().optional(),
     title: z.string(),
@@ -176,6 +179,7 @@ const formCollection = defineCollection({
 });
 
 const galleryCollection = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/gallery' }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
@@ -196,7 +200,7 @@ const galleryCollection = defineCollection({
 });
 
 const genericCollection = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/generic' }),
   schema: z.object({
     title: z.string(),
     body: z.string().optional(),
@@ -204,7 +208,7 @@ const genericCollection = defineCollection({
 });
 
 const hazteHermanoCollection = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/haztehermano' }),
   schema: z.object({
     title: z.string(),
     subtitle: z.string(),

@@ -1,4 +1,4 @@
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Gallery } from '~/types';
 import { APP_GALLERY } from '~/utils/config';
@@ -15,8 +15,8 @@ const generatePermalink = async ({ id, slug }: { id: string; slug: string }) => 
 };
 
 const getNormalizedPost = async (post: CollectionEntry<'gallery'>): Promise<Gallery> => {
-  const { id, slug: rawSlug = '', data } = post;
-  const { Content } = await post.render();
+  const { id, data } = post;
+  const { Content } = await render(post);
 
   const {
     publishDate: rawPublishDate = new Date(),
@@ -29,7 +29,7 @@ const getNormalizedPost = async (post: CollectionEntry<'gallery'>): Promise<Gall
     galleries = [],
   } = data;
 
-  const slug = cleanSlug(rawSlug); // cleanSlug(rawSlug.split('/').pop());
+  const slug = cleanSlug(id); // cleanSlug(id.split('/').pop());
   const publishDate = new Date(rawPublishDate);
   const updateDate = rawUpdateDate ? new Date(rawUpdateDate) : undefined;
 

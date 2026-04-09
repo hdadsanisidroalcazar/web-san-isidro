@@ -1,4 +1,4 @@
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import type { Home, Contact, Sponsor, Magazine, HazteHermano } from '~/types';
 
 let _home: Home;
@@ -61,7 +61,7 @@ export const fetchHazteHermano = async (): Promise<HazteHermano> => {
   if (!_hazteHermano) {
     const hazteHermano = await getCollection('haztehermano');
     _hazteHermano = hazteHermano[0]?.data;
-    const { Content } = await hazteHermano[0].render();
+    const { Content } = await render(hazteHermano[0]);
     _hazteHermano.DescriptionPrivacidad = Content;
   }
 
