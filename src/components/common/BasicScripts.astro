@@ -144,12 +144,13 @@ import { UI } from '~/utils/config';
     document.querySelectorAll('[no-intersect]').forEach((el) => observer.observe(el));
   }
 
-  // Carga inicial: registrar listeners y estado inicial
-  setupListeners();
-  onNavigate();
+  if (!window.__basicScriptsInit) {
+    window.__basicScriptsInit = true;
+    setupListeners();
+    document.addEventListener('astro:page-load', () => {
+      onNavigate();
+    });
+  }
 
-  // Cada navegación con ClientRouter: solo reset + IntersectionObserver
-  document.addEventListener('astro:page-load', () => {
-    onNavigate();
-  });
+  onNavigate();
 </script>
