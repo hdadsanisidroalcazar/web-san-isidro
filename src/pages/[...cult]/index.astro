@@ -59,7 +59,8 @@ const metadata = {
                           set:html={event.description
                             ?.replaceAll('\n', '<br/>')
                             .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>')}
-                        />                        {event.remark && (
+                        />{' '}
+                        {event.remark && (
                           <div
                             class="mt-3 px-4 py-3 bg-green-100 dark:bg-slate-800 rounded-lg text-sm"
                             set:html={event.remark
