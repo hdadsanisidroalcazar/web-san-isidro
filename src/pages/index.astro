@@ -8,10 +8,12 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import { fetchHome, fetchLastMagazine } from '~/utils/page';
 import SponsorBrand from '~/components/widgets/SponsorBrand.astro';
 import Countdown from '~/components/ui/Countdown.astro';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import heroImage from '~/assets/images/hero.webp';
 import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from '~/utils/config';
+
+const heroPlaceholder = await getImage({ src: heroImage, width: 32, quality: 1, format: 'webp' });
 
 const metadata = {
   title: 'Inicio | Hermandad de San Isidro Labrador',
@@ -70,16 +72,24 @@ const faqSchema = homeData.faqs?.length
 
   <!-- Hero Widget ******************* -->
 
-  <Image
-    src={heroImage}
-    alt="Romería de San Isidro Labrador en Alcázar de San Juan"
-    class="w-full object-cover object-top"
-    style="height:32rem;"
-    fetchpriority="high"
-    loading="eager"
-    widths={[800, 1200, 1600]}
-    sizes="100vw"
-  />
+  <div class="relative w-full overflow-hidden" style="height:32rem;">
+    <div
+      class="absolute inset-0 scale-110 blur-sm bg-cover bg-top transition-opacity duration-700"
+      style={`background-image: url(${heroPlaceholder.src})`}
+      aria-hidden="true"
+      id="hero-placeholder"
+    />
+    <Image
+      src={heroImage}
+      alt="Romería de San Isidro Labrador en Alcázar de San Juan"
+      class="relative w-full h-full object-cover object-top"
+      fetchpriority="high"
+      loading="eager"
+      widths={[800, 1200, 1600]}
+      sizes="100vw"
+      onload="document.getElementById('hero-placeholder').style.opacity='0'"
+    />
+  </div>
 
   {isNotYetRomeria && lessThan30Days && <Countdown date={dateRomeria} title="Hasta la romería: " />}
   <!-- Note Widget ******************* -->
