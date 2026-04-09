@@ -31,7 +31,7 @@ import { UI } from '~/utils/config';
     }
   }
 
-  function init() {
+  function setupListeners() {
     let lastKnownScrollPosition = window.scrollY;
     let ticking = true;
 
@@ -117,7 +117,9 @@ import { UI } from '~/utils/config';
         ticking = true;
       }
     });
+  }
 
+  function onNavigate() {
     document.documentElement.classList.add('motion-safe:scroll-smooth');
     const menuElem = document.querySelector('[data-aw-toggle-menu]');
     if (menuElem) {
@@ -142,11 +144,12 @@ import { UI } from '~/utils/config';
     document.querySelectorAll('[no-intersect]').forEach((el) => observer.observe(el));
   }
 
-  window.onload = function () {
-    init();
-  };
+  // Carga inicial: registrar listeners y estado inicial
+  setupListeners();
+  onNavigate();
 
+  // Cada navegación con ClientRouter: solo reset + IntersectionObserver
   document.addEventListener('astro:page-load', () => {
-    init();
+    onNavigate();
   });
 </script>
