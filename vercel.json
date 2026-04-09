@@ -1,9 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "buildEnv": {
-    "ASTRO_TELEMETRY_DISABLED": "1"
-  },
   "headers": [
     {
       "source": "/_astro/(.*)",
