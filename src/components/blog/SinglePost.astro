@@ -74,6 +74,7 @@ const Content = post?.Content || Fragment;
             width={900}
             height={506}
             decoding="async"
+            transition:name={`post-image-${post.id}`}
           />
         ) : (
           <div class="max-w-3xl mx-auto px-4 sm:px-6">
