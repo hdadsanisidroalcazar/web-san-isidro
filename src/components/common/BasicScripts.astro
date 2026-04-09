@@ -31,7 +31,7 @@ import { UI } from '~/utils/config';
     }
   }
 
-  window.onload = function () {
+  function init() {
     let lastKnownScrollPosition = window.scrollY;
     let ticking = true;
 
@@ -117,13 +117,11 @@ import { UI } from '~/utils/config';
         ticking = true;
       }
     });
-  };
 
-  window.onpageshow = function () {
     document.documentElement.classList.add('motion-safe:scroll-smooth');
-    const elem = document.querySelector('[data-aw-toggle-menu]');
-    if (elem) {
-      elem.classList.remove('expanded');
+    const menuElem = document.querySelector('[data-aw-toggle-menu]');
+    if (menuElem) {
+      menuElem.classList.remove('expanded');
     }
     document.body.classList.remove('overflow-hidden');
     document.getElementById('header')?.classList.remove('h-screen');
@@ -142,5 +140,13 @@ import { UI } from '~/utils/config';
       { threshold: 0.1 }
     );
     document.querySelectorAll('[no-intersect]').forEach((el) => observer.observe(el));
+  }
+
+  window.onload = function () {
+    init();
   };
+
+  document.addEventListener('astro:page-load', () => {
+    init();
+  });
 </script>
