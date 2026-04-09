@@ -23,7 +23,7 @@
         {
           "title": "Juegos populares",
           "time": "12:00",
-          "description": "Inscripciones gratuitas.\n\nSe realizará una carrera de sacos, huevo con cuchara y carrera de triciclos para los más pequeños. Los participantes deberán llevar el saco, una cuchara de metal y el triciclo en caso de participar en esta última modalidad.\n\nAunque se podrán inscribir el mismo día, se recomienda hacerlo a través de la inscripción a fin de organizar las actividades.",
+          "description": "Inscripciones gratuitas.\n\nSe realizará una carrera de sacos, huevo con cuchara y carrera de triciclos para los más pequeños. Los participantes deberán llevar el saco, una cuchara de metal y el triciclo en caso de participar en esta última modalidad.\n\nAunque se podrán inscribir el mismo día, se recomienda hacerlo a través de la inscripción a fin de organizar las actividades.\n",
           "remark": "",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
@@ -38,7 +38,7 @@
         {
           "title": "IV Concurso de dibujo infantil “¿QUÉ ES SAN ISIDRO PARA TI?”",
           "time": "13:00",
-          "description": "Inscripciones gratuitas.\n\nLa Hermandad facilitará los folios y los colores para su desarrollo.\n\nAunque se podrán inscribir el mismo día, se recomienda hacerlo a través de la inscripción a fin de tener en cuenta los medios necesarios para llevar a cabo la actividad.",
+          "description": "Inscripciones gratuitas.\n\nLa Hermandad facilitará los folios y los colores para su desarrollo.\n\nAunque se podrán inscribir el mismo día, se recomienda hacerlo a través de la inscripción a fin de tener en cuenta los medios necesarios para llevar a cabo la actividad.\n",
           "remark": "",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/qvFkeeCCes3QUHHNA",
@@ -81,16 +81,16 @@
         {
           "title": "Presentación de Damas y Caballeros de San Isidro e imposición de ramos y bandas",
           "time": "20:30",
-          "description": "Al terminar la Eucaristía",
+          "description": "Al terminar la Eucaristía\n",
           "remark": "",
           "location": "Iglesia de San Francisco",
           "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6",
-          "image": "/images/carteles/Damas y Caballeros.webp"
+          "image": "/images/carteles/5.avif"
         },
         {
           "title": "Entrega de títulos a los nuevos hermanos",
           "time": "20:30",
-          "description": "Al terminar la Eucaristía",
+          "description": "Al terminar la Eucaristía\n",
           "remark": "",
           "location": "Iglesia de San Francisco",
           "map": "https://maps.app.goo.gl/fPhJi5kqEb1aJwFN6",
@@ -164,7 +164,8 @@
         {
           "title": "II CONCENTRACIÓN DEL TRAJE MANCHEGO",
           "time": "13:00",
-          "description": "Todas aquellas personas que suban ataviadas con, al menos, una prenda típica del traje manchego según lo establecido en las bases, podrán inscribirse entre las 13.00 H. y las 19.00 H. para un sorteo de regalos.",
+          "description": "Todas aquellas personas que suban ataviadas con, al menos, una prenda típica del traje manchego según lo establecido en las bases, podrán inscribirse entre las 13.00 H. y las 19.00 H. para un sorteo de regalos.\n",
+          "remark": "",
           "location": "Ermita de San Isidro",
           "map": "https://maps.app.goo.gl/N6Pahc81yXMj4JiE8",
           "buttons": [
