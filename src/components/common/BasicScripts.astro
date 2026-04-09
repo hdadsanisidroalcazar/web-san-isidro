@@ -35,65 +35,73 @@ import { UI } from '~/utils/config';
     let lastKnownScrollPosition = window.scrollY;
     let ticking = true;
 
-    attachEvent('#header nav', 'click', function () {
-      document.querySelector('[data-aw-toggle-menu]')?.classList.remove('expanded');
-      document.body.classList.remove('overflow-hidden');
-      document.getElementById('header')?.classList.remove('h-screen');
-      document.getElementById('header')?.classList.remove('expanded');
-      document.querySelector('#header nav')?.classList.add('hidden');
-      document.querySelector('#header > div > div:last-child')?.classList.add('hidden');
-    });
+    // Delegación en document: sobrevive a cualquier swap de DOM por transition:persist
+    document.addEventListener('click', function (e) {
+      const target = e.target;
 
-    attachEvent('[data-aw-toggle-menu]', 'click', function (_, elem) {
-      elem.classList.toggle('expanded');
-      document.body.classList.toggle('overflow-hidden');
-      document.getElementById('header')?.classList.toggle('h-screen');
-      document.getElementById('header')?.classList.toggle('expanded');
-      document.querySelector('#header nav')?.classList.toggle('hidden');
-      document.querySelector('#header > div > div:last-child')?.classList.toggle('hidden');
-    });
-
-    attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
-      if (defaultTheme.endsWith(':only')) {
+      const toggleBtn = target.closest('[data-aw-toggle-menu]');
+      if (toggleBtn) {
+        toggleBtn.classList.toggle('expanded');
+        document.body.classList.toggle('overflow-hidden');
+        document.getElementById('header')?.classList.toggle('h-screen');
+        document.getElementById('header')?.classList.toggle('expanded');
+        document.querySelector('#header nav')?.classList.toggle('hidden');
+        document.querySelector('#header > div > div:last-child')?.classList.toggle('hidden');
         return;
       }
-      document.documentElement.classList.toggle('dark');
-      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-    });
 
-    attachEvent('[data-aw-social-share]', 'click', function (_, elem) {
-      const network = elem.getAttribute('data-aw-social-share');
-      const url = encodeURIComponent(elem.getAttribute('data-aw-url'));
-      const text = encodeURIComponent(elem.getAttribute('data-aw-text'));
-
-      let href;
-      switch (network) {
-        case 'facebook':
-          href = `https://www.facebook.com/sharer.php?u=${url}`;
-          break;
-        case 'twitter':
-          href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
-          break;
-        case 'linkedin':
-          href = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text}`;
-          break;
-        case 'whatsapp':
-          href = `https://wa.me/?text=${text}%20${url}`;
-          break;
-        case 'mail':
-          href = `mailto:?subject=%22${text}%22&body=${text}%20${url}`;
-          break;
-        case 'telegram':
-          href = `https://t.me/share/url?url=${url}&text=${text}`;
-          break;
-        default:
-          return;
+      if (target.closest('#header nav')) {
+        document.querySelector('[data-aw-toggle-menu]')?.classList.remove('expanded');
+        document.body.classList.remove('overflow-hidden');
+        document.getElementById('header')?.classList.remove('h-screen');
+        document.getElementById('header')?.classList.remove('expanded');
+        document.querySelector('#header nav')?.classList.add('hidden');
+        document.querySelector('#header > div > div:last-child')?.classList.add('hidden');
+        return;
       }
 
-      const newlink = document.createElement('a');
-      newlink.target = '_blank';
-      newlink.href = href;
-      newlink.click();
+      if (target.closest('[data-aw-toggle-color-scheme]')) {
+        if (defaultTheme.endsWith(':only')) return;
+        document.documentElement.classList.toggle('dark');
+        localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+        return;
+      }
+
+      const shareBtn = target.closest('[data-aw-social-share]');
+      if (shareBtn) {
+        const network = shareBtn.getAttribute('data-aw-social-share');
+        const url = encodeURIComponent(shareBtn.getAttribute('data-aw-url'));
+        const text = encodeURIComponent(shareBtn.getAttribute('data-aw-text'));
+
+        let href;
+        switch (network) {
+          case 'facebook':
+            href = `https://www.facebook.com/sharer.php?u=${url}`;
+            break;
+          case 'twitter':
+            href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+            break;
+          case 'linkedin':
+            href = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text}`;
+            break;
+          case 'whatsapp':
+            href = `https://wa.me/?text=${text}%20${url}`;
+            break;
+          case 'mail':
+            href = `mailto:?subject=%22${text}%22&body=${text}%20${url}`;
+            break;
+          case 'telegram':
+            href = `https://t.me/share/url?url=${url}&text=${text}`;
+            break;
+          default:
+            return;
+        }
+
+        const newlink = document.createElement('a');
+        newlink.target = '_blank';
+        newlink.href = href;
+        newlink.click();
+      }
     });
 
     function appyHeaderStylesOnScroll() {
