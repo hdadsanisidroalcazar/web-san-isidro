@@ -30,7 +30,8 @@ export default defineConfig({
   output: 'static',
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/cesion-de-instalaciones') && !page.includes('/admin'),
+      filter: (page) =>
+        !page.includes('/cesion-de-instalaciones') && !page.includes('/admin') && !page.includes('/tag/'),
     }),
     mdx(),
     icon({

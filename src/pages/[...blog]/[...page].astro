@@ -21,6 +21,10 @@ const currentPage = page.currentPage ?? 1;
 
 const metadata = {
   title: `Actualidad${currentPage > 1 ? ` — Página ${currentPage}` : ''}`,
+  description:
+    currentPage === 1
+      ? 'Últimas noticias, eventos y comunicados de la Hermandad de San Isidro Labrador de Alcázar de San Juan'
+      : `Noticias de la Hermandad de San Isidro Labrador — Página ${currentPage}`,
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,

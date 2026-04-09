@@ -7,6 +7,7 @@ import CustomStyles from '~/components/CustomStyles.astro';
 import ApplyColorMode from '~/components/common/ApplyColorMode.astro';
 import Metadata from '~/components/common/Metadata.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
+import { ClientRouter } from 'astro:transitions';
 
 import type { MetaData as MetaDataType } from '~/types';
 
@@ -25,17 +26,12 @@ const { metadata = {} } = Astro.props;
     <CustomStyles />
     <ApplyColorMode />
     <Metadata {...metadata} />
+    <ClientRouter />
   </head>
 
   <body class="antialiased text-default bg-page tracking-tight">
     <slot />
 
     <BasicScripts />
-
-    <style is:global>
-      img {
-        content-visibility: auto;
-      }
-    </style>
   </body>
 </html>

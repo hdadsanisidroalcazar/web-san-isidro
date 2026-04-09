@@ -8,6 +8,10 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import { fetchHome, fetchLastMagazine } from '~/utils/page';
 import SponsorBrand from '~/components/widgets/SponsorBrand.astro';
 import Countdown from '~/components/ui/Countdown.astro';
+import { Image } from 'astro:assets';
+import heroImage from '~/assets/images/hero.webp';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from '~/utils/config';
 
 const metadata = {
   title: 'Inicio | Hermandad de San Isidro Labrador',
@@ -20,12 +24,62 @@ const lastMagazine = await fetchLastMagazine();
 const dateRomeria = `${new Date().getFullYear()}-05-15T11:00:00+02:00`;
 const isNotYetRomeria = new Date().getTime() < new Date(dateRomeria).getTime();
 const lessThan30Days = new Date().getTime() > new Date(dateRomeria).getTime() - 30 * 24 * 60 * 60 * 1000;
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ReligiousOrganization',
+  name: SITE.name,
+  url: SITE.site,
+  logo: `${SITE.site}/images/logo.webp`,
+  sameAs: ['https://hermandadsanisidrolabrador.es'],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Alcázar de San Juan',
+    addressRegion: 'Castilla-La Mancha',
+    addressCountry: 'ES',
+  },
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  url: SITE.site,
+};
+
+const faqSchema = homeData.faqs?.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: homeData.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.title,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.description,
+        },
+      })),
+    }
+  : null;
 ---
 
 <Layout metadata={metadata}>
+  <JsonLd schema={organizationSchema} />
+  <JsonLd schema={websiteSchema} />
+  {faqSchema && <JsonLd schema={faqSchema} />}
+
   <!-- Hero Widget ******************* -->
 
-  <div class="w-full bg-cover bg-top" style="height:32rem; background-image: url(/images/hero.webp);"></div>
+  <Image
+    src={heroImage}
+    alt="Romería de San Isidro Labrador en Alcázar de San Juan"
+    class="w-full object-cover object-top"
+    style="height:32rem;"
+    fetchpriority="high"
+    loading="eager"
+    widths={[800, 1200, 1600]}
+    sizes="100vw"
+  />
 
   {isNotYetRomeria && lessThan30Days && <Countdown date={dateRomeria} title="Hasta la romería: " />}
   <!-- Note Widget ******************* -->
