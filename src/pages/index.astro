@@ -23,7 +23,7 @@ const metadata = {
 const homeData = await fetchHome();
 const lastMagazine = await fetchLastMagazine();
 
-const dateRomeria = `${new Date().getFullYear()}-05-15T11:00:00+02:00`;
+const dateRomeria = `${new Date().getFullYear()}-05-17T11:00:00+02:00`;
 const isNotYetRomeria = new Date().getTime() < new Date(dateRomeria).getTime();
 const lessThan30Days = new Date().getTime() > new Date(dateRomeria).getTime() - 30 * 24 * 60 * 60 * 1000;
 
