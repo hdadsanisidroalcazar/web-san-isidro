@@ -45,7 +45,7 @@
     "@astrojs/rss": "^4.0.18",
     "@astrojs/vercel": "^10.0.4",
     "@fontsource-variable/inter": "^5.2.8",
-    "@tailwindcss/vite": "^4.2.2",
+    "@tailwindcss/vite": "^4.2.4",
     "@tinacms/cli": "^2.2.2",
     "astro": "^6.1.5",
     "astro-icon": "^1.1.5",
