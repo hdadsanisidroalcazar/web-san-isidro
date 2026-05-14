@@ -101,7 +101,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                             { 'aw-link-active': href2 === currentPath },
                           ]}
                           href={href2}
-                          {...href2 === currentPath ? { 'aria-current': 'page' } : {}}
+                          {...(href2 === currentPath ? { 'aria-current': 'page' } : {})}
                         >
                           {text2}
                         </a>
@@ -116,7 +116,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                     { 'aw-link-active': href === currentPath },
                   ]}
                   href={href}
-                  {...href === currentPath ? { 'aria-current': 'page' } : {}}
+                  {...(href === currentPath ? { 'aria-current': 'page' } : {})}
                 >
                   {text}
                 </a>
