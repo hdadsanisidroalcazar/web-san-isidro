@@ -7,47 +7,54 @@ export interface Props {
 const { date, title } = Astro.props;
 
 const countdownDate = new Date(date).getTime();
+// ID único por instancia basado en la fecha objetivo
+const uid = `cd-${date.replace(/[^a-z0-9]/gi, '')}`;
 ---
 
 <div class="left-0 right-0 top-0 z-50 w-full bg-green-600 px-2 py-0.5 text-white shadow-md">
-  <div class="mx-auto flex w-fit max-w-5xl flex-wrap items-center justify-center gap-x-4 text-xs md:text-sm">
+  <div
+    class="mx-auto flex w-fit max-w-5xl flex-wrap items-center justify-center gap-x-4 text-xs md:text-sm"
+    aria-live="polite"
+    aria-atomic="true"
+    aria-label={`Cuenta atrás: ${title}`}
+  >
     <span class="font-semibold hidden md:block">{title}</span>
     <div class="flex w-fit items-center justify-center gap-1.5 py-2">
       <span
         class="relative w-full overflow-hidden text-center block font-mono text-sm font-semibold md:text-base"
-        id="days">0</span
+        id={`${uid}-days`}>0</span
       >
       <span>días</span>
     </div>
     <div class="flex w-fit items-center justify-center gap-1.5 py-2">
       <span
         class="relative w-full overflow-hidden text-center block font-mono text-sm font-semibold md:text-base"
-        id="hours">0</span
+        id={`${uid}-hours`}>0</span
       >
       <span>horas</span>
     </div>
     <div class="flex w-fit items-center justify-center gap-1.5 py-2">
       <span
         class="relative w-full overflow-hidden text-center block font-mono text-sm font-semibold md:text-base"
-        id="minutes">0</span
+        id={`${uid}-minutes`}>0</span
       >
       <span>minutos</span>
     </div>
     <div class="flex w-fit items-center justify-center gap-1.5 py-2">
       <span
         class="relative w-full overflow-hidden text-center block font-mono text-sm font-semibold md:text-base"
-        id="seconds">0</span
+        id={`${uid}-seconds`}>0</span
       >
       <span>segundos</span>
     </div>
   </div>
 </div>
 
-<script type="text/javascript" is:inline define:vars={{ countdownDate }}>
-  const days = document.getElementById('days');
-  const hours = document.getElementById('hours');
-  const minutes = document.getElementById('minutes');
-  const seconds = document.getElementById('seconds');
+<script type="text/javascript" is:inline define:vars={{ countdownDate, uid }}>
+  const days = document.getElementById(`${uid}-days`);
+  const hours = document.getElementById(`${uid}-hours`);
+  const minutes = document.getElementById(`${uid}-minutes`);
+  const seconds = document.getElementById(`${uid}-seconds`);
 
   const updateCountdown = () => {
     const now = new Date().getTime();

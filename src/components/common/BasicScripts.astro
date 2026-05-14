@@ -41,7 +41,8 @@ import { UI } from '~/utils/config';
 
       const toggleBtn = target.closest('[data-aw-toggle-menu]');
       if (toggleBtn) {
-        toggleBtn.classList.toggle('expanded');
+        const isExpanded = toggleBtn.classList.toggle('expanded');
+        toggleBtn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
         document.body.classList.toggle('overflow-hidden');
         document.getElementById('header')?.classList.toggle('h-screen');
         document.getElementById('header')?.classList.toggle('expanded');
@@ -51,7 +52,9 @@ import { UI } from '~/utils/config';
       }
 
       if (target.closest('#header nav')) {
-        document.querySelector('[data-aw-toggle-menu]')?.classList.remove('expanded');
+        const menuBtn = document.querySelector('[data-aw-toggle-menu]');
+        menuBtn?.classList.remove('expanded');
+        menuBtn?.setAttribute('aria-expanded', 'false');
         document.body.classList.remove('overflow-hidden');
         document.getElementById('header')?.classList.remove('h-screen');
         document.getElementById('header')?.classList.remove('expanded');
@@ -132,6 +135,7 @@ import { UI } from '~/utils/config';
     const menuElem = document.querySelector('[data-aw-toggle-menu]');
     if (menuElem) {
       menuElem.classList.remove('expanded');
+      menuElem.setAttribute('aria-expanded', 'false');
     }
     document.body.classList.remove('overflow-hidden');
     document.getElementById('header')?.classList.remove('h-screen');
