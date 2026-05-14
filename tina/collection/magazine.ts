@@ -28,10 +28,5 @@ export const Magazine: Collection = {
       name: 'pdf',
       label: 'PDF',
     },
-    {
-      type: 'string',
-      name: 'url',
-      label: 'Enlace',
-    },
   ],
 };

@@ -7,18 +7,15 @@ import type { CallToAction } from '~/types';
 
 const metadata = {
   title: 'Revistas',
-  description: 'Todas las revistas publicadas de la Hermandad de San Isidro para descargar o ver online.',
+  description: 'Todas las revistas publicadas de la Hermandad de San Isidro para descargar.',
 };
 
 const magazines = await fetchMagazines();
 
 const getActions = (magazine) => {
   const actions: CallToAction[] = [];
-  if (magazine.url) {
-    actions.push({ text: 'Ver online', href: magazine.url, variant: 'primary' });
-  }
   if (magazine.pdf) {
-    actions.push({ text: 'Descargar', href: magazine.pdf });
+    actions.push({ text: 'Descargar', href: magazine.pdf, variant: 'primary' });
   }
   return actions;
 };

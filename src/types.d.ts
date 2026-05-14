@@ -56,7 +56,6 @@ export interface Magazine {
   description?: string;
   image: string;
   pdf?: string;
-  url?: string;
 }
 
 export interface HazteHermano {
