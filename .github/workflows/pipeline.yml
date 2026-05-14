@@ -23,13 +23,13 @@ jobs:
           fetch-depth: 0
       - uses: pnpm/action-setup@v5
         with:
-          version: 8
+          version: 10
       - uses: actions/setup-node@v6
         with:
           cache: "pnpm"
           node-version-file: ".nvmrc"
       - name: Install dependencies
-        run: pnpm i
+        run: pnpm install --frozen-lockfile
       - name: Lint
         run: pnpm lint
 
@@ -41,13 +41,13 @@ jobs:
           fetch-depth: 0
       - uses: pnpm/action-setup@v5
         with:
-          version: 8
+          version: 10
       - uses: actions/setup-node@v6
         with:
           cache: "pnpm"
           node-version-file: ".nvmrc"
       - name: Install dependencies
-        run: pnpm i
+        run: pnpm install --frozen-lockfile
       - name: Prettier
         run: pnpm format
 
@@ -59,12 +59,12 @@ jobs:
           fetch-depth: 0
       - uses: pnpm/action-setup@v5
         with:
-          version: 8
+          version: 10
       - uses: actions/setup-node@v6
         with:
           cache: "pnpm"
           node-version-file: ".nvmrc"
       - name: Install dependencies
-        run: pnpm i 
+        run: pnpm install --frozen-lockfile
       - name: Build
         run: pnpm build
