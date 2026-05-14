@@ -9,8 +9,8 @@ const sponsorData = await fetchSponsors();
   title={sponsorData.title}
   subtitle={sponsorData.subtitle}
   icons={[]}
-  images={sponsorData.sponsor?.map((sponsor, index) => ({
+  images={sponsorData.sponsor?.map((sponsor) => ({
     src: sponsor,
-    alt: `patrocinador-${index}`,
+    alt: `Patrocinador de la Hermandad de San Isidro`,
   }))}
 />

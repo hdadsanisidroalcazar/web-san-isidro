@@ -75,7 +75,7 @@ const metadata = {
             </div>
           </div>
 
-          <div id="relativeNameField" class="hidden">
+          <div id="relativeNameField" class="hidden" aria-hidden="true">
             <Input label={hazteHermanoData.padremenor} name="representante" class="mt-6" />
             <Input label={hazteHermanoData.dnimenor} name="dni-representante" class="mt-6" />
           </div>
@@ -101,7 +101,7 @@ const metadata = {
             />
           </div>
           <div class="ml-3">
-            <label for="privacyPolicy" class="text-sm text-gray-700">
+            <label for="comunicaciones" class="text-sm text-gray-700">
               {hazteHermanoData.comunicaciones}
             </label>
           </div>
@@ -194,8 +194,10 @@ const metadata = {
   hasRelativeCheckbox?.addEventListener('change', function () {
     if (this.checked) {
       relativeNameField?.classList.remove('hidden');
+      relativeNameField?.setAttribute('aria-hidden', 'false');
     } else {
       relativeNameField?.classList.add('hidden');
+      relativeNameField?.setAttribute('aria-hidden', 'true');
     }
   });
 </script>

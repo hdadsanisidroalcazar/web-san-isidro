@@ -30,7 +30,7 @@ const getActions = (magazine) => {
       <Hero2
         title={`Revista ${magazine.year}`}
         subtitle={magazine.description}
-        image={{ src: findImage(magazine.image), alt: 'portada' }}
+        image={{ src: findImage(magazine.image), alt: `Portada Revista San Isidro ${magazine.year}` }}
         actions={getActions(magazine)}
       />
     ))
