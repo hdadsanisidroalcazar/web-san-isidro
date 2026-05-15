@@ -15,12 +15,12 @@ const imageFiles = import.meta.glob<ImageMetadata>('../../../public/images/galer
 
 const folderFiles = Object.keys(imageFiles).filter((image) => image.search(folder) >= 0);
 const imageSrcs = folderFiles.map((image) => imageFiles[image]);
-const gallery = 'gallery-' + folder;
+const gallery = 'gallery-' + folder.replace(/\s+/g, '-');
 ---
 
 <div
   id={gallery}
-  class="not-prose mx-auto block w-full columns-1 gap-2 sm:columns-2 lg:columns-3 lg:gap-4 place-self-center"
+  class="not-prose mx-auto w-full columns-1 gap-3 sm:columns-2 lg:columns-3 xl:columns-3 [column-gap:0.75rem]"
   itemscope
   itemtype="http://schema.org/ImageGallery"
 >

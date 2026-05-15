@@ -10,154 +10,132 @@ export interface Props {
 
 const { id, images } = Astro.props;
 
-const imagetitles = images.map((image) => image.src.split('/').reverse()[0].split('.')[0]);
+const imagetitles = images.map((image) => image.src.split('/').reverse()[0].split('.')[0].replace(/-|_/g, ' '));
 ---
 
-<lightbox-inner data-id={id}>
+<lightbox-gallery data-id={id}>
   {
     images.map((image, i) => (
       <figure
         itemscope
         itemtype="http://schema.org/ImageObject"
-        class="my-1 inline-block rounded-sm bg-gray-300 text-center text-sm italic text-gray-800 shadow-lg shadow-gray-400 dark:bg-gray-800 dark:text-gray-300 dark:shadow-black lg:my-2"
+        class="gallery-item my-1 inline-block w-full overflow-hidden rounded-md bg-gray-200 dark:bg-gray-800 lg:my-2"
       >
-        <a href={image.src} itemprop="contentUrl" data-pswp-width={image.width} data-pswp-height={image.height}>
+        <a
+          href={image.src}
+          itemprop="contentUrl"
+          data-pswp-width={image.width}
+          data-pswp-height={image.height}
+          data-pswp-caption={imagetitles[i]}
+          class="gallery-link relative block overflow-hidden"
+          aria-label={`Ver imagen: ${imagetitles[i]}`}
+        >
           <Image
             src={image}
             alt={imagetitles[i]}
             width={600}
-            height={(image.height * 600) / image.width}
+            height={Math.round((image.height * 600) / image.width)}
             format="webp"
-            class="rounded-sm"
+            class="gallery-img w-full rounded-md transition-transform duration-300 ease-out"
+            itemprop="thumbnail"
           />
+          <span class="gallery-overlay absolute inset-0 flex items-center justify-center rounded-md bg-black/0 transition-all duration-300">
+            <span class="gallery-icon flex h-10 w-10 items-center justify-center rounded-full bg-white/90 opacity-0 shadow-lg transition-all duration-300 scale-75">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0zm-3-1v2m-1-1h2" />
+              </svg>
+            </span>
+          </span>
         </a>
       </figure>
     ))
   }
-</lightbox-inner>
+</lightbox-gallery>
+
+<style>
+  .gallery-link:hover .gallery-img,
+  .gallery-link:focus .gallery-img {
+    transform: scale(1.04);
+  }
+
+  .gallery-link:hover .gallery-overlay,
+  .gallery-link:focus .gallery-overlay {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .gallery-link:hover .gallery-icon,
+  .gallery-link:focus .gallery-icon {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .gallery-link {
+    cursor: zoom-in;
+  }
+
+  /* PhotoSwipe caption styling */
+  :global(.pswp__custom-caption) {
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 0.85rem;
+    color: #fff;
+    width: 100%;
+    padding: 6px 16px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-transform: capitalize;
+  }
+</style>
+
 <script>
   import PhotoSwipeLightbox from 'photoswipe/lightbox';
 
-  function getContainer() {
-    const pswpContainer = document.createElement('div');
-    pswpContainer.style.background = '#000';
-    pswpContainer.style.width = '100%';
-    pswpContainer.style.height = '100%';
-    pswpContainer.style.display = 'none';
-    document.body.appendChild(pswpContainer);
-    return pswpContainer;
-  }
-
-  const pswpContainer = getContainer();
-
-  function getFullscreenPromise() {
-    return new Promise((resolve) => {
-      if (!fullscreenAPI || fullscreenAPI.isFullscreen()) {
-        resolve();
-        return;
-      }
-
-      document.addEventListener(
-        fullscreenAPI.change,
-        () => {
-          pswpContainer.style.display = 'block';
-          // delay to make sure that browser fullscreen animation is finished
-          setTimeout(function () {
-            resolve(0);
-          }, 300);
-        },
-        { once: true }
-      );
-
-      fullscreenAPI.request(pswpContainer);
-    });
-  }
-
-  function getFullscreenAPI() {
-    let api;
-    let enterFS;
-    let exitFS;
-    let elementFS;
-    let changeEvent;
-    let errorEvent;
-
-    if (document.documentElement.requestFullscreen) {
-      enterFS = 'requestFullscreen';
-      exitFS = 'exitFullscreen';
-      elementFS = 'fullscreenElement';
-      changeEvent = 'fullscreenchange';
-      errorEvent = 'fullscreenerror';
-    } else if (document.documentElement.webkitRequestFullscreen) {
-      enterFS = 'webkitRequestFullscreen';
-      exitFS = 'webkitExitFullscreen';
-      elementFS = 'webkitFullscreenElement';
-      changeEvent = 'webkitfullscreenchange';
-      errorEvent = 'webkitfullscreenerror';
-    }
-
-    if (enterFS) {
-      api = {
-        request: function (el) {
-          if (enterFS === 'webkitRequestFullscreen') {
-            el[enterFS](Element.ALLOW_KEYBOARD_INPUT);
-          } else {
-            el[enterFS]();
-          }
-        },
-
-        exit: function () {
-          return document[exitFS]();
-        },
-
-        isFullscreen: function () {
-          return document[elementFS];
-        },
-
-        change: changeEvent,
-        error: errorEvent,
-      };
-    }
-
-    return api;
-  }
-
-  const fullscreenAPI = getFullscreenAPI();
-
-  class LightboxInner extends HTMLElement {
-    constructor() {
-      super();
-
-      const id = this.dataset.id;
+  class LightboxGallery extends HTMLElement {
+    connectedCallback() {
+      const id = this.dataset.id!;
 
       const lightbox = new PhotoSwipeLightbox({
-        gallerySelector: '#' + id,
-        childSelector: 'a',
+        gallery: this,
+        children: 'a[data-pswp-width]',
         pswpModule: () => import('photoswipe'),
-        paddingFn: () => {
-          return {
-            top: 0,
-            bottom: 30,
-            left: 0,
-            right: 0,
-          };
-        },
-        openPromise: getFullscreenPromise,
-        appendToEl: fullscreenAPI ? pswpContainer : document.body,
-        preloadFirstSlide: false,
-        showAnimationDuration: 0,
-        hideAnimationDuration: 0,
+        padding: { top: 20, bottom: 40, left: 10, right: 10 },
+        showHideAnimationType: 'zoom',
+        showAnimationDuration: 250,
+        hideAnimationDuration: 200,
+        bgOpacity: 0.92,
+        loop: true,
+        wheelToZoom: true,
       });
 
-      lightbox.on('close', () => {
-        pswpContainer.style.display = 'none';
-        if (fullscreenAPI && fullscreenAPI.isFullscreen()) {
-          fullscreenAPI.exit();
-        }
+      // Add caption from data-pswp-caption attribute
+      lightbox.on('uiRegister', () => {
+        lightbox.pswp?.ui?.registerElement({
+          name: 'custom-caption',
+          order: 9,
+          isButton: false,
+          appendTo: 'root',
+          html: '',
+          onInit: (el: HTMLElement, pswp: any) => {
+            pswp.on('change', () => {
+              const currSlideEl = pswp.currSlide?.data?.element as HTMLAnchorElement | undefined;
+              const caption = currSlideEl?.dataset?.pswpCaption;
+              if (caption) {
+                el.innerHTML = caption;
+                el.className = 'pswp__custom-caption';
+              } else {
+                el.innerHTML = '';
+              }
+            });
+          },
+        });
       });
 
       lightbox.init();
     }
   }
 
-  customElements.define('lightbox-inner', LightboxInner);
+  if (!customElements.get('lightbox-gallery')) {
+    customElements.define('lightbox-gallery', LightboxGallery);
+  }
 </script>
