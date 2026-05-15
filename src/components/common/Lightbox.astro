@@ -41,8 +41,19 @@ const imagetitles = images.map((image) => image.src.split('/').reverse()[0].spli
           />
           <span class="gallery-overlay absolute inset-0 flex items-center justify-center rounded-md bg-black/0 transition-all duration-300">
             <span class="gallery-icon flex h-10 w-10 items-center justify-center rounded-full bg-white/90 opacity-0 shadow-lg transition-all duration-300 scale-75">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0zm-3-1v2m-1-1h2" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-gray-800"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0zm-3-1v2m-1-1h2"
+                />
               </svg>
             </span>
           </span>
@@ -93,8 +104,6 @@ const imagetitles = images.map((image) => image.src.split('/').reverse()[0].spli
 
   class LightboxGallery extends HTMLElement {
     connectedCallback() {
-      const id = this.dataset.id!;
-
       const lightbox = new PhotoSwipeLightbox({
         gallery: this,
         children: 'a[data-pswp-width]',
@@ -116,7 +125,13 @@ const imagetitles = images.map((image) => image.src.split('/').reverse()[0].spli
           isButton: false,
           appendTo: 'root',
           html: '',
-          onInit: (el: HTMLElement, pswp: any) => {
+          onInit: (
+            el: HTMLElement,
+            pswp: {
+              on: (event: string, callback: () => void) => void;
+              currSlide?: { data?: { element?: HTMLAnchorElement } };
+            }
+          ) => {
             pswp.on('change', () => {
               const currSlideEl = pswp.currSlide?.data?.element as HTMLAnchorElement | undefined;
               const caption = currSlideEl?.dataset?.pswpCaption;
