@@ -51,25 +51,39 @@ const uid = `cd-${date.replace(/[^a-z0-9]/gi, '')}`;
 </div>
 
 <script type="text/javascript" is:inline define:vars={{ countdownDate, uid }}>
-  const days = document.getElementById(`${uid}-days`);
-  const hours = document.getElementById(`${uid}-hours`);
-  const minutes = document.getElementById(`${uid}-minutes`);
-  const seconds = document.getElementById(`${uid}-seconds`);
+  let _cdInterval = null;
 
-  const updateCountdown = () => {
-    const now = new Date().getTime();
-    const distance = countdownDate - now;
+  const initCountdown = () => {
+    const days = document.getElementById(`${uid}-days`);
+    const hours = document.getElementById(`${uid}-hours`);
+    const minutes = document.getElementById(`${uid}-minutes`);
+    const seconds = document.getElementById(`${uid}-seconds`);
 
-    const dayTime = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hourTime = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minTime = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const secTime = Math.floor((distance % (1000 * 60)) / 1000);
+    if (!days) return;
 
-    days.textContent = dayTime < 10 ? `0${dayTime}` : dayTime;
-    hours.textContent = hourTime < 10 ? `0${hourTime}` : hourTime;
-    minutes.textContent = minTime < 10 ? `0${minTime}` : minTime;
-    seconds.textContent = secTime < 10 ? `0${secTime}` : secTime;
+    if (_cdInterval) {
+      clearInterval(_cdInterval);
+      _cdInterval = null;
+    }
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      const dayTime = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hourTime = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minTime = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const secTime = Math.floor((distance % (1000 * 60)) / 1000);
+
+      days.textContent = dayTime < 10 ? `0${dayTime}` : dayTime;
+      hours.textContent = hourTime < 10 ? `0${hourTime}` : hourTime;
+      minutes.textContent = minTime < 10 ? `0${minTime}` : minTime;
+      seconds.textContent = secTime < 10 ? `0${secTime}` : secTime;
+    };
+
+    updateCountdown();
+    _cdInterval = setInterval(updateCountdown, 1000);
   };
 
-  setInterval(updateCountdown, 1000);
+  document.addEventListener('astro:page-load', initCountdown);
 </script>
