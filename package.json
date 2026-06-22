@@ -4,7 +4,7 @@
   "type": "module",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@11.3.0",
+  "packageManager": "pnpm@10.5.2",
   "scripts": {
     "dev": "tinacms dev -c 'astro dev'",
     "build:tina": "tinacms build",
@@ -57,5 +57,10 @@
     "photoswipe": "^5.4.4",
     "tinacms": "^3.8.1",
     "unpic": "^4.2.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "@iconify/tools": "^4.0.5"
+    }
   }
 }

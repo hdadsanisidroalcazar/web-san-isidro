@@ -1,9 +1,0 @@
-overrides:
-  '@iconify/tools': '^4.0.5'
-
-allowBuilds:
-  better-sqlite3: true
-  core-js: true
-  esbuild: true
-  protobufjs: true
-  sharp: true
