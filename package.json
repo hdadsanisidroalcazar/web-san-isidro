@@ -4,6 +4,7 @@
   "type": "module",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@11.3.0",
   "scripts": {
     "dev": "tinacms dev -c 'astro dev'",
     "build:tina": "tinacms build",
