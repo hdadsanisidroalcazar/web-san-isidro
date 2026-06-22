@@ -1,5 +1,5 @@
 overrides:
-  "@iconify/tools": "^4.0.5"
+  '@iconify/tools': '^4.0.5'
 
 allowBuilds:
   better-sqlite3: true
