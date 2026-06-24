@@ -33,7 +33,7 @@ export default defineConfig({
       filter: (page) =>
         !page.includes('/cesion-de-instalaciones') && !page.includes('/admin') && !page.includes('/tag/'),
     }),
-    mdx(),
+    mdx({ gfm: true }),
     icon({
       include: {
         tabler: [
