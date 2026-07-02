@@ -30,7 +30,7 @@
     "eslint": "^10.3.0",
     "eslint-plugin-astro": "^1.7.0",
     "globals": "^17.7.0",
-    "js-yaml": "^4.2.0",
+    "js-yaml": "^5.2.1",
     "mdast-util-to-string": "^4.0.0",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
