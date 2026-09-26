@@ -76,7 +76,7 @@ export default defineConfig({
       },
     },
 
-    plugins: [tailwindcss([{ applyBaseStyles: false }])],
+    plugins: [tailwindcss()],
   },
   adapter: vercel({
     imageConfig: {
