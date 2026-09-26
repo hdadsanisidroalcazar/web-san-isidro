@@ -21,47 +21,42 @@
     "@astrojs/mdx": "^8.0.2",
     "@astrojs/sitemap": "^3.7.4",
     "@eslint/js": "10.0.1",
-    "@iconify-json/tabler": "^1.2.35",
-    "@tailwindcss/typography": "^0.5.19",
+    "@iconify-json/tabler": "^1.2.40",
+    "@tailwindcss/typography": "^0.5.20",
     "@types/lodash.merge": "^4.6.9",
-    "@typescript-eslint/eslint-plugin": "^8.59.3",
-    "@typescript-eslint/parser": "^8.59.3",
+    "@typescript-eslint/eslint-plugin": "^8.70.1",
+    "@typescript-eslint/parser": "^8.70.1",
     "astro-eslint-parser": "^1.4.0",
-    "eslint": "^10.6.0",
+    "eslint": "^10.11.0",
     "eslint-plugin-astro": "^1.7.0",
-    "globals": "^17.7.0",
+    "globals": "^17.12.0",
     "js-yaml": "^4.2.0",
     "mdast-util-to-string": "^4.0.0",
-    "prettier": "^3.8.3",
+    "prettier": "^3.9.9",
     "prettier-plugin-astro": "^0.14.1",
     "reading-time": "^1.5.0",
-    "tailwind-merge": "^3.6.0",
-    "tailwindcss": "^4.3.0",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.61.1"
+    "typescript-eslint": "^8.70.1"
   },
   "engines": {
     "node": ">=20.10"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.1",
-    "@astrojs/rss": "^4.0.18",
+    "@astrojs/rss": "^4.0.19",
     "@astrojs/vercel": "^11.0.11",
-    "@fontsource-variable/inter": "^5.2.8",
-    "@tailwindcss/vite": "^4.3.2",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@tailwindcss/vite": "^4.3.3",
     "@tinacms/cli": "^2.3.1",
     "astro": "^7.3.5",
     "astro-icon": "^1.1.5",
     "limax": "4.2.3",
     "lodash.merge": "^4.6.2",
-    "p-limit": "7.3.0",
+    "p-limit": "7.3.3",
     "photoswipe": "^5.4.4",
     "tinacms": "^3.8.1",
     "unpic": "^4.2.2"
-  },
-  "pnpm": {
-    "overrides": {
-      "@iconify/tools": "^4.0.5"
-    }
   }
 }
