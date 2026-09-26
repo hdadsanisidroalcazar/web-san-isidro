@@ -10,7 +10,6 @@ import vercel from '@astrojs/vercel';
 import tasks from './src/utils/tasks';
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter.mjs';
 import { SITE } from './src/utils/config';
-import { CopyFilesPlugin } from './copy-files.ts';
 import { unified } from '@astrojs/markdown-remark';
 
 import tailwindcss from '@tailwindcss/vite';
@@ -63,7 +62,6 @@ export default defineConfig({
       },
     }),
     tasks(),
-    CopyFilesPlugin(),
   ],
   markdown: {
     processor: unified({

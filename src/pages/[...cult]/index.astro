@@ -4,6 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import { getStaticPathsCult } from '~/utils/cults';
 import Image from '~/components/common/Image.astro';
+import { getPublicImageDimensions } from '~/utils/images';
 import { getPermalink } from '~/utils/permalinks';
 import Button from '~/components/ui/Button.astro';
 
@@ -89,7 +90,7 @@ const metadata = {
                                 class="rounded-sm shadow-lg mx-auto"
                                 widths={[400, 900]}
                                 width={400}
-                                height="auto"
+                                aspectRatio={getPublicImageDimensions(event.image)?.aspectRatio || '1:1'}
                                 sizes="(max-width: 900px) 400px, 900px"
                                 alt={event.title}
                                 layout="cover"

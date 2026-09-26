@@ -1,5 +1,5 @@
 ---
-import { findImage } from '~/utils/images';
+import { findImage, getPublicImageDimensions } from '~/utils/images';
 import {
   getImagesOptimized,
   astroAsseetsOptimizer,
@@ -21,11 +21,13 @@ if (props.alt === undefined || props.alt === null) {
 }
 
 if (typeof props.width === 'string') {
-  props.width = parseInt(props.width);
+  const parsedWidth = parseInt(props.width);
+  props.width = isNaN(parsedWidth) ? undefined : parsedWidth;
 }
 
 if (typeof props.height === 'string') {
-  props.height = parseInt(props.height);
+  const parsedHeight = parseInt(props.height);
+  props.height = isNaN(parsedHeight) ? undefined : parsedHeight;
 }
 
 if (!props.loading) {
@@ -39,6 +41,17 @@ if (!props.decoding) {
 const _image = await findImage(props.src);
 
 let image: ImageType | undefined = undefined;
+
+if (!props.aspectRatio && typeof _image === 'string' && _image.startsWith('/')) {
+  const publicDim = getPublicImageDimensions(_image);
+  if (publicDim) {
+    props.aspectRatio = publicDim.aspectRatio;
+    if (!props.height && props.width && typeof props.width === 'number') {
+      const numRatio = publicDim.width / publicDim.height;
+      props.height = Math.floor(props.width / numRatio);
+    }
+  }
+}
 
 if (_image !== null && typeof _image === 'object') {
   image = await getImagesOptimized(_image, props, astroAsseetsOptimizer);
