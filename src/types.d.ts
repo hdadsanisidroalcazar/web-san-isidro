@@ -20,12 +20,11 @@ export interface Form {
   Content?: unknown;
   content?: string;
   closed?: boolean;
-  field?: { title: string; name: string }[];
+  field?: { label: string; name: string }[];
 }
 
 export interface Cult {
   id: string;
-  slug: string;
   permalink: string;
   /** **/
   title: string;
@@ -33,12 +32,12 @@ export interface Cult {
   tagline?: string;
   pdf?: string;
   closed?: boolean;
-  days: {
+  days?: {
     title: string;
-    event: {
+    event?: {
       title: string;
       time: string;
-      map: string;
+      map?: string;
       description?: string;
       remark?: string;
       location?: string;
@@ -91,7 +90,7 @@ export interface HazteHermano {
   bizum: string;
   enviar: string;
   titlePrivacidad: string;
-  DescriptionPrivacidad: unknown;
+  DescriptionPrivacidad?: unknown;
 }
 
 export interface Sponsor {
