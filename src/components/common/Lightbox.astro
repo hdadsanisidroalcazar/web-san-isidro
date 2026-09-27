@@ -14,53 +14,51 @@ const imagetitles = images.map((image) => image.src.split('/').reverse()[0].spli
 ---
 
 <lightbox-gallery data-id={id}>
-  {
-    images.map((image, i) => (
-      <figure
-        itemscope
-        itemtype="http://schema.org/ImageObject"
-        class="gallery-item my-1 inline-block w-full overflow-hidden rounded-md bg-gray-200 dark:bg-gray-800 lg:my-2"
+  {images.map((image, i) => (
+    <figure
+      itemscope
+      itemtype="http://schema.org/ImageObject"
+      class="gallery-item my-1 inline-block w-full overflow-hidden rounded-md bg-gray-200 dark:bg-gray-800 lg:my-2"
+    >
+      <a
+        href={image.src}
+        itemprop="contentUrl"
+        data-pswp-width={image.width}
+        data-pswp-height={image.height}
+        data-pswp-caption={imagetitles[i]}
+        class="gallery-link relative block overflow-hidden"
+        aria-label={`Ver imagen: ${imagetitles[i]}`}
       >
-        <a
-          href={image.src}
-          itemprop="contentUrl"
-          data-pswp-width={image.width}
-          data-pswp-height={image.height}
-          data-pswp-caption={imagetitles[i]}
-          class="gallery-link relative block overflow-hidden"
-          aria-label={`Ver imagen: ${imagetitles[i]}`}
-        >
-          <Image
-            src={image}
-            alt={imagetitles[i]}
-            width={600}
-            height={Math.round((image.height * 600) / image.width)}
-            format="webp"
-            class="gallery-img w-full rounded-md transition-transform duration-300 ease-out"
-            itemprop="thumbnail"
-          />
-          <span class="gallery-overlay absolute inset-0 flex items-center justify-center rounded-md bg-black/0 transition-all duration-300">
-            <span class="gallery-icon flex h-10 w-10 items-center justify-center rounded-full bg-white/90 opacity-0 shadow-lg transition-all duration-300 scale-75">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 text-gray-800"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0zm-3-1v2m-1-1h2"
-                />
-              </svg>
-            </span>
+        <Image
+          src={image}
+          alt={imagetitles[i]}
+          width={600}
+          height={Math.round((image.height * 600) / image.width)}
+          format="webp"
+          class="gallery-img w-full rounded-md transition-transform duration-300 ease-out"
+          itemprop="thumbnail"
+        />
+        <span class="gallery-overlay absolute inset-0 flex items-center justify-center rounded-md bg-black/0 transition-all duration-300">
+          <span class="gallery-icon flex h-10 w-10 items-center justify-center rounded-full bg-white/90 opacity-0 shadow-lg transition-all duration-300 scale-75">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-gray-800"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0zm-3-1v2m-1-1h2"
+              />
+            </svg>
           </span>
-        </a>
-      </figure>
-    ))
-  }
+        </span>
+      </a>
+    </figure>
+  ))}
 </lightbox-gallery>
 
 <style>

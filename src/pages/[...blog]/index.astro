@@ -71,5 +71,5 @@ const articleSchema = {
 <Layout metadata={metadata}>
   <JsonLd schema={articleSchema} />
   <SinglePost post={{ ...post, image: image }} url={url} />
-  <ToBlogLink {...isArchivedCategory && { category: post.category }} />
+  <ToBlogLink {...(isArchivedCategory && { category: post.category })} />
 </Layout>

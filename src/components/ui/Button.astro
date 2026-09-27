@@ -23,7 +23,7 @@ const variants = {
 
 <a
   class={twMerge(variants[variant] || '', className)}
-  {...target ? { target: target, rel: 'noopener noreferrer' } : {}}
+  {...(target ? { target: target, rel: 'noopener noreferrer' } : {})}
   {...rest}
 >
   {icon && prevIcon && <Icon name={icon} class="w-5 h-5 mr-1 -ml-1.5 inline-block" />}
