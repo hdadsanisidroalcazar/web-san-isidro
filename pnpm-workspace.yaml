@@ -1,6 +1,3 @@
-overrides:
-  '@iconify/tools': '^4.0.5'
-
 onlyBuiltDependencies:
   - better-sqlite3
 
