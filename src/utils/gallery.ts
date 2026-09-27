@@ -1,5 +1,6 @@
 import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import type { PaginateFunction } from 'astro';
 import type { Gallery } from '~/types';
 import { APP_GALLERY } from '~/utils/config';
 import { cleanSlug, trimSlash, GALLERY_PERMALINK_PATTERN } from './permalinks';
@@ -114,7 +115,7 @@ export const findGalleriesByIds = async (ids: Array<string>): Promise<Array<Gall
 };
 
 /** */
-export const getStaticPathsGalleryList = async ({ paginate }) => {
+export const getStaticPathsGalleryList = async ({ paginate }: { paginate: PaginateFunction }) => {
   if (!isGalleryEnabled || !isGalleryListRouteEnabled) return [];
   const posts = await fetchGalleries();
   return paginate(posts, {
