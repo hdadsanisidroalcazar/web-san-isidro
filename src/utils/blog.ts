@@ -1,5 +1,6 @@
 import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import type { PaginateFunction } from 'astro';
 import type { Post } from '~/types';
 import { APP_BLOG } from '~/utils/config';
 import pLimit from 'p-limit';
@@ -171,7 +172,13 @@ export const findLatestPosts = async ({ count }: { count?: number }): Promise<Ar
 };
 
 /** */
-export const getStaticPathsBlogList = async ({ paginate, archived = true }) => {
+export const getStaticPathsBlogList = async ({
+  paginate,
+  archived = true,
+}: {
+  paginate: PaginateFunction;
+  archived?: boolean;
+}) => {
   if (!isBlogEnabled || !isBlogListRouteEnabled) return [];
   const posts = archived ? await fetchPosts() : await getPostNotArchived();
   return paginate(posts, {
@@ -192,11 +199,11 @@ export const getStaticPathsBlogPost = async () => {
 };
 
 /** */
-export const getStaticPathsBlogCategory = async ({ paginate }) => {
+export const getStaticPathsBlogCategory = async ({ paginate }: { paginate: PaginateFunction }) => {
   if (!isBlogEnabled || !isBlogCategoryRouteEnabled) return [];
 
   const posts = await fetchPosts();
-  const categories = new Set();
+  const categories = new Set<string>();
   posts.map((post) => {
     if (typeof post.category === 'string') categories.add(post.category.toLowerCase());
   });
@@ -214,11 +221,11 @@ export const getStaticPathsBlogCategory = async ({ paginate }) => {
 };
 
 /** */
-export const getStaticPathsBlogTag = async ({ paginate }) => {
+export const getStaticPathsBlogTag = async ({ paginate }: { paginate: PaginateFunction }) => {
   if (!isBlogEnabled || !isBlogTagRouteEnabled) return [];
 
   const posts = await fetchPosts();
-  const tags = new Set();
+  const tags = new Set<string>();
   posts.map((post) => {
     if (Array.isArray(post.tags)) post.tags.map((tag) => tags.add(tag.toLowerCase()));
   });
