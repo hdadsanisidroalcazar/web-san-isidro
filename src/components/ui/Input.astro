@@ -3,7 +3,9 @@ const { name, label, type = 'text' } = Astro.props;
 ---
 
 <div class={Astro.props.class}>
-  <label for={name} class="block text-sm font-medium mb-1">{label}</label>
+  <label for={name} class="block text-sm font-medium mb-1">
+    {label}
+  </label>
   <input
     type={type}
     name={name}

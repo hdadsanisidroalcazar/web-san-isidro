@@ -22,15 +22,13 @@ const getActions = (magazine) => {
 ---
 
 <Layout metadata={metadata}>
-  {
-    magazines.map((magazine) => (
-      <Hero2
-        title={`Revista ${magazine.year}`}
-        subtitle={magazine.description}
-        image={{ src: findImage(magazine.image), alt: `Portada Revista San Isidro ${magazine.year}` }}
-        actions={getActions(magazine)}
-      />
-    ))
-  }
+  {magazines.map((magazine) => (
+    <Hero2
+      title={`Revista ${magazine.year}`}
+      subtitle={magazine.description}
+      image={{ src: findImage(magazine.image), alt: `Portada Revista San Isidro ${magazine.year}` }}
+      actions={getActions(magazine)}
+    />
+  ))}
   <div class="mb-20"></div>
 </Layout>

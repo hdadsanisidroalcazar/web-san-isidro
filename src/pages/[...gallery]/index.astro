@@ -44,34 +44,26 @@ const Content = gallery?.Content || Fragment;
   <section class="py-8 sm:py-16 lg:py-20 mx-auto">
     <article>
       <header>
-        <h1
-          class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading"
-        >
+        <h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
           {gallery.title}
         </h1>
-        <p
-          class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify"
-        >
+        <p class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify">
           {gallery.description}
         </p>
       </header>
-      <div
-        class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
-      >
+      <div class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
         {Content ? <Content /> : <Fragment set:html={gallery.content} />}
-        {
-          gallery.galleries?.map((item) => (
-            <>
-              {item?.title && <h3 class="text-2xl font-bold mt-8">{item.title}</h3>}
-              {item.description && (
-                <p class="max-w-3xl mx-auto mt-4 mb-8 text-lg md:text-xl text-muted dark:text-slate-400">
-                  {item.description}
-                </p>
-              )}
-              <Gallery folder={item.folder} />
-            </>
-          ))
-        }
+        {gallery.galleries?.map((item) => (
+          <>
+            {item?.title && <h3 class="text-2xl font-bold mt-8">{item.title}</h3>}
+            {item.description && (
+              <p class="max-w-3xl mx-auto mt-4 mb-8 text-lg md:text-xl text-muted dark:text-slate-400">
+                {item.description}
+              </p>
+            )}
+            <Gallery folder={item.folder} />
+          </>
+        ))}
       </div>
       <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between flex-col sm:flex-row">
         <SocialShare
